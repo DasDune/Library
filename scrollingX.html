@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrolling</title>
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .hbox {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+      }
+
+      .hbox::-webkit-scrollbar {
+        display: none;
+      }
+
+      .item {
+        display: flex;
+        min-width: 100%;
+        height: 100vh;
+        font-size: 4rem;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        scroll-snap-align: start;
+        background: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hbox">
+      <div id="home" class="item">1</div>
+      <div id="middle" class="item">2</div>
+      <div id="end" class="item">3</div>
+    </div>
+  </body>
+</html>

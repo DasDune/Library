@@ -1,0 +1,10 @@
+Col	Title	Desc	Link
+Doc-AudioVideo	Audio Video - Cameras - Microphones etc...	Directory	/Doc/AudioVideo
+Doc-AudioVideo	Cameras - CCTV	Directory	/Doc/AudioVideo/Cameras
+AudioVideo-Cameras-Cameras	Hamrol Camera for home	Camera Hamrol model C-P05-17 instruction sheet: Product details of Hamrol 1080P 17 LEDs PTZ Wifi Camera 4X Digital Zoom CCTV Security Camera Siren Light 2MP Auto Tracking	/Doc/AudioVideo/Cameras/HamrolCamInstructions.pdf
+Doc-Engineering	Engineering	Directory	/Doc/Engineering/
+Doc-Engineering-Access-Control	" Note : See the directory for PowerPoint/Visio Presentation source files, business case, Simplex Grinnell Presentation, etc..."	Directory	/Doc/Engineering/Access-Control
+Doc-Engineering-Access-Control	Access Control System	Directory	/Doc/Engineering/Access-Control
+Doc-Engineering-Access-Control	Bechtel - Typical Sketches	Bechtel - Typical Sketches for Access Control system and Fire Alarm System	/Doc/Engineering/Access-Control/25363-00KT-J1K-0000-0002.pdf
+Doc-Engineering-Access-Control	Camera Media Converter	Typical drawing for a camera media converter panel ( Project RTA kitimat )	/Doc/Engineering/Access-Control/25363-22KT-JC-2256-0001-001.pdf
+Doc-Engineering-Access-Control	Bechtel - Standard Drawings	Bechtel - Standard Drawings for Access Control for the Pre-Fabricated Electrical Rooms wiring and interconnection diagrams	/Doc/Engineering/Access-Control/25363-22KT-JC-2256-0003.pdf

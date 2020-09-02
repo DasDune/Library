@@ -1,0 +1,17 @@
+h1 {
+  display: flex;
+  color: blue;
+  align-content: center;
+}
+
+h2 {
+  display: flex;
+  color: rgb(31, 114, 182);
+  align-content: center;
+}
+
+h3 {
+  display: flex;
+  color: rgb(9, 112, 60);
+  align-content: center;
+}

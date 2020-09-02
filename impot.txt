@@ -1,0 +1,13 @@
+Col	Title	Desc	Link
+Finances-Impot-2017	Avis de cotisations	Avis de cotisation reeu du federal et provincial pour 2017	/Perso/Finances/Impot/2017/AvisDeCotisations.pdf
+Finances-Impot-2017	Releve 1 - T4	Releve 1 et T4 pour 2017	/Perso/Finances/Impot/2017/R1T4-2017.pdf
+Finances-Impot-2017	Declaration de Revenu 2017	La declaration a ete faite par moi-meeme avec le logiciel impet rapide de Intuit	/Perso/Finances/Impot/2017/TaxReports2017.pdf
+Finances-Impot-2018	T4RSP 2018	"etat de revenus provenant d'un REER, retrait de REER au montant de $15,000 en juin 2018. Un releve 2 ( Quebec ) a aussi ete emis car Giverny n'etait pas au courant de ma nouvelle adresse en Thailande. Les montants payes ee Revenu Canada et Revenu quebec n'ont par pu eetre recuperes."	/Perso/Finances/Impot/2018/20181231_T4RSP-R2_492KQ1S.pdf
+Finances-Impot-2018	Demande de redressement T1	Le montant de la demande a ete rembourse au Federal mais pas au Provincial	"/Perso/Finances/Impot/2018/ROY,%20PIERRE_AMEND%C3%89E_T1ADJ-TP1.R.pdf"
+Finances-Impot-2018	" Summary - J'ai paye 25% d'Impot, le taux d'imposition est de 15%, je n'ai recu aucun remboursement ! de plus, ma deduction REER a ete perdu!"	Directory	/Perso/Finances/Impot/2018
+Finances-Impot-2018	Declaration d'impet 2018	Le remboursement demande ee Revenu Canada n'a jamais ete rembourse !!	"/Perso/Finances/Impot/2018/ROY,%20PIERRE.118.pdf"
+Finances-Impot-2018	Honoraire firme comptable	Honoraire de la firme comptable Moquin Amyot pour la declaration de revenu 2018.	/Perso/Finances/Impot/2018/Honoraires%20M.%20Pierre%20Roy_1900919.pdf
+Finances-Impot-2019	Revenu Canada - Avis de Cotisation	Avis de cotisation emis le 4 novembre 2019	/Perso/Finances/Impot/2019/Avis_de_cotisation_2019_10_28_06_51_08_983537.pdf
+Finances-Impot-2019	Revenu Canada - Avis de Cotisation	Avis de cotisation emis le 16 mars 2020	/Perso/Finances/Impot/2019/Avis_de_nouvelle_cotisation_2020_03_10_01_40_05_840598.pdf
+Finances-Impot-2019	Declaration Impot 2019	Declaration d'impet 2019 effectue par moi avec Impet rapide	/Perso/Finances/Impot/2019/Pierre-Roy-archives-cra-19.pdf
+Finances-Impot-2019	Declaration Impot 2019	Declaration d'impet 2019 effectue par la firme comptable Moquin-Amyot	/Perso/Finances/Impot/2019/DeclarationRevenu2019-Comptable.pdf

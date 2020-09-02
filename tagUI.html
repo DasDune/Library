@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .div {
+        position: relative;
+        color: coral;
+      }
+
+      .div:hover::before {
+        position: absolute;
+        /* visibility: hidden; */
+        top: -1.25rem;
+        content: attr(data-tooltip1);
+        color: cornflowerblue;
+      }
+
+      .div:hover::after {
+        position: absolute;
+        /* visibility: hidden; */
+        top: 1rem;
+        left: 0rem;
+        content: attr(data-tooltip2);
+        color: peachpuff;
+      }
+    </style>
+
+    <br />
+    <div id="test" data-tooltip1="🏷️🔒" data-tooltip2="tip2" class="div">
+      Hello
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <ul id="list">
+      <li>item1</li>
+      <li>item2</li>
+    </ul>
+
+    <script>
+      test = document.getElementById('test');
+      list = document.getElementById('list');
+      test.setAttribute('data-tooltip2', list.innerText);
+    </script>
+  </body>
+</html>

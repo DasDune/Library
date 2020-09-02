@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./js/FileSaver.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      col = [];
+      cols = '';
+      doc = [];
+      csv = [];
+      json = [12, 13];
+      collections = [];
+
+      function objToCSV(txt) {
+        const { topic, desc, link, file } = txt;
+        csv = [...csv, `${topic} , ${desc} ,${link} ,${file}\r\n ,`];
+        // console.log(trStr);
+      }
+
+      //Get all the collections
+      getCols = () => {
+        fetch('https://us-central1-documents-f34f3.cloudfunctions.net/getCols')
+          .then(function (res) {
+            return res.json();
+          })
+          .then((data) => {
+            data.map((col) => {
+              cols = [...cols, col + '\r\n'];
+              // objToCSV(col);
+              console.log(col);
+            });
+            // let blob = new Blob([cols], { type: 'text/plain;charset=utf-8' });
+            // saveAs(blob, 'cols.csv');
+            // console.log(trStr);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      };
+
+      //Get all the documents for a given collection
+      getDocs = (col) => {
+        // const { topic, desc, link, file } = doc;
+        fetch(
+          'https://us-central1-documents-f34f3.cloudfunctions.net/getDocs?col=' +
+            col +
+            ''
+        )
+          .then(function (res) {
+            return res.json();
+          })
+          .then((data) => {
+            data.map((doc) => {
+              // docs = [...docs, JSON.stringify(doc) + '\r\n'];
+              json = [...json, `${col} : ${JSON.stringify(doc)}`];
+              console.log(`${col} : ${JSON.stringify(doc)}`);
+            });
+            // let blob = new Blob([json], { type: 'text/plain;charset=utf-8' });
+            // saveAs(blob, 'docs.json');
+            // console.log(trStr);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      };
+
+      writeFile = (json) => {
+        let blob = new Blob([json], { type: 'text/plain;charset=utf-8' });
+        saveAs(blob, 'docs.json');
+      };
+
+      popDocs = (col) => {
+        col.map((doc) => {
+          // docs = [...docs, JSON.stringify(doc) + '\r\n'];
+          getDocs(doc);
+        });
+        setTimeout(writeFile(json), 15000);
+      };
+
+      //Import the database
+      backupDB = () => {
+        fetch('https://us-central1-documents-f34f3.cloudfunctions.net/getCols')
+          .then(function (res) {
+            return res.json();
+          })
+          .then((data) => {
+            console.log(data);
+            popDocs(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      };
+
+      backupDB();
+
+      // setTimeout(writeFile(json), 1000);
+    </script>
+  </body>
+</html>

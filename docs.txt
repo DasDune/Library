@@ -1,0 +1,507 @@
+Col	Title	Desc	Link
+Doc-AudioVideo	Audio Video - Cameras - Microphones etc...	Directory	/Doc/AudioVideo
+Doc-AudioVideo	Cameras - CCTV	Directory	/Doc/AudioVideo/Cameras
+AudioVideo-Cameras-Cameras	Hamrol Camera for home	Camera Hamrol model C-P05-17 instruction sheet: Product details of Hamrol 1080P 17 LEDs PTZ Wifi Camera 4X Digital Zoom CCTV Security Camera Siren Light 2MP Auto Tracking	/Doc/AudioVideo/Cameras/HamrolCamInstructions.pdf
+Doc-Engineering	Engineering	Directory	/Doc/Engineering/
+Doc-Engineering-Access-Control	" Note : See the directory for PowerPoint/Visio Presentation source files, business case, Simplex Grinnell Presentation, etc..."	Directory	/Doc/Engineering/Access-Control
+Doc-Engineering-Access-Control	Access Control System	Directory	/Doc/Engineering/Access-Control
+Doc-Engineering-Access-Control	Bechtel - Typical Sketches	Bechtel - Typical Sketches for Access Control system and Fire Alarm System	/Doc/Engineering/Access-Control/25363-00KT-J1K-0000-0002.pdf
+Doc-Engineering-Access-Control	Camera Media Converter	Typical drawing for a camera media converter panel ( Project RTA kitimat )	/Doc/Engineering/Access-Control/25363-22KT-JC-2256-0001-001.pdf
+Doc-Engineering-Access-Control	Bechtel - Standard Drawings	Bechtel - Standard Drawings for Access Control for the Pre-Fabricated Electrical Rooms wiring and interconnection diagrams	/Doc/Engineering/Access-Control/25363-22KT-JC-2256-0003.pdf
+Doc-Engineering-Access-Control	Bechtel - General Guide Specification	Bechtel - General Guide Specification for Closed Circuit Television (CCTV) System	/Doc/Engineering/Access-Control/3GS_EEC0_A0001.pdf
+Doc-Engineering-Access-Control	SNC Lavalin - Qatalum Project	Bid Analysis and Recommandation Overall Plant Site Access Control System	/Doc/Engineering/Access-Control/5332165-T035-0001-0001.pdf
+Doc-Engineering-Access-Control	Access Control typical installation	Access Control typical installation details	/Doc/Engineering/Access-Control/ACCESS%20CONTROL%20DETAIL%20DWGS.pdf
+Doc-Engineering-Access-Control	Access Control Philosophy	Access Control Philosophy	/Doc/Engineering/Access-Control/AccessControlDoorInOutPhilosophy.pdf
+Doc-Engineering-Access-Control	Access control Overview block diagram	Qatalum access control system overview block diagram	/Doc/Engineering/Access-Control/ACS.pdf
+Doc-Engineering-Access-Control	Typical access control panel room installation	Typical installation drawing (isometric view) for a access control panel	/Doc/Engineering/Access-Control/ACS_ISO.pdf
+Doc-Engineering-Access-Control	Access control - Security Levels	Typical layout of security levels vs the rooms type	/Doc/Engineering/Access-Control/ACS_SecurityLevels.pdf
+Doc-Engineering-Access-Control	Access control typical installation layout drawings	CHUM Project - Hospital ACS typical installation layouts	/Doc/Engineering/Access-Control/ACSChum.pdf
+Doc-Engineering-Access-Control	Access control typical installation drawings	Kitimat Project Bechtel -  Access control system typical installation drawings	/Doc/Engineering/Access-Control/BechtelTypicals.pdf
+Doc-Engineering-Access-Control	CCure-9000 Presentation	Simplex Grinnell presentation of CCure-9000 an access control system software	/Doc/Engineering/Access-Control/CC9000%20v2.0%20Enterprise%20End%20User%20Presentation.pdf
+Doc-Engineering-Access-Control	Access Control - Power Budget Calculator	Access Control - Power Budget Calculator	/Doc/Engineering/Access-Control/iSTAR%20Edge%20Power%20Budget%20Calculator%20ERoom.pdf
+Doc-Engineering-Access-Control	iSTAR Edge	iSTAR Edge Installation and Configuration Document	/Doc/Engineering/Access-Control/iSTAR_Edge_InstallationConfiguration_UM236_E0.pdf
+Doc-Engineering-Access-Control	iSTAR Pro	iSTAR Pro Installation and Configuration Document	/Doc/Engineering/Access-Control/istar_pro_Install_Guide.pdf
+Doc-Engineering-Access-Control	CCTV fiber optic block diagram	Kitimat Project Bechtel - Fiber optic connections block diagram	/Doc/Engineering/Access-Control/Overall%20Block%20Diagram%20of%20CCTV%20-Fiber%20Connections.pdf
+Doc-Engineering-Access-Control	SNC Lavalin - Qatalum Project	Temporary Construction Site Access Control System - Scope of Work	/Doc/Engineering/Access-Control/QA-00-SNL-I10-00001_03H.pdf
+Doc-Engineering-Access-Control	SNC Lavalin - Qatalum Project	Overall Site Access Control System - Scope of Work	/Doc/Engineering/Access-Control/QA-00-SNL-I10-00002-07G_Overall%20%20plant%20sites%20access%20control.pdf
+Doc-Engineering-Access-Control	Access control system Presentation	Simplex Grinnell presentation of the RTA Kitimat access control system upgrade	/Doc/Engineering/Access-Control/Rio%20Tinto%20Alcan%20Bechtel%20Presentation%20(Nov%202011).pdf
+Doc-Engineering-Access-Control	Typical access control panel electrical room installation	Typical access control panel room installation from Sonic contractor (well done! ) for the control and electrical rooms.	/Doc/Engineering/Access-Control/SonicTypicals.pdf
+Doc-Engineering-Access-Control	SNC Lavalin - Qatalum Project	Access Control System - Technical Bid Evaluation and Recommendation	/Doc/Engineering/Access-Control/Technical%20Bid%20Analysis%20and%20Recommendation%20T-035final.pdf
+Doc-Engineering-Access-Control	HID - ThinLine II Card reader	HID - ThinLine II Card reader technical note	/Doc/Engineering/Access-Control/thinline2_ins.pdf
+Doc-Engineering-Access-Control	iSTAR eX	iSTAR eX Installation and Configuration Document	/Doc/Engineering/Access-Control/UM_iSTAR_ex8_F0_0808_EN_LT.pdf
+Doc-Engineering-Access-Control	Software House - RM-4 Installation guide	Software House - RM-4 Installation guide top interface card reader	/Doc/Engineering/Access-Control/UM_rm4_standalone_quick_start_D0_0808_EN_LT.pdf
+Doc-Engineering-Access-Control	Video Surveillance Business Case	Kitimat Project Bechtel - Analysis of the existing CCTV system at RTA Kitimat	/Doc/Engineering/Access-Control/Video%20Surveillance%20Business%20Case.pdf
+Doc-Engineering-Admin	Administration - Contracts - Rates - Etc	Directory	/Doc/Engineering/Admin
+Doc-Engineering-Admin	Service Offer - BBA	Typical cost and engineering rates from BBA for the Tata Steel project.	/Doc/Engineering/Admin/BBAFees.pdf
+Doc-Engineering-Admin	Offre de service - ISAC	Offre de service typique d'un system integrateur en 2001	/Doc/Engineering/Admin/IsaacProjectscopeBlending.pdf
+Doc-Engineering-Automation	Automation - IC: Instrumentation and Control - IOT: Internet of Things	Directory	/Doc/Engineering/Automation
+Engineering-Automation-Block-Diagram	 Note : See in the directory for some source files in Visio regarding the IT building relocation with Bechtel	Directory	/Doc/Engineering/Automation/Block-Diagram
+Engineering-Automation-Block%20Diagrams	 Block Diagrams	Directory	/Doc/Engineering/Automation/Block-Diagram
+Engineering-Automation-Block-Diagram	IT Building relocation	"RTA Kitimat Project - IT Building relocation for the network, phone and access control systems"	/Doc/Engineering/Automation/Block-Diagram/B295ServicesRelocationBlockDiagramExisting.pdf
+Engineering-Automation-Block-Diagram	RTA Kitimat Projet	"Block diagrams for automation and fiber optic network including IT building, fire-alarm detection and automation network topology for the IT building"	/Doc/Engineering/Automation/Block-Diagram/Bechtel-J1.pdf
+Doc-Engineering-Automation	Block-Diagrams drawings	Directory	/Doc/Engineering/Automation/Block-Diagrams
+Engineering-Automation-Block-Diagrams	Bechtel J1 Drawings	All I&C Bechtel block diagrams drawings	/Doc/Engineering/Automation/Block-Diagrams/Bechtel-J1.pdf
+Engineering-Automation-Block-Diagrams	TATA - Project DSO	EDIO - ERIO block diagrams for the Tata Steel DSO Project	/Doc/Engineering/Automation/Block-Diagrams/EDIO-ERIO-Tata.pdf
+Engineering-Automation-Block-Diagrams	SNC-Lavalin - Qatalum Project	Control-Room and Server Room KVM block diagrams	/Doc/Engineering/Automation/Block-Diagrams/KVMBlockDiagrams.pdf
+Engineering-Automation-Block-Diagrams	Vale Mineral Malaysia Overview	Overview drawings for the Vale Mineral Malaysia	/Doc/Engineering/Automation/Block-Diagrams/OverviewValeMineralMalaysia.pdf
+Doc-Engineering-Automation	"CAD automation source files for Merck-SNC-Tafisa-Tata-Vale. Drawings are loop diagrams, basic frames, connection diagrams"	Directory	/Doc/Engineering/Automation/CAD
+Doc-Engineering-Automation	"Calculations for power supplies, heat dissipation, etc..."	Directory	/Doc/Engineering/Automation/Calculations
+Engineering-Automation-Calculations	ADImmune Project Taiwan	"Dickinson calculations for power supplies, heat dissipation, etc.."	/Doc/Engineering/Automation/Calculations/ADimuneDickinsonTaiwanCalculations.pdf
+Doc-Engineering-Automation	Calibration 	Directory	/Doc/Engineering/Automation/Calibration
+Engineering-Automation-Calibration	Calibration Sheet Example	Typical Calibration Sheet Example	/Doc/Engineering/Automation/Calibration/Example_ClaudeTherrien_3300001-cj0006-test2A.pdf
+Engineering-Automation-Calibration	ICS Calibration Specifications	ICS Specification User Instruction Manual for the Instrument Calibration Sheets	/Doc/Engineering/Automation/Calibration/ICS.pdf
+Engineering-Automation-Calibration	 Calibration source files in Excel for the TATA project	Directory	/Doc/Engineering/Automation/Calibration/Source
+Doc-Engineering-Automation	Codification and Tagging Convention	Directory	/Doc/Engineering/Automation/Codification-Tagging
+Engineering-Automation-Codification-Tagging	 Note : See the directory for some information about PLC network naming convention on Visio for the Bechtel Kitimat Project	Directory	/Doc/Engineering/Automation/Codification-Tagging
+Engineering-Automation-Codification-Tagging	Ville de Montreal - Tagging	Structure de Codification des Equipements	/Doc/Engineering/Automation/Codification-Tagging/[000]%20Structure%20de%20codifications%20des%20%C3%A9quipements%20-%201000-40EL-0001%20r%C3%A9v.01.pdf
+Engineering-Automation-Codification-Tagging	SNC Lavalin Pharma 	Project Documentation Naming & Numbering Procedure	/Doc/Engineering/Automation/Codification-Tagging/552648-SD-CXG-00002_Rev.0(Signed).pdf
+Engineering-Automation-Codification-Tagging	SNC Project - Naming Convention	Pharma - Equipment Tagging Convention	/Doc/Engineering/Automation/Codification-Tagging/552648-SD-CXG-00012_Rev.0.pdf
+Engineering-Automation-Codification-Tagging	SNC Lavalin Pharma	Equipment Tagging Convention	/Doc/Engineering/Automation/Codification-Tagging/552648-SD-CXG-00012_Rev.0.pdf
+Engineering-Automation-Codification-Tagging	TATA Project - Naming Convention	Iron Ore Project - Equipment & Motors Numbering Procedure	/Doc/Engineering/Automation/Codification-Tagging/DSOT-WP-9500-QA-0003_2.pdf
+Engineering-Automation-Codification-Tagging	TATA Steel Project	Aecom Equipment & Motors Numbering Precedure	/Doc/Engineering/Automation/Codification-Tagging/DSOT-WP-9500-QA-0003_2.pdf
+Engineering-Automation-Codification-Tagging	RTA Kitimat Project - Naming Convention	Naming convention diagram for an automation system with PLC-HMI	/Doc/Engineering/Automation/Codification-Tagging/KMP%20typical%20automation%20coding%20(v001).pdf
+Engineering-Automation-Codification-Tagging	RTA Kitimat	Typical automation coding for cables and systems	/Doc/Engineering/Automation/Codification-Tagging/KMP%20typical%20automation%20coding%20(v001).pdf
+Engineering-Automation-Codification-Tagging	SNC International Qatalum Project	Hydro Project Coding Manual	/Doc/Engineering/Automation/Codification-Tagging/QA-00-NHT-X02-00005-05M%20Project%20Coding%20Manual.pdf
+Engineering-Automation-Codification-Tagging	Cima Terminal Project Sept Iles	Equipment Numbering	/Doc/Engineering/Automation/Codification-Tagging/S100-10_26p10040708480.pdf
+Engineering-Automation-Codification-Tagging	 Sources Files for codification like Mcinnis (Polysius) Christian Kloblaush (Qatalum)	Directory	/Doc/Engineering/Automation/Codification-Tagging/Source
+Doc-Engineering-Automation	Connection Diagrams and Loop Diagrams	Directory	/Doc/Engineering/Automation/Connection-Diagrams
+Engineering-Automation-Connection-Diagrams	Axium - IB1 Line	Axium IB1 conveyor line connection drawings for Coke plant San Diago California	/Doc/Engineering/Automation/Connection-Diagrams/Axium1.pdf
+Engineering-Automation-Connection-Diagrams	Axor - Metso 	Metso connection drawings for the truck dumper for the Sept Iles terminal project	/Doc/Engineering/Automation/Connection-Diagrams/Axor.pdf
+Engineering-Automation-Connection-Diagrams	Progesys - Mcinnis Project	"Connection drawings for equipment 5F1, 5K1 for the McInnins Cement Project"	/Doc/Engineering/Automation/Connection-Diagrams/ConnectionDiagramsMcinnis.pdf
+Engineering-Automation-Connection-Diagrams	Bechtel - RTA Kitimat	"Connection drawings for the PLC racks, cabinets and panels"	/Doc/Engineering/Automation/Connection-Diagrams/ConnectionDiagramsRTAKitimat.pdf
+Engineering-Automation-Connection-Diagrams	SNC Lavalin - ADImmune Project	Dickinson connection drawings for the ADImmune Project	/Doc/Engineering/Automation/Connection-Diagrams/Drawings%20V0.03.pdf
+Engineering-Automation-Connection-Diagrams	TATA Steel - DSO Project	AECOM connection drawings for the DSO Project Tata Steel (this file has 1Gig! be patient on the loading)	/Doc/Engineering/Automation/Connection-Diagrams/DrawingsICTata.pdf
+Engineering-Automation-Connection-Diagrams	Vale Mineral - Vale Malaysia Manufacturing Project	Essar Engineering connection drawings for VMMP	/Doc/Engineering/Automation/Connection-Diagrams/Essar-J1.pdf
+Engineering-Automation-Connection-Diagrams	SNC Lavalin - ADImmune Project	Dickinson loop diagrams for the ADImmune Project	/Doc/Engineering/Automation/Connection-Diagrams/LoopDiagramsABMTaiwan.pdf
+Engineering-Automation-Connection-Diagrams	SNC Lavalin - Qatalum Project	SNC loop diagrams for Qatalum Project	/Doc/Engineering/Automation/Connection-Diagrams/LoopDiagramsQatalum.pdf
+Engineering-Automation-Connection-Diagrams	Bechtel - RTA Kitimat Project	Bechtel loop diagrams for RTA Kitimat Project	/Doc/Engineering/Automation/Connection-Diagrams/LoopDiagramsRTAKitimat.pdf
+Engineering-Automation-Connection-Diagrams	SNC Lavalin - Qatalum Project	SNC connection diagrams for Qatalum Project	/Doc/Engineering/Automation/Connection-Diagrams/PLCDrawingsQatalum.pdf
+Doc-Engineering-Automation	Data sheets for instruments and other automation devices	Directory	/Doc/Engineering/Automation/Data-Sheets
+Engineering-Automation-Data-Sheets	Bechtel - Data Sheets	Bechtel  Typical Data Sheets for instruments and other automation devices for general mine and metals Projects	/Doc/Engineering/Automation/Data-Sheets/DataSheetsBechtel.pdf
+Engineering-Automation-Data-Sheets	CIMA - Sept Iles Terminal Project	CIMA Data Sheets for the automation devices	/Doc/Engineering/Automation/Data-Sheets/DataSheetsCima.pdf
+Engineering-Automation-Data-Sheets	TATA STeel - DSO Project	Aecom Typical Data Sheets for instruments and other automation devices for the TATA STeel - DSO Project	/Doc/Engineering/Automation/Data-Sheets/DataSheetsICTata.pdf
+Engineering-Automation-Data-Sheets	Bechtel - RTA Kitimat Project	Bechtel  Typical Data Sheets for instruments and other automation devices for the RTA Kitimat Project	/Doc/Engineering/Automation/Data-Sheets/DataSheetsKitimat.pdf
+Engineering-Automation-Data-Sheets	Progesys - Mazzaza Project	Progesys Typical Data Sheets for instruments and other automation devices for the Mazzaza Project	/Doc/Engineering/Automation/Data-Sheets/DataSheetsMazzaza.pdf
+Engineering-Automation-Data-Sheets	SNC Lavalin - Qatalum Project	SNC Lavalin Typical Data Sheets for instruments and other automation devices for the Mazzaza Project	/Doc/Engineering/Automation/Data-Sheets/DataSheetsQatalum.pdf
+Engineering-Automation-Data-Sheets	Bechtel - RTA Kitimat Project	Bechtel  Typical Data Sheets for the Utility PLC for the RTA Kitimat Project	/Doc/Engineering/Automation/Data-Sheets/DataSheetsUtilityPLCKitimat.pdf
+Engineering-Automation-Data-Sheets	 Source files in Excel for typical Bechtel datasheets for general mine and metals Projects	Directory	/Doc/Engineering/Automation/Data-Sheets/Source
+Doc-Engineering-Automation	Design Guides Criteria	Directory	/Doc/Engineering/Automation/Design-Guides-Criteria
+Engineering-Automation-Design-Guides-Criteria	Bechtel - Project RTA Kitimat	Bechtel Design Criteria for Instrumentation and Control Systems	/Doc/Engineering/Automation/Design-Guides-Criteria/25363-0000-3DR-J04-0001.pdf
+Engineering-Automation-Design-Guides-Criteria	Progesys - Vale Malaysia Manufacturing Project	Essar Engineering Design Criteria for Instrumentation and Control Systems	/Doc/Engineering/Automation/Design-Guides-Criteria/DesignCriteriaVale.pdf
+Engineering-Automation-Design-Guides-Criteria	Bechtel - Project RTA Kitimat	Bechtel Design Guide for Instrumentation and Cabling Diagrams and/or Tables	/Doc/Engineering/Automation/Design-Guides-Criteria/DesignGuidesBechtel.pdf
+Engineering-Automation-Design-Guides-Criteria	Tata Steel - DSO Project	AECOM Automation Design Criteria	/Doc/Engineering/Automation/Design-Guides-Criteria/DSOT-DC-0000-IC-0001_1.pdf
+Engineering-Automation-Design-Guides-Criteria	Tata Steel - DSO Project	AECOM Design Criteria for Instrumentation and Control Systems	/Doc/Engineering/Automation/Design-Guides-Criteria/DSOT-DC-2000-IC-8003_0.pdf
+Engineering-Automation-Design-Guides-Criteria	General - SCADA	Guide to Supervisory Control and Data Acquisition (SCADA) and Industrial Control Systems Security 	/Doc/Engineering/Automation/Design-Guides-Criteria/Guide_SCADA_and_Industrial_Control_Systems_Security.pdf
+Engineering-Automation-Design-Guides-Criteria	 Bechtel source files in World Documents	Directory	/Doc/Engineering/Automation/Design-Guides-Criteria/Source
+Doc-Engineering-Automation	FAT - Factory Acceptance Test	Directory	/Doc/Engineering/Automation/FAT
+Engineering-Automation-FAT	Bechtel - RTA Kitimat Project	Cathode Sealing Equipment - MCS FAT Procedure	/Doc/Engineering/Automation/FAT/25363-4480-3PQ-MXA0-0001.pdf
+Engineering-Automation-FAT	SNC Lavalin - Qatalum Project	FAT Compressed Air Distribution System	/Doc/Engineering/Automation/FAT/FAT.pdf
+Engineering-Automation-FAT	ADImmune Project	Dickinson - Factory Acceptance Test for MCC Panel Hardware	/Doc/Engineering/Automation/FAT/P1293-HFAT-MCC.pdf
+Engineering-Automation-FAT	ADImmune Project	Dickinson - Factory Acceptance Test for PLC	/Doc/Engineering/Automation/FAT/P1293-HFAT-PLC.pdf
+Engineering-Automation-FAT	SNC Lavalin - ADImmune Project	Dickinson - Test Procedure for the automation equipment	/Doc/Engineering/Automation/FAT/P1293-ITP00.pdf
+Doc-Engineering-Automation	Functional & Process Description	Directory	/Doc/Engineering/Automation/Functional-Process-Description
+Engineering-Automation-Functional-Process-Description	SNC Lavalin - Berna Korea Project	Formulation CIP System - Process Description	/Doc/Engineering/Automation/Functional-Process-Description/552648-ES-PQD-B3503_Process%20Description%20Rev%200.pdf
+Engineering-Automation-Functional-Process-Description	AIA - TATA Steel DSO Project	AIA Control Philosophy for the TATA Steel DSO Project	/Doc/Engineering/Automation/Functional-Process-Description/AIA%20-%20TSMC%20CONTROL%20rev0p1.pdf
+Engineering-Automation-Functional-Process-Description	SNC Lavalin - Qatalum Project	Functional description for the compressed air distribution system	/Doc/Engineering/Automation/Functional-Process-Description/FunctionalDescriptionQatalum.pdf
+Engineering-Automation-Functional-Process-Description	Symbotic - Coke Project	Functional Analysis for the Coke project	/Doc/Engineering/Automation/Functional-Process-Description/FunctionalDescriptionSymbotic.pdf
+Engineering-Automation-Functional-Process-Description	TATA Steel DSO Project	Process description for the TATA Steel DSO Project	/Doc/Engineering/Automation/Functional-Process-Description/FunctionalDescriptionTata.pdf
+Engineering-Automation-Functional-Process-Description	Vale Malaysia Mineral Project 	Functional description for the Vale Malaysia Mineral Project 	/Doc/Engineering/Automation/Functional-Process-Description/FunctionalDescriptionVale.pdf
+Engineering-Automation-Functional-Process-Description	TATA Steel DSO Project	Plant Operation for the TATA Steel DSO Project	/Doc/Engineering/Automation/Functional-Process-Description/PlantOperationTata.pdf
+Engineering-Automation-Functional-Process-Description	ADImmune Project Taiwan	Dickinson : Process description for the ADImmune Project Taiwan	/Doc/Engineering/Automation/Functional-Process-Description/ProcessDescriptionADImmune.pdf
+Engineering-Automation-Functional-Process-Description	SNC Lavalin - Berna Korea Project	SNC Lavalin : Process description for the Berna Korea Project	/Doc/Engineering/Automation/Functional-Process-Description/ProcessDescriptionBernaKorea.pdf
+Engineering-Automation-Functional-Process-Description	TATA Steel DSO Project	Process Description for the TATA Steel DSO Project	/Doc/Engineering/Automation/Functional-Process-Description/ProcessDescriptionBernaKorea.pdf
+Engineering-Automation-Functional-Process-Description	 Source files in World format and Power Point format	Directory	/Doc/Engineering/Automation/Functional-Process-Description/Source
+Doc-Engineering-Automation	HMI - Human Machine Interface	Directory	/Doc/Engineering/Automation/HMI
+Engineering-Automation-HMI	AIA - TATA Steel DSO Project	AIA HMI Standards and Specifications (source file available in the directory)	/Doc/Engineering/Automation/HMI/50640%20-%20Tata%20Steel%20DSOT%20-%20HMI%20Standards%20and%20Specifications%20revGp1.pdf
+Engineering-Automation-HMI	AIA - TATA Steel DSO Project	AIA HMI System Philosophy (Power Point also available in the directory)	/Doc/Engineering/Automation/HMI/AIA%20-%20TSMC%20HMI%20rev0p1.pdf
+Doc-Engineering-Automation	Installation Details	Directory	/Doc/Engineering/Automation/Installation-Details
+Engineering-Automation-Installation-Details	Mazzaza - Installation Details	Mazzaza - Installation Details with PRoy Comments	/Doc/Engineering/Automation/Installation-Details/1-M041-DS00-4-0002-SHT-9%20(PROYComments).pdf
+Engineering-Automation-Installation-Details	Voith Hydro - Churchills Falls Project	Control System Upgrade Installation Procedure	/Doc/Engineering/Automation/Installation-Details/Churchill%20Falls%20Control%20Panel%20Installation%20Work%20procedure.pdf
+Engineering-Automation-Installation-Details	SNC Lavalin - Berna Korea - Installation Details	SNC Lavalin - Berna Korea - Installation Details	/Doc/Engineering/Automation/Installation-Details/InstallationDetailsBernaKorea.pdf
+Engineering-Automation-Installation-Details	Bechtel - Instruments Installation Details	Bechtel - Instruments Installation Details	/Doc/Engineering/Automation/Installation-Details/InstallDetailsBechtel.pdf
+Engineering-Automation-Installation-Details	MURR I/O Connectors	MURR I/O Connectors installation details	/Doc/Engineering/Automation/Installation-Details/IOMURRConnectors.pdf
+Doc-Engineering-Automation	Installation Qualification (IQ)	Directory	/Doc/Engineering/Automation/IQ
+Engineering-Automation-IQ	ADImmune Taiwan IQ	Honeywell ADImmune Taiwan Installation Qualification for the BAS GMP System	/Doc/Engineering/Automation/IQ/P3%20LAB%20IQ%20Rev%20B.pdf
+Doc-Engineering-Automation	"Lists - Panels , Motors, Cables, etc.."	Directory	/Doc/Engineering/Automation/Lists
+Engineering-Automation-Lists	McInnis Cement Project	"Thyssenkrupp lists for the motors, panels, switches, instruments and consumer"	/Doc/Engineering/Automation/Lists/ListThyssenkrupp.pdf
+Engineering-Automation-Lists	 Source files in Excel format	Directory	/Doc/Engineering/Automation/Lists/Source
+Doc-Engineering-Automation	Location Drawings	Directory	/Doc/Engineering/Automation/Location-Drawings
+Engineering-Automation-Location-Drawings	MCInnis Cement Project - Location Drawing	Location drawing are 5F1 for the MCInnis Cement Project	/Doc/Engineering/Automation/Location-Drawings/5F1Location.pdf
+Doc-Engineering-Automation	Motor Control Center (MCC)	Directory	/Doc/Engineering/Automation/MCC
+Engineering-Automation-MCC	Bechtel - RTA Kitimat Project	MCC schematic and connections diagrams	/Doc/Engineering/Automation/MCC/25363-00KT-E6-0000-0001.pdf
+Engineering-Automation-MCC	MCInnis Cement Project	MCC Config list with DNET E3 starter. (Excel file available in the directory)	/Doc/Engineering/Automation/MCC/MCC_Config%20Rev%201.17.pdf
+Engineering-Automation-MCC	MCInnis Cement Project	Rockwell Automation Centerline 2100 MCC drawings for the MCInnis Cement Project	/Doc/Engineering/Automation/MCC/MCC51A.pdf
+Engineering-Automation-MCC	MCInnis Cement Project	BBA MCC drawings for the MCInnis Cement Project	/Doc/Engineering/Automation/MCC/MCC61A.pdf
+Doc-Engineering-Automation	Process Flow Diagrams (PFD)	Directory	/Doc/Engineering/Automation/PFD
+Engineering-Automation-PFD	MCInnis Project	Process Flow Diagram (PFD) (artistic way)	/Doc/Engineering/Automation/PFD/ISOP&ID.pdf
+Engineering-Automation-PFD	MCInnis Project	Overview Diagram	/Doc/Engineering/Automation/PFD/Overview.pdf
+Engineering-Automation-PFD	SNC Lavalin - Project ADImmune	Process Flow Diagram (PFD)	/Doc/Engineering/Automation/PFD/PFDADImmune.pdf
+Engineering-Automation-PFD	SNC Lavalin - Project Berna Korea	Process Flow Diagram (PFD)	/Doc/Engineering/Automation/PFD/PFDBernaKorea.pdf
+Engineering-Automation-PFD	TATA Steel - DSO Project	Process Flow Diagram (PFD)	/Doc/Engineering/Automation/PFD/PO-100%20Plant%20Flow%20Overview.pdf
+Doc-Engineering-Automation	Process Instrumentation Diagrams (PID)	Directory	/Doc/Engineering/Automation/PID
+Engineering-Automation-PID	MCInnis Project	Section 5F1 PID 	/Doc/Engineering/Automation/PID/5F1P&ID.pdf
+Engineering-Automation-PID	Merck Frosst	PID Coating Area	/Doc/Engineering/Automation/PID/P&IDMerck.pdf
+Engineering-Automation-PID	ADImmune Project	ADImmune Vaccine Project PID	/Doc/Engineering/Automation/PID/P&IDTaiwan.pdf
+Engineering-Automation-PID	Berna Korea Project	Berna Korea flue vaccine project PID	/Doc/Engineering/Automation/PID/PIDBernaKorea.pdf
+Engineering-Automation-PID	Mazzaza Project	Copper Mine Project PID	/Doc/Engineering/Automation/PID/PIDMazzaza.pdf
+Doc-Engineering-Automation	Planning - Strategy	Directory	/Doc/Engineering/Automation/Planning-Strategy
+Engineering-Automation-Planning-Strategy	Christian Albert - Automation Procurement Strategy	Automation & LV Power Procurement Strategy for the RTA Kitimat Project (source file available)	/Doc/Engineering/Automation/Planning-Strategy/Automation%20&%20LV%20Procurement%20Strategy%20r1.pdf
+Engineering-Automation-Planning-Strategy	Christian Albert - Manufacturing Control Systems (MCS)	Manufacturing Control Systems (MCS) - Building Automation Systems - Project Execution Strategy for the RTA Kitimat Project (source file available)	/Doc/Engineering/Automation/Planning-Strategy/Automation%20Strategy%202011_C.Albert%20[Compatibility%20Mode].pdf
+Engineering-Automation-Planning-Strategy	RTA Kitimat Project - PLC & HMI Programming Strategy	PLC & HMI Programming Strategy for the RTA Kitimat Project (source file available)	/Doc/Engineering/Automation/Planning-Strategy/KMP_ProgrammingStrategy_20080925%20[Compatibility%20Mode].pdf
+Engineering-Automation-Planning-Strategy	Christian Albert - PLC/HMI Programming Execution Strategy	PLC/HMI Programming Execution Strategy for the RTA Kitimat Project	/Doc/Engineering/Automation/Planning-Strategy/PLC_HMI%20Programming%20Execution%20Strategy%208%20Nov%202011_C.Albert%20[Compatibility%20Mode].pdf
+Engineering-Automation-Planning-Strategy	Control System Integrators Association	Guide for Selecting & Working with a Control Systems Integrator	/Doc/Engineering/Automation/Planning-Strategy/Select%20an%20Integrator%20Guide.pdf
+Engineering-Automation-Planning-Strategy	PLC/HMI Programming Execution Strategy - RTA Kitimat Project	PLC/HMI Programming Execution Strategy flow chart (source file available)	/Doc/Engineering/Automation/Planning-Strategy/Visio-Programming%20execution%20strategy-%20Attachment%204%20rev%20g.vsd.pdf
+Doc-Engineering-Automation	Programmable Logic Controller (PLC)	Directory	/Doc/Engineering/Automation/PLC
+Engineering-Automation-PLC	Voith PLC Training	Voith PLC Training Document (source file available)	/Doc/Engineering/Automation/PLC/CFGC-ACS01-0000-01716091-OMI_Training_Document_PLC.pdf
+Engineering-Automation-PLC	MURR Blocks	MURR Blocks module configuration (source file available)	/Doc/Engineering/Automation/PLC/Murr%60s%20blocks%20configuration.pdf
+Engineering-Automation-PLC	Studio 5000 PLC 	Studio 5000 PLC Devices Configuration (source file available)	/Doc/Engineering/Automation/PLC/PLC%20program%20%20setup.pdf
+Engineering-Automation-PLC	Voith PLC Training	Voith PLC Components Training Document	/Doc/Engineering/Automation/PLC/PLCInfoScan.pdf
+Engineering-Automation-PLC	Point I/O Configuration	Point I/O Configuration SOP (source file available)	/Doc/Engineering/Automation/PLC/Point%20I_O%20Configuration.pdf
+Engineering-Automation-PLC	Voith Sequential Function Chart	Voith Sequential Function Chart (SFC) Definitions (source file available)	/Doc/Engineering/Automation/PLC/Sequential%20Function%20Chart%20Definitions%20[Compatibility%20Mode].pdf
+Engineering-Automation-PLC	AIA PLC Programming	AIA PLC Programming and Troubleshooting (source file available)	/Doc/Engineering/Automation/PLC/Training%20automation%202015%2005%2017.pdf
+Doc-Engineering-Automation	Procedures by Voith and Axium	Directory	/Doc/Engineering/Automation/Procedures
+Engineering-Automation-Procedures	Voith - Governor	Governor Control	/Doc/Engineering/Automation/Procedures/GovernorControlScan.pdf
+Engineering-Automation-Procedures	Axium - Light Curtain Sick	Axium - Light Curtain Sick calibration and configuration (source files available)	/Doc/Engineering/Automation/Procedures/LightCurtainSick.pdf
+Engineering-Automation-Procedures	Voith - Servo Positioner	Servo Positioner Control System	/Doc/Engineering/Automation/Procedures/ServoPositioner.pdf
+Engineering-Automation-Procedures	Voith - Speed Sensing	Practical Speed Sensing	/Doc/Engineering/Automation/Procedures/SpeedSensingScan.pdf
+Engineering-Automation-Procedures	Voith - Wicket Gate Control	Wicket Gate Control	/Doc/Engineering/Automation/Procedures/WicketGateControlScan.pdf
+Doc-Engineering-Automation	Request for Quotation	Directory	/Doc/Engineering/Automation/RFQ
+Engineering-Automation-RFQ	SNC Lavalin - Berna Korea Project	Berna Korea Project Typical Request for Quotation Document	/Doc/Engineering/Automation/RFQ/552648-PR-CXX-00032_Rev.A_RFQ_Formulation%20System.pdf
+Doc-Engineering-Automation	SCADA	Directory	/Doc/Engineering/Automation/SCADA
+Engineering-Automation-SCADA	McInnis Project - SCADA Screen Shots	McInnis Project - SCADA Screen Shots for area 5F1	/Doc/Engineering/Automation/SCADA/5F1Screens.pdf
+Engineering-Automation-SCADA	ADImmune SCADA	ADImmune Taiwan SCADA Screen Shots	/Doc/Engineering/Automation/SCADA/ADImmuneTaiwanSCADAScreenShots.pdf
+Engineering-Automation-SCADA	ADImmune BAS SCADA	ADImmune Taiwan Building Automation System (BAS) SCADA Screen shots	/Doc/Engineering/Automation/SCADA/BAS_Image_080410.pdf
+Engineering-Automation-SCADA	Stantec - AMT Project Montreal	Stantec - AMT Project Montreal Screen Shots with explanations	/Doc/Engineering/Automation/SCADA/SCADASreensATMTypical.pdf
+Engineering-Automation-SCADA	 Source files as JPG available here	Directory	/Doc/Engineering/Automation/SCADA/Source
+Engineering-Automation-SCADA	TATA Steel - DSO Project	TATA Steel - DSO Project SCADA Screen Shots	/Doc/Engineering/Automation/SCADA/TATAnSCADAScreenShots.pdf
+Doc-Engineering-Automation	Scope of work (SOW)	Directory	/Doc/Engineering/Automation/Scope-of-Work
+Engineering-Automation-Scope-of-Work	SNC Lavalin Pharma - Berna Korea Project	Process Control System - Scope of Work	/Doc/Engineering/Automation/Scope-of-Work/552648-FE-KQD-00008_Rev.A.pdf
+Engineering-Automation-Scope-of-Work	TATA Steel - DSO Project 	AECOM - Site Instrumentation and Control Installation Scope of Work	/Doc/Engineering/Automation/Scope-of-Work/DSOT-SO-0000-IC-0001_0.pdf
+Engineering-Automation-Scope-of-Work	TATA Steel - DSO Project 	AECOM - Site Instrumentation Piping and Tubing Installation Scope of Work	/Doc/Engineering/Automation/Scope-of-Work/DSOT-SO-0000-IC-0002_0.pdf
+Engineering-Automation-Scope-of-Work	TATA Steel - DSO Project 	AECOM - PLC Panels and Junctions Boxes Scope of Work	/Doc/Engineering/Automation/Scope-of-Work/DSOT-SO-0000-IC-0003_2.pdf
+Engineering-Automation-Scope-of-Work	TATA Steel - DSO Project 	AECOM - SCADA System Integrator Scope of Work	/Doc/Engineering/Automation/Scope-of-Work/DSOT-SO-0000-IC-0007_1.pdf
+Doc-Engineering-Automation	Specifications	Directory	/Doc/Engineering/Automation/Specifications
+Automation-Specifications-Bechtel	3GS-JDO2-10001 - GUIDE SPECIFICATION FOR PROGRAMMABLE LOGIC CONTROLLERS	Directory	/Doc/Engineering/Automation/Specifications/Bechtel
+Automation-Specifications-Bechtel	3GS-JV07-00001 - TECHNICAL SPECIFICATION FOR STEAM CONDITIONING VALVES AND DESUPERHEATERS	Directory	/Doc/Engineering/Automation/Specifications/Bechtel
+Automation-Specifications-Bechtel	 Bechtel - 3SS-JF07-G0001 - STANDARD SPECIFICATION FOR VENTURIS AND FLOW TUBES	Directory	/Doc/Engineering/Automation/Specifications/Bechtel
+Engineering-Automation-Specifications	 Bechtel Set of Specifications	Directory	/Doc/Engineering/Automation/Specifications/Bechtel
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	General Design Specification	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0001.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	"Instrumentation, Control & Communication Cables"	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0002.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Control Panels and Junction Boxes	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0003.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Instrumentation Installation	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0004.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	General Programming Specification	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0005.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	HMI General Programming Specification	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0006.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Recommended Manufacturers	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0007.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Functional Description Specification	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0008.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Automation Communication Networks	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0009.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Seller Template for Instrument Data Importation	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0010.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Control System Equipment Installation	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0011.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Protective Measures and Automation Safety	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0012.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	General Specification for Equipment and Cable Coding	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0013.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	PLC & HMI Functional and Technical Specification Index 	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0014.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	FactoryTalk Server/Client Configuration	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0015a40.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	DeviceNet Configuration with RSNetworkX	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0015a41.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	PLC Program Organization	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0018.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Inspection and Testing Specification	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0019.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	IO List	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0020.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specificsations-Training	Programming Standards - SFC Management - FVNR MCC - Interlocks & Condition Lists - Simulation - Modules and Inputs Validation - Alarming Add-Ons Instruction - Analog I/O - Numerical Tools - Phase Manager - Date/Time - Motor AddOns - Analog Input Add-On - PLC/HMI Programming Strategy	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0022.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Manufacturing Control System (MCS) Documentation Introduction	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0023.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Physical Identification - Nameplates	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0024.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Manufacturing Execution System (MES)	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0025.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Interlocks and Other List	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0030.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Motor Add-Ons	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0031.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Plant Wireless Network Design	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0032.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	HF-Monitoring in PotRooms (Cassette Type)	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0033.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	315 KV Power Station SCADA System	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0034.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Plant Power Distribution SCADA System	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0035.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Network Installation and Testing	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0036.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	Analog Input Add-On	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0040.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	PLC/HMI Programming Strategy	/Doc/Engineering/Automation/Specifications/Bechtel/25363-0000-3PS-J000-0090.pdf
+Automation-Specifications-Bechtel	Bechtel Automation Specifications	MAADEN Project : Network Installation and Testing	/Doc/Engineering/Automation/Specifications/Bechtel/25457-0000-3PS-J000-0017.pdf
+Engineering-Automation-Specifications	 SNC Lavalin Pharma - Berna Korea Project - Set of Specifications	Directory	/Doc/Engineering/Automation/Specifications/Berna-Korea
+Automation-Specifications-Berna-Korea	Berna-Korea - Approved Automation Suppliers List	Approved Automation Suppliers List	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-EG-KKS-00009_Rev.D.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Stopper Processing System	Stopper Processing System User Requirements Specifications (URS)	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-ES-PQD-B1201_Rev.1.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Filling CIP System	Filling CIP System User Requirements Specifications (URS)	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-ES-PQD-B1501%20Rev%200.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Formulation CIP System	Formulation CIP System User Requirements Specifications (URS)	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-ES-PQD-B3501%20Rev%200.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Vial Filling Line 	Vial Filling Line User Requirements Specifications (URS)	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-ES-PQD-B5001_Rev.2.2%202009-01-21.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Purified Water System	Purified Water System User Requirements Specifications (URS)	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-ES-PQD-F0101_Rev%201.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Water For Injection System	Water For Injection System User Requirements Specifications (URS)	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-ES-PQD-F0401_Rev.2(Signed).pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Process Control System Construction Specifications	Process Control System Construction Specifications	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-FE-KQD-00007_Rev.C.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Process Control Network URS	Process Control Network User Requirements Specifications (URS)	/Doc/Engineering/Automation/Specifications/Berna-Korea/552648-SD-KQD-00004_Rev.A.pdf
+Automation-Specifications-Berna-Korea	Berna-Korea - Plant URS	Influenza Manufacturing Facility User Requirements Specifications (URS)	"/Doc/Engineering/Automation/Specifications/Berna-Korea/general%2002,%20070612%20URS%20Adimmune%20(V4),RHacceptall.pdf"
+Engineering-Automation-Specifications	Voith Hydro - Churchill Falls Project	Cable Specification	/Doc/Engineering/Automation/Specifications/CableSpecs.pdf
+Engineering-Automation-Specifications	Voith Hydro - Churchill Falls Project	Control Cabinet Construction Specification	/Doc/Engineering/Automation/Specifications/CFGC-ACS01-3100-01162064-PRS_cabinet_construction_spec.pdf
+Engineering-Automation-Specifications	Tafisa Contract Ligne 2	Tafisa - Contrat reconstruction ligne 2 Electricite et instrumentation	/Doc/Engineering/Automation/Specifications/Contrat%20902-4001-Tafisa.pdf
+Engineering-Automation-Specifications	Merck Frosst DDS	Merck Frosst Detailed Design Specifications (DDS) for the High Shear Granulation Module	/Doc/Engineering/Automation/Specifications/DDSGranulation.pdf
+Engineering-Automation-Specifications	Merck Frosst DDS	Merck Frosst Detailed Design Specifications (DDS) for the Preparation and Transfer of Coating Solution	/Doc/Engineering/Automation/Specifications/DDSPrepCoating.pdf
+Engineering-Automation-Specifications	Merck Frosst FRS	Merck Frosst Functional Requirements Specifications (FRS) for the High Shear Granulation Module	/Doc/Engineering/Automation/Specifications/FRSGranulation.pdf
+Engineering-Automation-Specifications	Merck Frosst FRS	Merck Frosst Functional Requirements Specifications (FRS) for the Preparation and Transfer of Coating Solution	/Doc/Engineering/Automation/Specifications/FRSPrepCoating.pdf
+Engineering-Automation-Specifications	Vale Malaysia Mineral Project	Process Control System (PCS) Technical Specification	/Doc/Engineering/Automation/Specifications/PCS-Technical%20Specifications.pdf
+Engineering-Automation-Specifications	SNC Lavalin - Qatalum Project	Control System Configuration and Programming Standard	/Doc/Engineering/Automation/Specifications/QA-S1-SNL-I50-00010_04F%20Control%20System%20Configuration.pdf
+Engineering-Automation-Specifications	SNC Lavalin - Qatalum Project	SAS Programming Standard	/Doc/Engineering/Automation/Specifications/QA-S1-SNL-I50-00012_02F%20SAS%20Programming%20Standard.pdf
+Engineering-Automation-Specifications	SNC Lavalin - Qatalum Project	HMI Programming Standard	/Doc/Engineering/Automation/Specifications/QA-S1-SNL-I50-00013_02F%20HMI%20Programming%20Standard.pdf
+Engineering-Automation-Specifications	 Stantec Set of Specifications	Directory	/Doc/Engineering/Automation/Specifications/Stantec
+Automation-Specifications-Stantec	Stantec - Cochrane Project	Main Controller Narrative - Solar Project	/Doc/Engineering/Automation/Specifications/Stantec/[000]%20SH-GE-IC-R002-CD-3.pdf
+Automation-Specifications-Stantec	Stantec - AMT Project	SCADA Specifications	/Doc/Engineering/Automation/Specifications/Stantec/5.%20Automatisation%20-%20Sp%C3%A9cifications%20SCADA.pdf
+Automation-Specifications-Stantec	Stantec - General	Instrumentation et Commandes - Specifications	/Doc/Engineering/Automation/Specifications/Stantec/DevisMontreal.pdf
+Automation-Specifications-Stantec	Stantec - General	Instrumentation et Commandes - Clauses Techniques Speciales	/Doc/Engineering/Automation/Specifications/Stantec/DevisStantecTypicals.pdf
+Automation-Specifications-Stantec	Stantec - Dufferin Wind Project	SCADA System - Basic of Design - Dufferin Wind Project	/Doc/Engineering/Automation/Specifications/Stantec/DWP-ES-602-01.pdf
+Automation-Specifications-Stantec	Stantec - Dufferin Wind Project	SCADA System Specification - Dufferin Wind Project	/Doc/Engineering/Automation/Specifications/Stantec/DWP-ES-632-01.pdf
+Automation-Specifications-Stantec	Stantec - General	Process Automation General & Specific Instructions	/Doc/Engineering/Automation/Specifications/Stantec/InstallSpecsEnglish.pdf
+Automation-Specifications-Stantec	Stantec - General	Process Automation General & Specific Instructions (french)	/Doc/Engineering/Automation/Specifications/Stantec/InstallSpecsFrench.pdf
+Automation-Specifications-Stantec	Stantec - General	Automation General Specification	/Doc/Engineering/Automation/Specifications/Stantec/Version2005.pdf
+Engineering-Automation-Specifications	 SNC Lavalin Pharma - ADImmune-Taiwan Project - Set of Specifications	Directory	/Doc/Engineering/Automation/Specifications/Taiwan
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Functional Specification	Functional Specification - Influenza Vaccine Plant	/Doc/Engineering/Automation/Specifications/Taiwan/A011FunctionalSpec_RevB.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Equipment Requirement Specification	Equipment Requirement Specification (ERS) for CIP Skids	/Doc/Engineering/Automation/Specifications/Taiwan/A017-ERS-0001_CIP_SKIDS.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Equipment Requirement Specification	Equipment Requirement Specification (ERS) - Platforms	/Doc/Engineering/Automation/Specifications/Taiwan/A017-ERS-0010_Platform_Binder.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Equipment Requirement Specification	Equipment Requirement Specification (ERS) for the Vaccine Manufacture Control System (VMCS)	/Doc/Engineering/Automation/Specifications/Taiwan/A017-ERS-002_Rev_2.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Equipment Requirement Specification	Equipment Requirement Specification (ERS) for the Vaccine Manufacture Transfer Panel Fabrication	/Doc/Engineering/Automation/Specifications/Taiwan/A017-ERS-003__Rev_1.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Equipment Requirement Specification	Equipment Requirement Specification (ERS) for the Vessel Dip Tube Fabrication	/Doc/Engineering/Automation/Specifications/Taiwan/A017-ERS-010__Rev_0.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Installation Detail Specification	Installation Detail Specification	/Doc/Engineering/Automation/Specifications/Taiwan/Elec_Spec_Draft.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Quality and Project Plan	Quality and Project Plan	/Doc/Engineering/Automation/Specifications/Taiwan/P1293_GAMP4_Quality_Project__plan_0_1.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Hardware Design Specification	Hardware Design Specification for the Vaccine Manufacture Control System (VMCS)	/Doc/Engineering/Automation/Specifications/Taiwan/P1293-HDS-01%20Rev0.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - Software Design Specification	Software Design Specification for the Vaccine Manufacture Control System (VMCS)	/Doc/Engineering/Automation/Specifications/Taiwan/P1293-SDS-01%20Rev%200.04.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - User Design Specification	User Design Specification (URS) for the Flu Plant HVAC System by Honeywell	/Doc/Engineering/Automation/Specifications/Taiwan/User%20Requirements%20Specification%20For%20Flu%20Plant%20HVAC%20System.pdf
+Automation-Specifications-Taiwan	ADImmune -Taiwan - User Design Specification	User Design Specification (URS) for the Seed Virus Passaging Lab Area HVAC System by Honeywell	/Doc/Engineering/Automation/Specifications/Taiwan/User%20Requirements%20SpecificationFor%20A%20Seed%20Virus%20Passaging%20Lab%20Area%20HVAC%20System.pdf
+Engineering-Automation-Specifications	" TATA Steel Set of Specifications (BBA, AECOM)"	Directory	/Doc/Engineering/Automation/Specifications/Tata
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Nuclear Density Meters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8150_0%20.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Flow Meter	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8200_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Coriolis Mass Flow Meter	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8202_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Flow Switches	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8225_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Level Transmitters and Level Switches	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8300_0.pdf
+Automation-Specifications-Tata	Tata Steel -Technical Notes	Technical Notes - Pressure Transmitters and Pressure Gauges	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8350_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - On/Off and Modulating Control Valves	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8680_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Knife Valves	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-0000-IC-8684_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Discharge Water Released - Flow Measurement	/Doc/Engineering/Automation/Specifications/Tata/DSOT-NT-4310-IC-0001_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - Programmable Logic Controller (PLC)	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0001_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - Motor Control Philosophy	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0002_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - PLC Panels and Junction Boxes	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0004_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Notes	Technical Notes - Pressure Transmitters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0005.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Inspection and Testing of Automation Equipment	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0007_B.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Instrumentation Installation	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0008_B.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Instrument Cables	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0009_2.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - SCADA System Intergrator	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0010.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - HMI Standards and Specifications	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0011_B.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - PLC Standards and Specifications	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-0012_B.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - Density Meters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8150_2.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - Flow Meters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8200_2.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Flow Meters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8200_2.pdf
+Automation-Specifications-Tata	Tata Steel -Technical Specification	Technical Specification for Coriolis Flow Meters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8202_B.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Flow Switches	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8225_3.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Level Transmitters and Level Switches	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8300_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Pressure Transmitters and Pressure Gauges	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8350_1.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - Temperature Sensors & Transmitters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8425.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Temperature Sensors and Transmitters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8425.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Modulating and On/Off Control Valves	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8680_0.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Knife gage Valves	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8684_2.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Victaulic Valves	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-0000-IC-8685_0.pdf
+Automation-Specifications-Tata	Tata Steel - General Specification	"General Specification - Preferred Instrumentation, Control and Automation Component Suppliers"	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-2000-IC-8101_2.pdf
+Automation-Specifications-Tata	Tata Steel - General Specification	General Specification for numbering and codification of Automation and Instrumentation Components	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-2000-IC-8102_4.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Density Meters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-2000-IC-8150.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for Density Meters	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-2000-IC-8150.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification for the Fuel Management System.	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-3142-IC-0100_RevBA.pdf
+Automation-Specifications-Tata	Tata Steel - Technical Specification	Technical Specification - Fuel Management System	/Doc/Engineering/Automation/Specifications/Tata/DSOT-SP-3142-IC-0100_RevBA.pdf
+Doc-Engineering-Automation	"Typical Documents, sketches and drawings"	Directory	/Doc/Engineering/Automation/Typicals
+Engineering-Automation-Typicals	Tata Steel - DSOT Project	Typical Control Room and desk layout and arrangements	/Doc/Engineering/Automation/Typicals/13-234%20AIA%20Schefferville%20DSOT%20Control%20Room%20Dessins%20REV%20B.pdf
+Engineering-Automation-Typicals	Typical AB Remote I/O Panel	Typical Allen-Bradley Remote I/O Panel	/Doc/Engineering/Automation/Typicals/B287RemoteIO.pdf
+Engineering-Automation-Typicals	Typical spacing of panels in an electrical room	Typical spacing of panels in an electrical room	/Doc/Engineering/Automation/Typicals/ElectricalPanelsSpacing.pdf
+Doc-Engineering-Commissioning	" Note : See the directory for multiple examples of commissioning presentation on PowerPoint , Excel forms etc... "	Directory	/Doc/Engineering/Commissioning
+Doc-Engineering-Commissioning	Commissioning - Electrical - Instrumentation and Control - Networking	Directory	/Doc/Engineering/Commissioning
+Doc-Engineering-Commissioning	Projet - Vale Mineral - Technical Query	Typical Commissioning technical query 	/Doc/Engineering/Commissioning/CTQ-0001.pdf
+Doc-Engineering-Commissioning	Projet - Vale Mineral	Typical EIA puch list	/Doc/Engineering/Commissioning/TR-1020ML-08%20%20EIA%20punch%20list.pdf
+Doc-Engineering-Electrical	Electrical Engineering	Directory	/Doc/Engineering/Electrical
+Doc-House	Coffee Machine	Breville Oracle - User Manual	/Doc/House/Breville-BES980BKS-the-Oracle--Coffee-Machine-User-Manual.pdf
+Doc-House	Coffee Machine	Breville Oracle - General Instructions	/Doc/House/BrevilleOracle.pdf
+Doc-IOT	"IOT - Home Automation - Internet of things - Arduino, ESP32, ESP8266 etc..."	Directory	/Doc/IOT
+Doc-IOT-ESP	"Espressif Micro-Controller Products - ESP8266, ESP32, ESP32-CAM. "	Directory	/Doc/IOT/ESP
+Doc-IOT-ESP	 Summary - Espressif is a Chinese company manufacturing very low cost Wifi micro Controller	Directory	/Doc/IOT/ESP/
+Doc-IOT-ESP	ESP8266 Datasheet	Datasheet from Expressif	/Doc/IOT/ESP/0a-esp8266ex_datasheet_en.pdf
+Doc-IOT-ESP	ESP8266 DataSheet	This Document is the official Expressif datasheet for the ESP8266 chip.	/Doc/IOT/ESP/0a-esp8266ex_datasheet_en.pdf
+Doc-IOT-ESP	ESP-01	The Document explained how to connect a basic ESP-01 which is the tiniest chip you can buy from Expressif. The Document show how to connect the ESP-01 to a PC using a FTDI USB cable and the 3.3V required for the chip.	/Doc/IOT/ESP/A-Beginner's-Guide-to-the-ESP8266.pdf
+Doc-IOT-ESP	ESP8266-ESP32 technical Document	The Document explained in details the ESP8266 and the ESP32 chips using C++ language with Eclipse. This Document have 400 pages! The first pages give you a good description of the chips themselves.	/Doc/IOT/ESP/ESP8266_ESP32.pdf
+Doc-IOT-ESP	NodeMCU Data Sheets	NodeMCU Data Sheets	/Doc/IOT/ESP/NODEMCU_DEVKIT_V1.0.PDF
+Doc-IOT-ESP	ESP8266/32 GPIO Pins	"How to choose the good GPIO pins for the IO types, which one are the best for Inputs, which one are the best for Outputs, pull-up pull-down pins etc..."	/Doc/IOT/ESP8266/How To_ Pick the right pins on the NodeMCU ESP8266 and ESP32 - YouTube (720p).mp4
+Doc-Networking	"Networking - OSI Model, TCP/IP, WS, Wireless, switch, router, AP etc..."	Directory	/Doc/Networking
+Doc-Programming-Networking	ISO Stack Chart	description	/Doc/Networking/snifferposter.pdf
+Doc-Networking-WebSockets	topic	description	/Doc/Networking/WebSockets/What are Web Sockets and Communication Formats.mp4
+Doc-Programming	Programming - Everything about programming and Web development - HTML CSS JS Python etc...	Directory	/Doc/Programming
+Doc-Programming-Firebase	 Summary - Firebase is a cloud solution from Google	"Firebase is use for serverless technology, cloud database, Documents storage, functions cloud messaging etc..."	/Doc/Programming/Firebase
+Doc-Programming-Firebase	FireBase - Google no-SQL database	Directory	/Doc/Programming/Firebase
+Doc-Programming-JavaScript 	Creating a Module	Creating a Module	/Doc/Programming/JavaScript/Creating a Module.mp4
+Doc-Programming-JavaScript 	Installing Node	Installing Node	/Doc/Programming/JavaScript/Installing Node.mp4
+Doc-Programming-JavaScript 	Loading a Module	Loading a Module	/Doc/Programming/JavaScript/Loading a Module.mp4
+Doc-Programming-MicroPython	Micro Python - Use to program the ESP micro-controller 	Directory	/Doc/Programming/MicroPython
+Doc-Programming-MicroPython	Getting Started with MicroPython	This book is an introduction to MicroPython language.	/Doc/programming/MicroPython/MicroPython.pdf
+Doc-Programming-MicroPython	MicroPython Cookbook	"This book is about all (almost) the programming regarding MicroPython, the chapter about Networking and REST application is particularly interesting however the web sockets are not covered."	/Doc/programming/MicroPython/MicroPythonCookBook.pdf
+Doc-Programming-MicroPython	Bin File update	"You can Personnalize the bin file using Virtual Box / Ubuntu, the video show you how to get around with the MAKE process issue."	/Doc/Programming/MicroPython/MicroPythonMake.mp4
+Doc-Programming-NodeJS	NodeJS - Events Module	Events Module	/Doc/Programming/NodeJS/10.%20Events%20Module.mp4
+Doc-Programming-NodeJS	NodeJS - Events Arguments	Events Arguments	/Doc/Programming/NodeJS/11.%20Event%20Arguments.mp4
+Doc-Programming-NodeJS	NodeJS - Extending Event emitter	Extending Event emitter	/Doc/Programming/NodeJS/12.%20Extending%20Event%20Emitter.mp4
+Doc-Programming-NodeJS	NodeJS - HTTP Module	HTTP Module	/Doc/Programming/NodeJS/13.%20HTTP%20Module.mp4
+Doc-Programming-NodeJS	NodeJS - Global Object	Global Object	/Doc/Programming/NodeJS/2.%20Global%20Object.mp4
+Doc-Programming-NodeJS	NodeJS - Modules	Concept of modules in NodeJS.	/Doc/Programming/NodeJS/3.%20Modules.mp4
+Doc-Programming-NodeJS	NodeJS - Module Create	How to create your own module.	/Doc/Programming/NodeJS/4.%20Creating%20a%20Module.mp4
+Doc-Programming-NodeJS	NodeJS - Installation	How to install NodeJS.	/Doc/Programming/NodeJS/5.%20Installing%20Node.mp4
+Doc-Programming-NodeJS	NodeJS - Module Loading	How to load a module.	/Doc/Programming/NodeJS/5.%20Loading%20a%20Module.mp4
+Doc-Programming-NodeJS	NodeJS - Module Wrapper	Module Wrapper function.	/Doc/Programming/NodeJS/6.%20Module%20Wrapper%20Function.mp4
+Doc-Programming-NodeJS	NodeJS - Your First Program	Making your first NodeJS program.	/Doc/Programming/NodeJS/6.%20Your%20First%20Node%20Program.mp4
+Doc-Programming-NodeJS	NodeJS - Path Module	Path Module	/Doc/Programming/NodeJS/7.%20Path%20Module.mp4
+Doc-Programming-NodeJS	NodeJS - OS Module	OS Module	/Doc/Programming/NodeJS/8.%20OS%20Module.mp4
+Doc-Programming-NodeJS	NodeJS - File System Module	File System Module	/Doc/Programming/NodeJS/9.%20File%20System%20Module.mp4
+Doc-Programming-Python	Python Programming	Directory	/Doc/Programming/Python
+Doc-Programming-Python	Python - If Else	Python - If Else	/Doc/Programming/Python/Control%20Flow%20in%20Python%20-%20If%20Elif%20Else%20Statements.mp4
+Doc-Programming-Python	Python - Lists	Python - Lists	/Doc/Programming/Python/How%20to%20Use%20Lists%20in%20Python.mp4
+Doc-Programming-Python	Python - Strings	Python - Strings	/Doc/Programming/Python/How%20to%20Use%20Strings%20in%20Python%20-%20Python%20Tutorial%20for%20Beginners.mp4
+Doc-Programming-Python	Python - Map and Filter	Python - Map and Filter	/Doc/Programming/Python/Map%20and%20Filter%20Functions%20in%20Python%20-%20Python%20Tutorial%20for%20Absolute%20Beginners%20_%20Mosh.mp4
+Doc-Programming-Python	Asyncio & Web Socket	Asyncio is an asynchronious module which can be used for web sockets. The video is simple and straight to the point!	/Doc/Programming/Python/Python%20-%20Asyncio%20and%20Websockets.mp4
+Doc-Programming-Python	Python - For Loops	Python - For Loops	/Doc/Programming/Python/Python%20For%20Loops%20-%20Python%20Tutorial%20for%20Absolute%20Beginners.mp4
+Doc-Programming-Python	Python - Functions	Python - Functions	/Doc/Programming/Python/Python%20Functions%20_%20Python%20Tutorial%20for%20Absolute%20Beginners.mp4
+Doc-Programming-Python	Python - Stacks	Python - Stacks	/Doc/Programming/Python/Python%20Stacks%20-%20Python%20Tutorial%20for%20Absolute%20Beginners%20_%20Mosh.mp4
+Doc-Programming-Python	Python - Crash course for Programmers	Crash course oriented for programmer using VSCode and PyLint for error checking and debugging.	/Doc/Programming/Python/Python%20Tutorial%20for%20Programmers%20-%20Python%20Crash%20Course.mp4
+Doc-Programming-Python	Python - Variables	Python - Variables	/Doc/Programming/Python/Python%20Variables%20-%20Python%20Tutorial%20for%20Beginners%20with%20Examples%20_%20Mosh.mp4
+Doc-Programming-Python	Python - Sets	Python - Sets	/Doc/Programming/Python/What%20are%20Sets%20in%20Python_%20Python%20Tutorial%20for%20Absolute%20Beginners%20_%20Mosh.mp4
+Doc-Programming-VSCode	VS Code - Emmet	How to use all the shortcuts with Emmet for Faster HTML &amp; CSS Workflow.	/Doc/Programming/VSCode/Emmet%20For%20Faster%20HTML%20&%20CSS%20Workflow.mp4
+Doc-Training-AfterEffects	Adobe - After Effects	Directory	/Doc/Training/AfterEffects
+Doc-Training-AfterEffects	Animation	How to animate your graphic - Working with layers and keyframes - Timing Layers Animation - Producing your first video rendering	/Doc/Training/AfterEffects/AeAnimation.mp4
+Doc-Training-AfterEffects	Animation Project	Animation Project Design/Animation/Timing - importing Images and Videos to your project - Transform and Timeline techniques	/Doc/Training/AfterEffects/AeAnimationProject.mp4
+Doc-Training-AfterEffects	Introduction	Initial setup - Animation from scratch - Your first visual effect - Time Line seconds and frames - Interface - First composition - Creating shapes - Create format and edit text	/Doc/Training/AfterEffects/AEIntro.mp4
+Doc-Training-AfterEffects	Layers & Masks	Masks on shape layer - Masks on text layer - Solid layers and masks - Alpha inverted track matte - Animating track matte	/Doc/Training/AfterEffects/AeLayers.mp4
+Doc-Training-AfterEffects	Masks and Paths	Masks on Image - Masks on Videos - Source and Text property - Animate text on path - Transform a mask or path & Path on a keyframed motion Path - Trim Path - Layers Parent Method - Grouping Layers Animation with the null object	/Doc/Training/AfterEffects/AeMasksPaths.mp4
+Doc-Training-AfterEffects	Motion	Animation methods - Activity tutorial - Motion graphics concept - Motion graph editor - Speed graph - Motion path technique - Animate with the value graph	/Doc/Training/AfterEffects/AeMotion.mp4
+Doc-Training-AfterEffects	Reversing Animation	Blur Presets - Reversing Animation with Keyframe assistant and time reverse layer - Slow speed - Stretch or Shrink layers duration - Layers sequencing	/Doc/Training/AfterEffects/BlurReversing.mp4
+Doc-Training-AfterEffects	Burst - Bezier - Stroke	Burst elements - Bezier shapes - Stroke effect - Character animation - Animator properties - Ramp UpDown - 3D per character animation	/Doc/Training/AfterEffects/BurstBezierStroke.mp4
+Doc-Training-AfterEffects	Camera and 3D	Position property in 3D - 3D rotation property - Camera - Camera Views - Orbit null for the camera - 3D Cube project	/Doc/Training/AfterEffects/Camera3D.mp4
+Doc-Training-AfterEffects	Blur Presets and Other topics	Effective Blur Presets - Slow Down Speed Up Reversing Animation - Shrink/Strech Layers duration - Layers Sequencing	/Doc/Training/AfterEffects/LastTopics.mp4
+Doc-Training-AfterEffects	Presets	Grouping alignment and Anchor point - Wigglying Characters - Presets - Animate IN/OUT - 3D Presets	/Doc/Training/AfterEffects/Presets.mp4
+Doc-Training-AfterEffects	Stroke - Shapes - Wiggle	How to create a complex shape - Fill stroke manipulation - Compound shapes - Wiggle Path - Wiggle transform - repeater	/Doc/Training/AfterEffects/WiggleRepeaterStroke.mp4
+Doc-Training-Inkscape	Inkscape - Design software open source	Directory	/Doc/Training/Inkscape
+Doc-Training-inkscape	Image Tracing	Tracing an image and create a line art drawing	/Doc/Training/inkscape/Inkscape%20LinePortrait.mp4
+Doc-Training-inkscape	 Introduction	What is Inkscape ? - Touring the interface - Toolbox - Creating new Documents - Illustrator import - Importing EPS file in Windows - Editing Document properties - Global preferences	/Doc/Training/inkscape/InkscapeBasics.mp4
+Doc-Training-inkscape	Drawing Tools Bezier	Pen - Node - Pencil - Shapes & Paths - Spirals - Rectangles - Ellipses - Stars & Polygons	/Doc/Training/inkscape/InkscapeDrawingTools.mp4
+Doc-Training-inkscape	Guides - Grid - Snap	Dialogs - Panning & Zooming - Guides - Grids - Snap - Display Mode -Input Devices - Layers	/Doc/Training/inkscape/InkscapeGridSnap.mp4
+Doc-Training-inkscape	Masks - Gradients - Patterns	Clipping paths and masks - XML editor - objects fills - fill rules - strokes on objects - gradients - patterns - swatches - stroke styles - Dropper tool	/Doc/Training/inkscape/InkscapeMasksGradients.mp4
+Doc-Training-inkscape	Materials - Textures - Shadows	Materials - Drop shadows - textures - adjusting colors - images - modifying paths - raster extensions - rendering objects - path commands	/Doc/Training/inkscape/InkscapeMaterialsTextures.mp4
+Doc-Training-inkscape	Objects	Calligraphy tool - Diagram connectors - Erasing paths - Selecting/Grouping/Moving objects - Stacking Order - Scaling/Rotating/Skewing objects - Tweak tool - Hiding/Showing objects - Aligning/distributing/arranging objects - Objects clones	/Doc/Training/inkscape/InkscapeObjects.mp4
+Doc-Training-inkscape	3D tool - Spray - Bitmap	3D tool box - Spray tool - bitmap images - path effects - adding text -editing text - Inserting special characters - text on path - convert text to path - clean up Document - saving files for print - saving files for the web	/Doc/Training/inkscape/InkscapeTextSpray.mp4
+Doc-Training-inkscape	Interlocking Letters	How to create interlock letters to make them looks like they are chained to each other	/Doc/Training/inkscape/InterlockingLetters.mp4
+Doc-Training-SolidWorks-Electrical	How to Insert a Multi-Level Terminal	How to create multi levels terminal strips	/Doc/Training/SolidWorks/10. SolidWorks Electrical - How to Insert a Multi-Level Terminal - YouTube (720p).mp4
+Doc-Training-SolidWorks	Mass Properties	Viewing Mass Properties	/Doc/Training/SolidWorks/2. Opening an Assembly File.mp4
+Doc-Training-SolidWorks	Planes	Planes concept and selection	/Doc/Training/SolidWorks/2. Select a Plane to Sketch on.mp4
+Doc-Training-SolidWorks	Materials	Selecting materials for your parts	/Doc/Training/SolidWorks/2. Selecting Materials for Your Parts.mp4
+Doc-Training-SolidWorks	Revolve Boss-Cut features	Revolve Boss-Cut features	/Doc/Training/SolidWorks/2. The Features Revolved Boss and Revolved Cut!.mp4
+Doc-Training-SolidWorks	File types	Description of the file types (extension) used by SolidWorks	/Doc/Training/SolidWorks/2-File Formats in SolidWorks.mp4
+Doc-Training-SolidWorks	Units	Adjusting the measurement units	/Doc/Training/SolidWorks/3. Adjusting Measurement Units' System in a Drawing File.mp4
+Doc-Training-SolidWorks	Drawing File	Opening a drawing file	/Doc/Training/SolidWorks/3. Adjusting Measurement Units' System in a Drawing File.mp4
+Doc-Training-SolidWorks	Extrude Boss-Cut features	Extrude Boss-Cut features	"/Doc/Training/SolidWorks/3. Our First Features Extrude Boss, Cut Extrude, and Fillet.mp4"
+Doc-Training-SolidWorks	Swept Boss-Cut features	Swept Boss-Cut features	/Doc/Training/SolidWorks/3. The Features Swept Boss and Swept Cut.mp4
+Doc-Training-SolidWorks	Mates	"Types of mates : Standard, Advanced and Mechanical"	"/Doc/Training/SolidWorks/3. Types of Mates in SOLIDWORKS Standard, Advanced and Mechanical.mp4"
+Doc-Training-SolidWorks	Mass Properties	Viewing Mass Properties	/Doc/Training/SolidWorks/3. Viewing Mass Properties.mp4
+Doc-Training-SolidWorks-Electrical	Create a symbol with connections	Create a symbol with connection points	/Doc/Training/SolidWorks/4. SolidWorks Electrical - How to create your own 2D Symbol - YouTube (720p).mp4
+Doc-Training-SolidWorks-Electrical	How to add manufacturer parts	"How to add manufacturer parts, create the circuits and terminals (tag the terminal doing so). A part is not a symbol, the symbol shall be created and linked to the part via the circuits created in the part."	/Doc/Training/SolidWorks/7. SolidWorks Electrical - Link 3D Part to Manufacturer Data - Part I - YouTube (720p).mp4
+Doc-Training-SolidWorks-Electrical	Cable References	Create custom cables	/Doc/Training/SolidWorks/SolidWorks Electrical_ Adding Cable References - YouTube (720p).mp4
+Doc-Training-SolidWorks-Electrical	Create a symbol	Create a symbol (electrical symbols such like a fuse) using the symbol manager	/Doc/Training/SolidWorks/SolidWorks Electrical_ Creating Detailed Schematic Symbols - YouTube (720p).mp4
+Doc-Training-SolidWorks-Electrical	Create a symbol from a DWG	Create a symbol looking like a real 2D electrical part	/Doc/Training/SolidWorks/SolidWorks Electrical_ Creating SLD Symbols - YouTube (720p).mp4
+Doc-Training-Wireless	Wireless - Terms and Topology	Wireless - Terms and Topology	/Doc/Training/Wireless/02%20-%20TermsTopology.mp4
+Doc-Training-Wireless	Wireless - Stnadards and Regulation	Wireless - Stnadards and Regulation	/Doc/Training/Wireless/03%20-%20StandardsRegulations.mp4
+Doc-Training-Wireless	Wireless - Radio Frequency	Wireless - Radio Frequency	/Doc/Training/Wireless/04%20-%20RF101.mp4
+Doc-Training-Wireless	Wireless - Power Maths	Wireless - Power Maths	/Doc/Training/Wireless/05%20-%20PowerMath.mp4
+Doc-Training-Wireless	Wireless - Antennas	Wireless - Antennas	/Doc/Training/Wireless/06%20-%20Antennas.mp4
+Doc-Training-Wireless	Wireless - 802.11 Standard	Wireless - 802.11 Standard	/Doc/Training/Wireless/07%20-%20802.11%20and%20Friends
+Doc-Training-Wireless	Wireless - Frames type and Etiquette	Wireless - Frames type and Etiquette	/Doc/Training/Wireless/FormatFactory08%20-%20Frame%20Types%20and%20Etiquette
+Doc-Training-Wireless	Wireless - A tale of 10 Frames	Wireless - A tale of 10 Frames	/Doc/Training/Wireless/FormatFactory09%20-%20A%20Tale%20of%2010%20Frames
+Doc-Training-Wireless	Wireless - Other Wireless Technology	Wireless - Other Wireless Technology	/Doc/Training/Wireless/FormatFactory10%20-%20Other%20Wireless%20Technologies
+Doc-Training-Wireless	Wireless - WLC Discovery	Wireless - Access Point and Wireless LAN Controller (WLC)	/Doc/Training/Wireless/FormatFactory11%20-%20AP%20&%20WLC%20(Dynamic%20Duo).mp4
+Doc-Training-Wireless	Wireless - VLAN and SSIDs	Wireless - VLAN and SSIDs	/Doc/Training/Wireless/FormatFactory12%20-%20VLANs%20and%20SSIDs%20(preparing%20the%20switch)
+Doc-Training-Wireless	Wireless - Deploy the WLC	Wireless - Deploy the WLC	/Doc/Training/Wireless/FormatFactory13%20-%20Deploy%20the%20WLC.mp4
+Doc-Training-Wireless	Wireless - The first Wireless	Wireless - The first Wireless	/Doc/Training/Wireless/FormatFactory14%20-%20Ahhh%20the%20first%20WLAN.mp4
+Doc-Training-Wireless	Wireless - WLC Discovery	Wireless - WLC Discovery	/Doc/Training/Wireless/FormatFactory15%20-%20WLC%20Discovery.mp4
+Doc-Training-Wireless	Wireless - AP a la Mode	Wireless - AP a la Mode	/Doc/Training/Wireless/FormatFactory16%20-%20AP%20a%20la%20Mode.mp4
+Doc-Training-Wireless	Wireless - Roaming	Wireless - Roaming	/Doc/Training/Wireless/FormatFactory17%20-%20Roaming.mp4
+Doc-Training-Wireless	Wireless - Converting AP	Wireless - Converting AP	/Doc/Training/Wireless/FormatFactory18%20-%20Converting%20APs.mp4
+Doc-Training-Wireless	Wireless - Security 101	Wireless - Security 101	/Doc/Training/Wireless/FormatFactory19%20-%20Security%20101+.mp4
+Doc-Training-Wireless	Wireless - 802.1x and EAP	Wireless - 802.1x and EAP	/Doc/Training/Wireless/FormatFactory20%20-%20802.1x%20&%20EAP.mp4
+Doc-Training-Wireless	Wireless - Encryption Keys and AAA Servers	Wireless - Encryption Keys and AAA Servers	/Doc/Training/Wireless/FormatFactory21%20-%20Encryption%20Keys%20and%20AAA%20Servers.mp4
+Doc-Training-Wireless	Wireless - Web Authentication	Wireless - Web Authentication	/Doc/Training/Wireless/FormatFactory22%20-%20Web%20Authentication.mp4
+Doc-Training-Wireless	Wireless - WCS	Wireless - WCS	/Doc/Training/Wireless/FormatFactory23%20-%20WCS.mp4
+Doc-Training-Wireless	Wireless - Troubleshooting Wirelesss	Wireless - Troubleshooting Wirelesss	/Doc/Training/Wireless/FormatFactory24%20-%20Troubleshooting%20WLANs.mp4
+Doc-Training-Wireless	Wireless - Rogue APs	Wireless - Rogue APs	/Doc/Training/Wireless/FormatFactory25%20-%20Rogue%20APs.mp4
+Doc-Training-Wireless	Wireless - Clients	Wireless - Clients	/Doc/Training/Wireless/FormatFactory26%20-%20Clients.mp4
+Doc-Web	Web - Internet - Website Hosting etc...	Directory	/Doc/Web
+Doc-Web-Apache	Apache - Basic Configuration	Netlify  - Create an account	/Doc/Web/Apache/ApacheBasicConfig.mp4
+Doc-Web-Apache	Apache - Firewall Configuration	How to set the firewall to allow external access to Apache Web Server.	/Doc/Web/Apache/ApacheFireWall.mp4
+Doc-Web-Apache	Apache - Installation	Installation of Apache Web Server.	/Doc/Web/Apache/ApacheInstallation.mp4
+Doc-Web-Apache	Apache - Virtual Directories	How to set virtual directories in Apache Web Server.	/Doc/Web/Apache/ApacheVirtualDirectories.mp4
+Doc-Web-Hosting	"Web Hosting services - Heroku, netlify, firebase etc..."	Directory	/Doc/Web/Hosting
+Doc-Web-Hosting	Netlify  - Create an account	Netlify  - Create an account	/Doc/Web/Hosting/netlify.jpg
+Engineering-Automation-Codification-Tagging	Stantec - Structure de Codification	CODIFICATION - MISE ?? NIVEAU DES USINES (MNU) DE PRODUCTION D'EAU POTABLE	/Engineering/Automation/Codification-Tagging/1000-40EL-0001.pdf
+Perso-Finances	"Finances - Banking accounts, Retirement, etc..."	Directory	/Perso/Finances
+Perso-Finances-BKB	Bangkok Bank	Information about Bangkok Bank	/Perso/Finances/BKB
+Perso-Finances-BKB	2018 - Bank Statement	All the 2018 bank transactions	/Perso/Finances/BKB/BKB2018.pdf
+Perso-Finances-BNC	National Bank of Canada	Information about the National Bank of Canada	/Perso/Finances/BNC
+Perso-Finances-BNC	2019 Statements	Tous les relev??s 2019	/Perso/Finances/BNC/BNC2019.pdf
+Perso-Finances-Budget	"Budget - Expenses, invoices"	Directory	/Perso/Finances/Budget
+Perso-Finances-Budget	Invoices 2017	All the invoices in Thailand for year 2017	/Perso/Finances/Budget/ThaiInvoices2017.pdf
+Perso-Finances-Budget	Invoices 2019	All the invoices in Thailand for year 2019	/Perso/Finances/Budget/ThaiInvoices2019.pdf
+Perso-Finances-Giverny	Giverny Capital	Directory	/Perso/Finances/Giverny
+Perso-Finances-Giverny	Avis Execution	Le Document contient la liste de toutes les ??x??cutions (transactions) depuis 2015	/Perso/Finances/Giverny/dd_AvisExecution.pdf
+Perso-Finances-Giverny	Consentement transmission ??lectronique	Consentement transmission ??lectronique	/Perso/Finances/Giverny/dd_Consentement%20transmission%20electronique.pdf
+Perso-Finances-Giverny	CRI Quebec	Que se passe t'il avec le CRI si je ne r??side plus au Qu??bec ?	/Perso/Finances/Giverny/dd_CRI%20QC.pdf
+Perso-Finances-Giverny	Ouverture de compte BNRI	Ouverture d'un nouveau compte suite ???? mon d??m??nagement en Thailande.( ann??e 2019 )	/Perso/Finances/Giverny/dd_FDemande%20d'ouverture%20de%20compte%20Individuel.pdf
+Perso-Finances-Giverny	Formulaire de non-r??sident Canadien - NR301	Formulaire de non-r??sident Canadien - NR301	/Perso/Finances/Giverny/dd_FNR301.pdf
+Perso-Finances-Giverny	Ouverture de compte	Ouverture d'un nouveau compte suite ???? mon d??m??nagement en Thailande.( ann??e 2019 )	/Perso/Finances/Giverny/dd_Formulaire%20d'ouverture%20KYC.pdf
+Perso-Finances-Giverny	Brochure de marketing	Brochure de marketing	/Perso/Finances/Giverny/dd_GivernyBrochure.pdf
+Perso-Finances-Giverny	Convention de gestion	Lettre de convention de gestion sign?? le 30 Juin 2015	/Perso/Finances/Giverny/dd_GivernyConventionDeGestion.pdf
+Perso-Finances-Giverny	Entente avec Giverny	Entente avec Giverny	/Perso/Finances/Giverny/dd_GivernyEntente.pdf
+Perso-Finances-Giverny	Statements	Tous les statements depuis l'ouverture de compte.	/Perso/Finances/Giverny/dd_GivernyStatements.pdf
+Perso-Finances-Giverny	"REER 2015 $25,000"	"Recu pour cotisation REER en 2015 au montant de $25,000"	/Perso/Finances/Giverny/dd_REER2015Receipt.pdf
+Perso-Finances-Giverny	Historique des retraits	"3 retraits totalisant $45,000 depuis Juin 2018."	/Perso/Finances/Giverny/dd_RetraitHisto.pdf
+Perso-Finances-Giverny	Transfert de Desjardins ???? Giverny	REER Collectif de Axium transf??r?? ???? Desjardins en 2017	/Perso/Finances/Giverny/dd_XferFromDesgardinsToGiverny.pdf
+Perso-Finances-Giverny	Video Giverny	Excellent video au sujet de l'investissement dans les actions	/Perso/Finances/Giverny/Giverny.mp4
+Perso-Finances-Impot	Imp??ts - Documentation sur les imp??ts des ann??es ant??c??dente	Directory	/Perso/Finances/Impot
+Perso-Finances-Impot	Impot 2017	Directory	/Perso/Finances/Impot/2017
+Doc-Impot-2017	Administration Paperworks	"Administration papers, transmit confirmation, Intuit Info, etc..."	/Perso/Finances/Impot/2017/adminPapers2017.pdf
+Perso-Impot-2017	Avis de cotisations	Avis de cotisation re??u du f??d??ral et provincial pour 2017	/Perso/Finances/Impot/2017/AvisDeCotisations.pdf
+Perso-Impot-2017	Releve 1 - T4	Releve 1 et T4 pour 2017	/Perso/Finances/Impot/2017/R1T4-2017.pdf
+Perso-Impot-2017	D??claration de Revenu 2017	La d??claration a ??t?? faite par moi-m????me avec le logiciel imp??t rapide de Intuit	/Perso/Finances/Impot/2017/TaxReports2017.pdf
+Perso-Finances-Impot	Impot 2018	Directory	/Perso/Finances/Impot/2018
+Perso-Impot-2018	" Summary - J'ai pay?? 25% d'Impot, le taux d'imposition est de 15%, je n'ai recu aucun remboursement ! de plus, ma d??duction REER a ??t?? perdu!"	Directory	/Perso/Finances/Impot/2018
+Perso-Impot-2018	T4RSP 2018	"??tat de revenus provenant d'un REER, retrait de REER au montant de $15,000 en juin 2018. Un relev?? 2 ( Qu??bec ) a aussi ??t?? ??mis car Giverny n'??tait pas au courant de ma nouvelle adresse en Thailande. Les montants pay??s ???? Revenu Canada et Revenu qu??bec n'ont par pu ????tre r??cup??r??s."	/Perso/Finances/Impot/2018/20181231_T4RSP-R2_492KQ1S.pdf
+Perso-Impot-2018	Honoraire firme comptable	Honoraire de la firme comptable Moquin Amyot pour la d??claration de revenu 2018.	/Perso/Finances/Impot/2018/Honoraires%20M.%20Pierre%20Roy_1900919.pdf
+Perso-Impot-2018	D??claration d'imp??t 2018	Le remboursement demand?? ???? Revenu Canada n'a jamais ??t?? rembours?? !!	"/Perso/Finances/Impot/2018/ROY,%20PIERRE.118.pdf"
+Perso-Impot-2018	Demande de redressement T1	Le montant de la demande a ??t?? rembours?? au F??d??ral mais pas au Provincial	"/Perso/Finances/Impot/2018/ROY,%20PIERRE_AMEND%C3%89E_T1ADJ-TP1.R.pdf"
+Perso-Finances-Impot	Impot 2019	Directory	/Perso/Finances/Impot/2019
+Perso-Impot-2019	Revenu Canada - Avis de Cotisation	Avis de cotisation ??mis le 4 novembre 2019	/Perso/Finances/Impot/2019/Avis_de_cotisation_2019_10_28_06_51_08_983537.pdf
+Perso-Impot-2019	Revenu Canada - Avis de Cotisation	Avis de cotisation ??mis le 16 mars 2020	/Perso/Finances/Impot/2019/Avis_de_nouvelle_cotisation_2020_03_10_01_40_05_840598.pdf
+Perso-Impot-2019	D??claration Impot 2019	Declaration d'imp??t 2019 effectu?? par la firme comptable Moquin-Amyot	/Perso/Finances/Impot/2019/DeclarationRevenu2019-Comptable.pdf
+Perso-Impot-2019	D??claration Impot 2019	D??claration d'imp??t 2019 effectu?? par moi avec Imp??t rapide	/Perso/Finances/Impot/2019/Pierre-Roy-archives-cra-19.pdf
+Perso-Finances-Impot	Revenu Canada - Login questions	ARC Questions	/Perso/Finances/Impot/ARCInfo.pdf
+Perso-Finances-Impot	Revenu Qu??bec - Login questions	CliqSecur questions	/Perso/Finances/Impot/RevenuQuebecQuestions.pdf
+Perso-Finances-Retirement	"Retirement - Documentation about RRQ, PSV and useful info. about Retirement"	Directory	/Perso/Finances/Retirement
+Perso-Finances-Retirement	FERR	Convertir REER en FEER a partir de 65 ans peut faire economiser de l'Impot! voir Document.	/Perso/Finances/Retirement/FERR.pdf
+Perso-Finances-Retirement	Pension de s??curite de veillesse - PSV	Calcul pour d??termin?? quand demand?? la PSV	/Perso/Finances/Retirement/Gestion%20F%C3%89RIQUE%20-%20Publications%20-%20Retraite%20-%201.pdf
+Perso-Finances-Retirement	La planification de la retraite	"Excellent Document sur le planificationd de la retraite - Fonds ferique. Information au sujet de la RRQ, REER, PSV etc..."	/Perso/Finances/Retirement/RetraiteInfo(Ferique-Excellent).pdf
+Perso-Finances-Retirement	RRQ Denial to Louise Brunelle	Preuve que Louise Brunelle a renonc?? ???? mon RRQ	/Perso/Finances/Retirement/RRQDenialLouiseBrunelle.pdf
+Perso-House	House	Directory	/Perso/House
+Perso-House	Materials & Invoices	All the photographs of the material bought for the Thai house and all the invoices for them	/Perso/House/ConstructionPurchase.pdf
+Perso-Insurance	Insurance	Directory	/Perso/Insurance/
+Perso-Insurance	Card	Copy of the card and survival info.	/Perso/Insurance/Card.pdf
+Perso-Insurance	Papers Works filled	See the signed Document for insurance details	/Perso/Insurance/PapersFilled.pdf
+Perso-Insurance	Pacific Cross - Insurance Plans	The chosen plan is Premium Plus.	/Perso/Insurance/Plans.pdf
+Perso-Thailand	Thailand	Directory	/Perso/Thailand
+Projects-DasDoc-Doc	"Documentation - This project organize the directories and files, a title and thumbnail for each directory can be created, for the files, a title, description and preview is possible. "	Directory	/Projects/DasDoc/Doc
+Projects-DasDuneTech-Doc	DasDune Technologies Website Project	Directory	/Projects/DasDuneTech/Doc
+Projects-HomeAutomation-Doc	 Summary - Home automation using IOT and WEB technology	Directory	/Projects/HomeAutomation/Doc
+Projects-HomeAutomation-Doc	Architecture	The architecture is simply a network of wifi controllers communicating to the host via HTTP (half duplex) or WS (full duplex)	/Projects/HomeAutomation/Doc/Architecture.pdf
+Projects-HomeAutomation-Doc	Overview and Architecture	"The project use IOT technology, the hardware is based on ESP8266 and ESP32 from Expressif. The IDE used is uPycraft with micropython (python on a chip). UI use the web technology (HTML, CSS and JS). The backend is serverless using Firebase cloud functions with Node JS, the database used is Firestore. The notification system is based on Functions Messaging and the notification mobile application is based on Google Flutter. The vocal dialog bot used Google DialogFlow with JSON format for the request to the bot."	/Projects/HomeAutomation/Doc/Architecture.pdf
+Projects-HomeAutomation-Doc	Overview	"The overview screen display all the sprinklers, lights and control panels location"	/Projects/HomeAutomation/Doc/Overview.pdf
+Projects-Lib-Doc	Library	Directory	/Projects/Lib/Doc
+Projects-TagLinker-Doc	Tag Linker - This project is linking a tag to any entities related to it	Directory	/Projects/TagLinker/Doc
+Projects-TagLinker-Doc	 Summary	"Tag linker allow a tag to be links to any Documents such as P&ID, Circuit Diagrams, Location drawings, process screens, or any other kind of Documents related to the tag."	/Projects/TagLinker/Doc
+Perso-Insurance	 Summary - In thailand this only insurance I took so far a health insurance starting in April 2020.	Note	Note
+Automation-Specifications-Bechtel	 Bechtel - 3GS-JDO2-A0001 - GUIDE SPECIFICATION FOR PROGRAMMABLE LOGIC CONTROLLERS FOR INTEGRATION INTO A PROCESS CONTROL SYSTEM	Note	Note
+Automation-Specifications-Bechtel	 Bechtel - 3GS-JDO2-A0002 - GUIDE SPECIFICATION FOR PROGRAMMABLE LOGIC CONTROLLERS HARDWARE	Note	Note
+Automation-Specifications-Bechtel	 Bechtel - 3GS-JD02-A0003 - GUIDE SPECIFICATION FOR PROGRAMMING THE ALLEN BRADLEY PLC-5	Note	Note
+Automation-Specifications-Bechtel	 Bechtel - 3GS_JQ08_A0001_Attach01 - INSTRUCTIONS FOR INSTRUMENT TAGGING	Note	Note
+Perso-Finances-Giverny	 Summary - February 2020	Giverny a cr???? un nouveau compte en 2019 car je suis non r??sident Canadien maintenant.	Note
+Perso-Condo	Condo	Directory	Perso/Condo
+Doc-Training-SolidWorks-Electrical	Create a symbol from a DWG	Create a symbol looking like a real 2D electrical part	/Doc/Training/SolidWorks-ElectricalSolidWorks Electrical_ Symbols Resembling Physical Components - YouTube (720p).mp4

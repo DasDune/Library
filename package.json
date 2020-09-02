@@ -1,0 +1,26 @@
+{
+  "name": "lib",
+  "version": "1.0.0",
+  "main": "db.js",
+  "dependencies": {
+    "@google-cloud/functions-framework": "^1.6.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "ejs": "^3.1.5",
+    "express-fileupload": "^1.2.0",
+    "firebase": "^7.15.5",
+    "firebase-admin": "^8.13.0",
+    "jsdom": "^16.4.0",
+    "swiper": "^5.4.2"
+  },
+  "devDependencies": {
+    "pdfjs-dist": "^2.4.456"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

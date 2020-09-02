@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="fileButton" />
+
+    <script>
+      let inputFile = document.getElementById('fileButton');
+
+      inputFile.addEventListener('change', (e) => {
+        const files = e.target.files;
+        const formData = new FormData();
+        formData.append('myFile', files[0]);
+
+        fetch('http://localhost:555', {
+          method: 'POST',
+          body: formData,
+        });
+        // .then((response) => response.json())
+        // .then((data) => {
+        //   console.log(data);
+        // })
+        // .catch((error) => {
+        //   console.error(error);
+        // });
+      });
+    </script>
+  </body>
+</html>

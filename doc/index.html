@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EnlighterJS Test</title>
+
+    <!-- EnlighterJS Resources !-->
+    <link
+      rel="stylesheet"
+      href="http://dasdune/Projects/lib/css/enlighterjs.min.css"
+    />
+    <link rel="stylesheet" href="http://dasdune/Projects/lib/css/index.css" />
+    <script src="http://dasdune/Projects/lib/js/enlighterjs.min.js"></script>
+  </head>
+  <body>
+    <h1>Software Library</h1>
+
+    <h2>Server Side (Node-JS)</h2>
+
+    <h3>FireBase Initialization</h3>
+    <p>
+      Prerequisite : Create a service account in your firebase project then your
+      application will be authorize to access Firebase.
+    </p>
+    <p>Service account details video:</p>
+    <video width="1000" height="100" controls>
+      <source
+        src="http://dasdune/Projects/lib/doc/GoogleServiceAccount.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <pre data-enlighter-language="less">
+      var admin = require('firebase-admin');
+      var fs = require('fs');
+      
+      var serviceAccount = require('./serviceAccountKey.json');
+      
+      admin.initializeApp({
+        credential: admin.credential.cert(serviceAccount),
+        databaseURL: 'https://dasdoc-83fc7.firebaseio.com',
+      });
+      
+        </pre
+    >
+
+    <h3>Backup FireStore Database</h3>
+    <p>
+      The getCols() function get all the firestore collections and their
+      corresponding documents and write te results to a JSON file after 10
+      seconds, TODO : this function need to be improve by using async/await and
+      integrated in a cloud function.
+    </p>
+
+    <p>
+      Note the listCollections() method cannot be used if the JavaScript is in a
+      web page.
+    </p>
+
+    <pre data-enlighter-language="less">
+      cols = [];
+      docs = [];
+      docStr = [];
+      
+      saveFile = () => {
+        fs.writeFile('docs.json', docStr, function (err) {
+          if (err) throw err;
+          console.log('Done!');
+        });
+      };
+      
+      function objStr(col, doc) {
+        const { title, video, description, topic, desc, file, link } = doc;
+        // Note2 = Note.replace(',', '-');
+        docStr = [
+          ...docStr,
+          `${col}~${title}~${description}~${video}~${topic}~${desc}~${file}~${link}\r\n`,
+        ];
+      }
+      
+      getCols = () => {
+        admin
+          .firestore()
+          .listCollections()
+          .then((cs) => {
+            cs.map((col) => {
+              getDocs(col.id);
+              console.log(col.id);
+            });
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+      
+      getDocs = (col) => {
+        admin
+          .firestore()
+          .collection(col)
+          .get()
+          .then((snapshot) => {
+            snapshot.docs.map((doc) => {
+              // docs = [...docs, col + ' ## ' + JSON.stringify(doc.data())];
+              objStr(col, doc.data());
+              console.log(doc.data());
+            });
+            //   saveFile(JSON.stringify(docs));
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      };
+      
+      getCols();
+      
+      setTimeout(saveFile, 10000);
+      
+        </pre
+    >
+
+    <!-- <p>
+        Here we use the 'code' tag element :
+        <code>window.addEvent('domready', async (a,b) => {});</code>
+      </p> -->
+
+    <script>
+      // INIT CODE - simple page-wide initialization based on css selectors
+      // - highlight all pre + code tags (CSS3 selectors)
+      // - use javascript as default language
+      // - use theme "enlighter" as default theme
+      // - replace tabs with 2 spaces
+      EnlighterJS.init('pre', 'code', {
+        language: 'javascript',
+        theme: 'enlighter',
+        indent: 2,
+      });
+    </script>
+  </body>
+</html>
