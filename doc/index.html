@@ -15,6 +15,7 @@
   </head>
   <body>
     <h1>Software Library</h1>
+    <hr />
 
     <h2>Server Side (Node-JS)</h2>
 
@@ -44,8 +45,82 @@
       
         </pre
     >
+    <hr />
 
-    <h3>Backup FireStore Database</h3>
+    <h3>FireBase Initialization - Another method</h3>
+    <p>This method is older and more cumbersome but works as well</p>
+    <pre data-enlighter-language="less">
+      import * as Firebase from './node_modules/firebase/firebase-app.js';
+      import * as Firestore from './node_modules/firebase/firebase-firestore.js';
+      import * as Auth from './node_modules/firebase/firebase-auth.js';
+      import * as Storage from './node_modules/firebase/firebase-storage.js';
+      // import 'firebase/firestore';
+      
+      console.log(firebase);
+      
+      // Initialize Firebase for documents database
+      const cfgDocDB = {
+        apiKey: 'AIzaSyBOLEmiUX7yWTmTq3w5j-THGvhG5XxwtYM',
+        authDomain: 'dasdoc-83fc7.firebaseapp.com',
+        databaseURL: 'https://dasdoc-83fc7.firebaseio.com',
+        projectId: 'dasdoc-83fc7',
+        storageBucket: 'dasdoc-83fc7.appspot.com',
+        messagingSenderId: '197289633451',
+        appId: '1:197289633451:web:001fb714c9b10e5fc939ee',
+        measurementId: 'G-Q93GE06Z0T',
+      };
+      
+      firebase.initializeApp(cfgDocDB);
+      
+      let col = '';
+      
+      const auth = firebase.auth();
+      const db = firebase.firestore();
+      const storage = firebase.storage();
+      
+        </pre
+    >
+    <hr />
+
+    <h3>FireBase - Create a new user</h3>
+    <p>
+      This function create a new user base on his username and email information
+      that can also be done in the firebase console screen
+    </p>
+    <pre data-enlighter-language="less">
+      //DB Login Stuff
+      const email = 'dasdune@dasdune.com';
+      const password = 'Benoit2020';
+      
+      // One-Shot function to create the user once
+      // You can create the user from the firebase console under user menu
+      let createUser = () => {
+        auth.createUserWithEmailAndPassword(email, password).then((cred) => {
+          console.log(cred);
+        });
+      };
+      </pre
+    >
+    <hr />
+
+    <h3>FireBase - User signIn</h3>
+    <p>This function signIn the user to firebase firestore</p>
+    <pre data-enlighter-language="less">
+      // Start Everything by Login to DB
+      auth.signInWithEmailAndPassword(email, password).then((cred) => {
+        console.log(cred);
+      });
+      </pre
+    >
+    <hr />
+
+    <h3>FireStore - Delete collections</h3>
+
+    <pre>firebase firestore:delete --all-collections -y</pre>
+
+    <hr />
+
+    <h3>FireStore -Backup/Import (importDB.js)</h3>
     <p>
       The getCols() function get all the firestore collections and their
       corresponding documents and write te results to a JSON file after 10
@@ -59,64 +134,309 @@
     </p>
 
     <pre data-enlighter-language="less">
-      cols = [];
-      docs = [];
-      docStr = [];
-      
-      saveFile = () => {
-        fs.writeFile('docs.json', docStr, function (err) {
-          if (err) throw err;
-          console.log('Done!');
+      db = [];
+
+//Get all the collections
+getCols = () => {
+  cols = [];
+  admin
+    .firestore()
+    .listCollections()
+    .then((cs) => {
+      cs.map((col) => {
+        cols = [...cols, col.id];
+        console.log(col.id);
+      });
+      getDocs(cols);
+    })
+    .catch((error) => {
+      console.log(error);
+      response.status(500).send(error);
+    });
+};
+
+tabber = (col, id, doc) => {
+  const { Title, Desc, Link } = doc;
+  let strDoc = JSON.stringify(doc);
+  db = [...db, `${col}~${id}~${strDoc}\r\n`];
+  // console.log(trStr);
+};
+
+getDoc = (col) => {
+  return new Promise((resolve) => {
+    console.log(`Col: ${col}`);
+    admin
+      .firestore()
+      .collection(col)
+      .get()
+      .then((snapshot) => {
+        snapshot.docs.map((doc) => {
+          // db = [...db, col, JSON.stringify(doc.data())];
+          tabber(col, doc.id, doc.data());
+          // console.log(db);
+          resolve('got doc');
         });
-      };
-      
-      function objStr(col, doc) {
-        const { title, video, description, topic, desc, file, link } = doc;
-        // Note2 = Note.replace(',', '-');
-        docStr = [
-          ...docStr,
-          `${col}~${title}~${description}~${video}~${topic}~${desc}~${file}~${link}\r\n`,
-        ];
-      }
-      
-      getCols = () => {
-        admin
-          .firestore()
-          .listCollections()
-          .then((cs) => {
-            cs.map((col) => {
-              getDocs(col.id);
-              console.log(col.id);
-            });
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      };
-      
-      getDocs = (col) => {
-        admin
-          .firestore()
-          .collection(col)
-          .get()
-          .then((snapshot) => {
-            snapshot.docs.map((doc) => {
-              // docs = [...docs, col + ' ## ' + JSON.stringify(doc.data())];
-              objStr(col, doc.data());
-              console.log(doc.data());
-            });
-            //   saveFile(JSON.stringify(docs));
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      };
-      
-      getCols();
-      
-      setTimeout(saveFile, 10000);
+        // response.send(docs);
+      })
+      .catch((error) => {
+        console.log(error);
+        response.status(500).send(error);
+      });
+  });
+};
+
+//Batch reads need to be async.
+getDocs = async (cols) => {
+  for (i in cols) await getDoc(cols[i]);
+  fs.writeFile('db.txt', db, function (err) {
+    if (err) throw err;
+    console.log('Replaced!');
+  });
+  // cols.map((row) => await popCol(row));
+};
+
+getCols();
       
         </pre
+    >
+    <hr />
+
+    <h3>FireStore -Export (exportDB.js)</h3>
+    <p>
+      TO DO : Integration in a cloud function. Exportation to Firestore database
+      the TAB source file. The first line contains the collection name and the
+      children documents names. The next following lines are the values for the
+      children, each children is separated with a line feed and a carriage
+      return. Example:
+    </p>
+    <pre>
+      Col Title Desc Link 
+      Doc-AudioVideo Audio Video - Cameras - Microphones etc... Directory / 
+      Doc/AudioVideo Doc-AudioVideo Cameras - CCTV Directory /Doc/AudioVideo/Cameras
+    </pre>
+    <p>
+      This function convert a TAB file to a JSON file to an object ready to be
+      send to firestore.
+    </p>
+    <pre>
+      TabtoJSON = () => {
+        fs.readFile('impot.txt', 'utf8', (err, data) => {
+          let arrRowData = data.split('\r\n');
+          arrRowData.map((row, index) => {
+            let item = row.split('\t');
+            if (index == 0) {
+              header = item;
+              // console.log(header);
+            } else {
+              header.map((h, i) => {
+                switch (i) {
+                  case 0:
+                    result += `{"${h}":"${item[i]}",`;
+                    break;
+                  case header.length - 1:
+                    result += `"${h}":"${item[i]}"},`;
+                    break;
+                  default:
+                    result += `"${h}":"${item[i]}",`;
+                    break;
+                }
+              });
+            }
+          });
+          result = result.replace(/""/g, `"`);
+          result = `[${result.substring(0, result.length - 1)}]`;
+          // console.log(result);
+          let cols = JSON.parse(result);
+          popCols(cols);
+        });
+      };
+    </pre>
+
+    <p>
+      This async function receive the collections object from the function above
+      and call another function to send the collection and its documents one by
+      one waiting in the loop to send them all.
+    </p>
+    <pre>
+      //Batch writes need to be async.
+      popCols = async (cols) => {
+        for (i in cols) await popCol(cols[i]);
+        // cols.map((row) => await popCol(row));
+      };
+      </pre
+    >
+
+    <p>
+      This async function receive the collection and its documents and send it
+      to firestore, once done, its return a promsie resolved.
+    </p>
+    <pre>
+      popCol = (row) => {
+        return new Promise((resolve) => {
+          Col = row.Col;
+          delete row.Col;
+          Doc = row;
+          console.log(`Col: ${Col} ${Doc}`);
+          admin
+            .firestore()
+            .collection(Col)
+            .doc()
+            .set(Doc)
+            .then((snapshot) => {
+              resolve('col saved');
+            })
+            .catch((error) => {
+              console.log(error);
+              // res.status(500).send(error);
+            });
+        });
+      };
+      </pre
+    >
+
+    <hr />
+
+    <h3>FireStore Handler (db.js)</h3>
+    <p>
+      This function handles all the request to FireStore (add, get, change,
+      update, seach, etc...)
+    </p>
+    <pre data-enlighter-language="less">
+      /Event raised when the DB Collection is not found, the event return the requested collection
+      let colEmpty = (col) => {
+        const event = new CustomEvent('colEmpty', {
+          detail: { col: col },
+        });
+        document.dispatchEvent(event);
+      };
+      
+      //Event raised when the DB collection is found, the event return the documents belonging to the requested collection
+      
+      let searchFound = (col, id, doc) => {
+        const event = new CustomEvent('searchFound', {
+          detail: { col: col, id: id, doc: doc },
+        });
+        document.dispatchEvent(event);
+      };
+      
+      //DB change event
+      let docChanged = (type, id, doc) => {
+        const event = new CustomEvent('docChanged', {
+          detail: { type: type, id: id, doc: doc },
+        });
+        document.dispatchEvent(event);
+      };
+      
+      const nop = () => {};
+      
+      //**DB functions
+      let dbObj = [
+        { op: '' },
+        { col: '' },
+        { id: '' },
+        { doc: {} },
+        { popCol: {} },
+        { popDoc: {} },
+        { changed: {} },
+        { added: {} },
+        { modified: {} },
+        { removed: {} },
+      ];
+      
+      //db Handler
+      export let dbOp = (dbObj) => {
+        let {
+          op,
+          col,
+          id,
+          doc,
+          popCol,
+          popDoc,
+          changed,
+          added,
+          modified,
+          removed,
+        } = dbObj;
+      
+        if (op === 'get') {
+          // firebase
+          //   .firestore()
+          db.collection(col)
+            .orderBy('Title')
+            .get()
+            .then((snapshot) => {
+              //If collection found : Raise an event 'colEmpty' and pass the name of the collection for verification
+              // else pass the documents collection
+              snapshot.empty
+                ? colEmpty(col)
+                : colFound(
+                    snapshot.docs.map((doc) => {
+                      return doc.data();
+                    })
+                  );
+            });
+        }
+      
+        if (op === 'search') {
+          // firebase
+          //   .firestore()
+          db.collection(col)
+            // .orderBy('Title')
+            .doc(id)
+            .get()
+            .then((doc) => {
+              searchFound(col, doc.id, doc.data());
+            });
+        }
+      
+        if (op === 'add') {
+          db.collection(col)
+            .doc()
+            .set(doc)
+            .then((res) => {
+              console.log('db doc added!');
+            });
+        }
+      
+        if (op === 'upt') {
+          db.collection(col)
+            .doc(id)
+            .set(doc)
+            .then((res) => {
+              console.log('db doc updated!');
+            });
+        }
+      
+        if (op === 'del') {
+          db.collection(col)
+            .doc(id)
+            .delete()
+            .then((res) => {
+              console.log('db doc deleted!');
+            });
+        }
+      
+        if (op === 'chg') {
+          db.collection(col)
+            .orderBy('Title')
+            .onSnapshot((snapshot) => {
+              console.log('something change...');
+              snapshot.docChanges().map((change) => {
+                docChanged(change.type, change.doc.id, change.doc.data());
+                console.log(
+                  'change Type: ' + change.type + ' on doc: ' + change.doc.id
+                );
+                console.log(change.doc.data());
+              });
+            });
+        }
+      
+      };
+
+
+
+
+      </pre
     >
 
     <!-- <p>

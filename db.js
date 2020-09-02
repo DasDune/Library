@@ -187,16 +187,6 @@ export let dbOp = (dbObj) => {
         });
       });
   }
-
-  //not working...maybe listCollections only works on Node.js...?
-  if (op === 'col') {
-    console.log('hi');
-    db.listCollections().then((collections) => {
-      for (let collection of collections) {
-        console.log(`Found collection with id: ${collection.id}`);
-      }
-    });
-  }
 };
 
 //storage Handler
