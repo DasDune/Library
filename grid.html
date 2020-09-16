@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      iframe {
+        width: 98%;
+        height: 90vh;
+        border: none;
+      }
+
+      .ul-H {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        /* padding: 1rem; */
+        /* flex-grow: 4; */
+        margin-right: 2rem;
+      }
+
+      .ul-V {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        /* padding: 1rem; */
+        /* flex-grow: 4; */
+        margin-right: 2rem;
+      }
+
+      li {
+        padding-right: 1rem;
+      }
+
+      .item1 {
+        z-index: 1;
+        grid-area: logo;
+        position: sticky;
+        top: 0;
+      }
+      .item2 {
+        z-index: 1;
+        grid-area: topMenu;
+        position: sticky;
+        top: 0;
+      }
+      .item3 {
+        grid-area: login;
+        position: sticky;
+        top: 0;
+      }
+      .item4 {
+        grid-area: sideMenu;
+      }
+      .item5 {
+        grid-area: content;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-areas:
+          'logo topMenu topMenu topMenu topMenu topMenu topMenu topMenu topMenu topMenu login login'
+          'sideMenu content content content content content content content content content content content';
+        grid-gap: 0rem;
+        background-color: rgba(10, 76, 121);
+        padding: 0.1rem;
+      }
+
+      .grid-container > div {
+        color: white;
+        background-color: rgb(5, 42, 66);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="item1">Logo</div>
+      <div class="item2">
+        <ul class="ul-H">
+          <li><a href="https://www.w3schools.com">Item1</a></li>
+          <li><a href="https://www.w3schools.com">Item2</a></li>
+          <li><a href="https://www.w3schools.com">Item3</a></li>
+          <li><a href="https://www.w3schools.com">Item4</a></li>
+          <li><a href="https://www.w3schools.com">Item5</a></li>
+        </ul>
+      </div>
+      <div class="item3">Login</div>
+      <div class="item4">
+        <ul class="ul-V">
+          <li><a href="https://www.w3schools.com">Item1</a></li>
+          <li><a href="https://www.w3schools.com">Item2</a></li>
+          <li><a href="https://www.w3schools.com">Item3</a></li>
+          <li><a href="https://www.w3schools.com">Item4</a></li>
+          <li><a href="https://www.w3schools.com">Item5</a></li>
+        </ul>
+      </div>
+      <div class="item5">
+        <iframe
+          src="http://dasdune/Projects/Taglinker/fileupload.html"
+          title="W3Schools Free Online Web Tutorials"
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
