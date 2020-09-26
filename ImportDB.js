@@ -5,7 +5,7 @@ var serviceAccount = require('./serviceAccountKey.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://dasdoc-83fc7.firebaseio.com',
+  databaseURL: 'https://taglinker-4ee7c.firebaseio.com',
 });
 
 db = [];
@@ -31,7 +31,8 @@ getCols = () => {
 
 tabber = (col, id, doc) => {
   const { Title, Desc, Link } = doc;
-  db = [...db, `${col}~${id}~${Title}~${Desc}~${Link}\r\n`];
+  let strDoc = JSON.stringify(doc);
+  db = [...db, `${col}~${id}~${strDoc}\r\n`];
   // console.log(trStr);
 };
 

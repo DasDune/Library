@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+
+      .grid-container {
+        display: grid;
+        grid-template-areas: 
+        'title title'
+        'user access'
+        'msg msg'; 
+        border-radius: 5px;
+        border-style: solid;
+        /* column-gap: 1rem; */
+      }
+
+
+      .title {
+        grid-area: title;
+        display: flex;
+        background: #052a42;
+        justify-content: space-around;
+
+      }
+
+      .user {
+        grid-area: user;
+        display: flex;
+        background: #052a42;
+        flex-direction: column;
+        min-width: 200px;
+      }
+      .access {
+        grid-area: access;
+        display: flex;
+        background: #052a42;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+
+      .msg {
+        grid-area: msg;
+        display: flex;
+        background: #052a42;
+        justify-content: space-around;
+
+      }
+
+
+
+      .login {
+  
+        height: 4rem;
+      }
+
+
+      p{
+
+        color:peachpuff;
+
+      }
+
+      input {
+        border-radius: 5px;
+        border-style: solid;
+        background: #052a42;
+        color: cornflowerblue;
+        border-width: 1px;
+        font-size: 0.75rem;
+        position: absolute;
+        height: 15px;
+        padding: 5px;
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      span {
+        color: whitesmoke;
+        position: absolute;
+        font-size: 1rem;
+        padding: 3px;
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      input:focus + span {
+        position: relative;
+        font-size: 0.75rem;
+        /* top: -.0rem; */
+      }
+
+      input:hover {
+        border-style: solid;
+        border-width: 1px;
+        border-color: coral;
+      }
+
+      input:valid + span {
+        position: relative;
+        font-size: 0.75rem;
+        /* top: -.0rem; */
+        /* display: block; */
+        /* font-weight: bold; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+
+      <div class="title">
+        <p>Add a user</p>
+        </div>
+
+      <div class="user">
+        <div class="login">
+            <input id='email' type="email" name="email" required >
+              <span>email</span>
+            </input>
+      </div>
+      <div class="login">
+            <input id='password' type="password" name="password" required >
+              <span>password</span>
+            </input>
+      </div>
+      </div>
+
+      <div class="access">
+        <div><button>Viewer</button></div>
+        <div><button>Editor</button></div>
+        <div><button>Admin</button></div>
+      </div>
+
+      <div class="msg">
+      <p>Login messages</p>
+      </div>
+      
+    </div>
+  </body>
+</html>

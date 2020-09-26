@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style></style>
+  </head>
+  <body>
+    <div id="container">
+      <img id="scream" src="file.jpg" alt="The Scream" />
+      <!-- <canvas id="myCanvas"></canvas> -->
+    </div>
+
+    <script>
+      window.onload = function () {
+        // var canvas = document.getElementById('myCanvas');
+        // var ctx = canvas.getContext('2d');
+        // var img = document.getElementById('scream');
+        // ctx.drawImage(img, 100, 100);
+
+        let popEl = (cssArr) => {
+          let ele = {};
+          let row = '';
+          let rowArr = [];
+
+          cssArr.map((row) => {
+            rowArr = row.split('~');
+            ele = document.createElement('div');
+            ele.textContent = rowArr[0];
+            // ele.style.width = rowArr[1] + 'px';
+            ele.style.width = '300px';
+            ele.style.color = 'green';
+            ele.style.cssText = rowArr[2];
+            ele.style.width = parseInt(rowArr[1]) + 10 + 'px';
+            // ele.style.background = 'green';
+            ele.style.position = 'absolute';
+            ele.className = 'test';
+            ele.style.color = 'transparent';
+            container.appendChild(ele);
+          });
+        };
+
+        const getDBtxt = async () => {
+          let res = await fetch(
+            'http://dasdune/Projects/TagLinker/D-12048-5K1-N-0901.txt'
+          );
+          return await res.text();
+        };
+
+        //Fetching done, convert the text to an array and populate a datalist and input element
+        getDBtxt().then((drawingCSS) => {
+          console.log('Drawings CSS loaded');
+          let cssArr = drawingCSS.split('\r\n');
+          popEl(cssArr);
+        });
+      };
+    </script>
+  </body>
+</html>

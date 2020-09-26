@@ -1,0 +1,67 @@
+input {
+  border-radius: 5px;
+  border-style: solid;
+  background: rgb(5, 42, 66);
+  color: cornflowerblue;
+  border-width: 1px;
+  font-size: 1rem;
+  position: absolute;
+  height: 15px;
+  padding: 5px;
+}
+
+span {
+  color: whitesmoke;
+  position: absolute;
+  font-size: 1rem;
+  padding: 3px;
+}
+
+input:focus + span {
+  position: relative;
+  font-size: 0.75rem;
+  top: -1.25rem;
+}
+
+input:hover {
+  border-style: solid;
+  border-width: 1px;
+  border-color: coral;
+}
+
+input:valid + span {
+  position: relative;
+  font-size: 0.75rem;
+  top: -1.25rem;
+  display: block;
+  /* font-weight: bold; */
+}
+
+.form {
+  //   padding: 1.5rem;
+  background: rgb(5, 42, 66);
+  width: 200px;
+}
+
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#signIn {
+  color: teal;
+}
+
+#cancel {
+  color: crimson;
+}
+
+i {
+  padding-left: 0.5rem;
+}
+
+#msg {
+  font-size: 0.75rem;
+  color: rgb(5, 42, 66);
+}

@@ -5,7 +5,7 @@ var serviceAccount = require('./serviceAccountKey.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://dasdoc-83fc7.firebaseio.com',
+  databaseURL: 'https://taglinker-4ee7c.firebaseio.com',
 });
 
 result = '';
@@ -48,14 +48,14 @@ wait5Sec = () => {
 
 popCol = (row) => {
   return new Promise((resolve) => {
-    Col = row.Col;
-    delete row.Col;
+    Col = 'tags';
+    // delete row.Col;
     Doc = row;
     console.log(`Col: ${Col} ${Doc}`);
     admin
       .firestore()
       .collection(Col)
-      .doc()
+      .doc(Doc.Name)
       .set(Doc)
       .then((snapshot) => {
         resolve('col saved');
@@ -74,7 +74,7 @@ popCols = async (cols) => {
 };
 
 TabtoJSON = () => {
-  fs.readFile('impot.txt', 'utf8', (err, data) => {
+  fs.readFile('devices.txt', 'utf8', (err, data) => {
     let arrRowData = data.split('\r\n');
     arrRowData.map((row, index) => {
       let item = row.split('\t');

@@ -2,32 +2,136 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=
+        , initial-scale=1.0"
+    />
+    <meta http-equiv="expires" content="0" />
+    <!-- <link rel="stylesheet" type="text/css" href="/css/dashboard.css" /> -->
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <title>File Upload</title>
+    <style>
+     * {
+        margin: 0;
+        padding: 0;
+        overflow:hidden;
+      }
+
+      body{
+        background: rgb(5, 42, 66);
+        font-family: 'Abel';font-size: 22px;
+      }
+
+      h1{
+        padding:1rem;
+        color:  rgb(32, 108, 158);
+        font-family: 'Abel';font-size: 22px;
+      }
+
+      p {
+        padding:1rem;
+        color: rgb(102, 173, 200);
+        font-family: 'Abel';font-size: 16px;
+      }
+
+
+      label{
+        padding:1rem;
+        color:  rgb(32, 108, 158);
+        font-family: 'Abel';font-size: 16px;
+      }
+
+     select {
+        padding:.5rem;
+        background:rgb(5, 42, 66);
+        color:rgba(245, 245, 245, 0.555);
+        font-family: 'Abel';font-size: 16px;
+      }
+
+      input {
+        padding:.5rem;
+        background:  rgb(5, 42, 66);
+        color:rgba(245, 245, 245, 0.555);
+        font-family: 'Abel';font-size: 16px;
+      }
+
+      button{
+        padding:.5rem;
+        background:rgb(5, 42, 66);
+        color:rgba(245, 245, 245, 0.555);
+        font-family: 'Abel';font-size: 16px;
+      }
+
+ 
+
+    </style>
   </head>
-  <body>
-    <input type="file" id="fileButton" />
+  <body id="body">
+    <h1>File uploader/converter</h1>
+    <p>Upload the file(s) as it or convert them to a web page</p>
+    <hr><br>
+    <label for="options">Choose an option:</label>
+    <select id="options">
+      <option value="preview">Preview</option>
+      <option value="upload">Upload</option>
+      <option value="html">Upload/Web</option>
+    </select>
+   <br><br>
+    <label for="regEx">Filter:</label>
+    <input type="text" id="filter" name="filter"><br><br>
+    <hr>
 
-    <script>
-      let inputFile = document.getElementById('fileButton');
+    <input multiple type="file" id="fileInput" />
+    <button type="button" id="btnProceed">Proceed</button>
+    <button type="button" id="btnPreview">Preview</button>
 
-      inputFile.addEventListener('change', (e) => {
-        const files = e.target.files;
-        const formData = new FormData();
-        formData.append('myFile', files[0]);
+      <script>
+        let inputFile = document.getElementById('fileInput');
+        let options = document.getElementById('options');
+        let filter= document.getElementById('filter');
 
-        fetch('http://localhost:555', {
-          method: 'POST',
-          body: formData,
-        });
-        // .then((response) => response.json())
-        // .then((data) => {
-        //   console.log(data);
-        // })
-        // .catch((error) => {
-        //   console.error(error);
-        // });
+         filter.value = localStorage.getItem("regEx") == undefined ? '^.{3,12}$' : localStorage.getItem("regEx") ;
+
+        let formData = {};
+
+        inputFile.addEventListener('change', (e) => {
+          const files = e.target.files;
+          formData = new FormData();
+          formData.append('myFile', files[0]);
       });
-    </script>
+
+      btnProceed.addEventListener('click', (e) => {
+        
+        let path = options.value == 'upload' ? 'upload' : 'web';
+        path = options.value == 'preview' ? 'preview' : path;
+
+        regEx = localStorage.getItem("regEx");
+        if (filter.value != regEx) localStorage.setItem("regEx", filter.value)
+        regEx = localStorage.getItem("regEx");
+
+            fetch(`http://localhost:666/${path}/${regEx}`, {
+              // fetch(`http://localhost:666/${path}`, {       
+            method: 'POST',
+            body: formData,
+          })
+            .then((res) => console.log(res.json()))
+            .then((data) => {
+              console.log(data);
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+        });
+
+
+        btnPreview.addEventListener('click', (e) => {
+
+          window.open("http://localhost:666/view/view2.html");
+
+        });
+
+      </script>
+    </p>
   </body>
 </html>

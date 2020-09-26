@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Title-Topic-->
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=
+        , initial-scale=1.0"
+    />
+    <meta http-equiv="expires" content="0" />
+    <title>Upload</title>
+    <script type="module" defer src="/js/firebase.js"></script>
+  </head>
+  <body id="body">
+    <h1>Files uploader</h1>
+    <h2>The file will be uploaded to Google cloud storage</h2>
+    <input multiple type="file" id="filesInput" />
+    <button type="button" id="btnUpload">Upload</button>
+    <div id="container"></div>
+
+    <script type="module">
+      import { storageOp } from './js/firebase.js';
+      let inputFiles = document.getElementById('filesInput');
+      let btnUpload = document.getElementById('btnUpload');
+
+      let filesList = [];
+
+      inputFiles.addEventListener('change', (e) => {
+        let files = e.target.files;
+        for (let file of files) {
+          console.log(file.name);
+          filesList = [...filesList, file];
+          // storageOp('upload', file);
+        }
+      });
+
+      btnUpload.addEventListener('click', (e) => {
+        filesList.map((file) => {
+          storageOp('upload', file);
+          // storageOp('download', file);
+        });
+      });
+    </script>
+  </body>
+</html>
