@@ -1,52 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <style>
-      .div {
-        position: relative;
-        color: coral;
-      }
 
-      .div:hover::before {
-        position: absolute;
-        /* visibility: hidden; */
-        top: -1.25rem;
-        content: attr(data-tooltip1);
-        color: cornflowerblue;
-      }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag UI</title>
+</head>
 
-      .div:hover::after {
-        position: absolute;
-        /* visibility: hidden; */
-        top: 1rem;
-        left: 0rem;
-        content: attr(data-tooltip2);
-        color: peachpuff;
-      }
-    </style>
+<body>
 
-    <br />
-    <div id="test" data-tooltip1="🏷️🔒" data-tooltip2="tip2" class="div">
-      Hello
+    <div class='tag' data-name='Tagname'>
+        <span>
+            <ul>
+                <li>Name</li>
+                <li>Description</li>
+                <li><a href="https://www.w3schools.com">Link1</a></li>
+                <li><a href="https://www.w3schools.com">Link2</a></li>
+                <li><a href="https://www.w3schools.com">Link3</a></li>
+                <li id='more'>more...
+                    <div class='keyVal'>
+                        <div class='key'>Min</div>
+                        <div class='val'>100</div>
+                    </div>
+                    <div class='keyVal'>
+                        <div class='key'>Max</div>
+                        <div class='val'>1000</div>
+                    </div>
+                    <div class='keyVal'>
+                        <div class='key'>Temperature</div>
+                        <div class='val'>25c</div>
+                    </div>
+                    <div class='keyVal'>
+                        <div class='key'>Pression is getting very </div>
+                        <div class='val'>33kpa</div>
+                    </div>
+                    <div class='keyVal'>
+                        <div class='key'>Min</div>
+                        <div class='val'>100</div>
+                    </div>
+                    <div class='keyVal'>
+                        <div class='key'>Max</div>
+                        <div class='val'>1000</div>
+                    </div>
+                    <div class='keyVal'>
+                        <div class='key'>Temperature</div>
+                        <div class='val'>25c</div>
+                    </div>
+                    <div class='keyVal'>
+                        <div class='key'>Pression is getting very </div>
+                        <div class='val'>33kpa</div>
+                    </div>
+                </li>
+            </ul>
+        </span>
     </div>
 
-    <br />
-    <br />
-    <br />
-    <ul id="list">
-      <li>item1</li>
-      <li>item2</li>
-    </ul>
 
-    <script>
-      test = document.getElementById('test');
-      list = document.getElementById('list');
-      test.setAttribute('data-tooltip2', list.innerText);
-    </script>
-  </body>
+</body>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Armata&family=Roboto&display=swap');
+
+    .tag {
+        font-family: 'Armata', sans-serif;
+        background: whitesmoke;
+        position: absolute;
+        opacity: 0%;
+        top: 100px;
+        left: 100px;
+        border: 1px solid;
+        border-radius: 5px;
+        box-shadow: -5px 5px rgb(6, 27, 218);
+    }
+
+    .tag:hover {
+        visibility: visible;
+        opacity: 100%;
+    }
+
+    .tag li:hover {
+        color: red;
+    }
+
+    .tag li {
+        margin-right: 1em;
+
+    }
+
+    .tag li>div {
+        opacity: 100%;
+    }
+
+    .keyVal {
+
+        display: none;
+        padding: .25em;
+    }
+
+    .keyVal:hover {
+        border: 1px solid;
+        border-radius: 5px;
+        border-color: peru;
+    }
+
+    .key {
+        font-size: .75em;
+        width: 10em;
+        color: royalblue;
+        /* padding-left: 1em; */
+        display: flex;
+    }
+
+    .val {
+        font-size: .75em;
+        color: peru;
+        padding-left: 1em;
+        display: flex;
+        margin-right: 1em;
+    }
+</style>
+
+<script>
+
+    keyVal = document.getElementsByClassName('keyVal');
+    keyValArr = Array.from(keyVal)
+    more = document.getElementById("more");
+
+
+    more.addEventListener("mouseenter", () => keyValArr.map((keyval) => keyval.style.display = 'flex'));
+
+    more.addEventListener("mouseleave", () => keyValArr.map((keyval) => keyval.style.display = 'none'));
+
+
+
+
+
+</script>
+
 </html>

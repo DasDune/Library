@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordeon</title>
+    <style>
+      .box {
+        background: burlywood;
+        transition: max-height 1s ease-in-out;
+      }
+
+      .content {
+        background: peru;
+        transition: max-height 1s ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box" class="box">
+      Box
+      <div class="content">
+        <div>Detail-1</div>
+        <div>Detail-2</div>
+        <div>Detail-3</div>
+      </div>
+    </div>
+
+    <script>
+      let box = document.getElementById('box');
+      box.addEventListener('click', function (e) {
+        if (e.target.childNodes[1].style.maxHeight)
+          e.target.childNodes[1].style.maxHeight = null;
+        else
+          e.target.childNodes[1].style.maxHeight =
+            e.target.childNodes[1].scrollHeight + 'px';
+      });
+    </script>
+  </body>
+</html>

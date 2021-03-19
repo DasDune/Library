@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Unica+One|Vollkorn');
+
+.icon::before {
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+.tag {
+    position : absolute;
+    left:10rem;
+    top:10rem;
+    font-size: 2rem;
+    transition: transform ease-out 150ms;
+    }
+
+span {
+
+    
+    transform: scale(0);
+    transition: transform ease-in-out 300ms;
+
+  
+
+}    
+
+span[data-tooltip] {
+    position : absolute;
+    /* display:inline;
+    color:red; */
+}
+
+span[data-tooltip]::before {
+    z-index: 2;
+    position : absolute;
+    white-space: nowrap;
+    color:brown;
+    content: attr(data-tooltip);
+    padding: .5rem;
+    background: palegoldenrod;
+    border-width: 1px;
+    border-radius: 115px;
+    font-size: 1rem;
+    top: -2rem;
+    transform: scale(1);
+    transition: transform ease-out 150ms;
+}
+
+/* .tag::before {
+    position : absolute;
+    content: attr(data-tooltip);
+    padding: .5rem;
+    background: palegoldenrod;
+    border-width: 1px;
+    border-radius: 115px;
+    font-size: 1rem;
+    top: -2rem;
+    transform: scale(1);
+    transition: transform ease-out 150ms;
+} */
+
+/* .tag::after {
+    z-index: -1;
+    position : absolute;
+
+    white-space: nowrap;
+
+    content: 'Das Dune';
+    padding: .5rem;
+
+    background: peachpuff;
+
+    border-width: 1px;
+    border-radius: 115px;
+
+    font-size: 1rem;
+    top: -2rem;
+} */
+
+a::after {
+    z-index: -1;
+    position : absolute;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f1c1';
+    font-weight: 900;
+    font-size: .8em;
+    top: -.5rem;
+    left: 7rem;
+
+}
+
+
