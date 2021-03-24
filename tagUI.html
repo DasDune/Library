@@ -9,15 +9,17 @@
 
 <body>
 
-    <div class='tag' data-name='Tagname'>
-        <span>
-            <ul>
-                <li>Name</li>
-                <li>Description</li>
-                <li><a href="https://www.w3schools.com">Link1</a></li>
-                <li><a href="https://www.w3schools.com">Link2</a></li>
-                <li><a href="https://www.w3schools.com">Link3</a></li>
-                <li id='more'>more...
+    <div id='info'>info</div>
+    <div id='tag' class='tag' data-show='none'>TagName
+        <div class='value'>123456</div>
+        <div id='menu' class='menu'>
+            <div class='name'>Name</div>
+            <div class='desc'>Description</div>
+            <div><a href="https://www.w3schools.com">Link1</a></div>
+            <div><a href="https://www.w3schools.com">Link2</a></div>
+            <div><a href="https://www.w3schools.com">Link3</a></div>
+            <div id='more'><span class="caret">more</span>
+                <div class='nested'>
                     <div class='keyVal'>
                         <div class='key'>Min</div>
                         <div class='val'>100</div>
@@ -31,7 +33,7 @@
                         <div class='val'>25c</div>
                     </div>
                     <div class='keyVal'>
-                        <div class='key'>Pression is getting very </div>
+                        <div class='key'>Pression is getting very high </div>
                         <div class='val'>33kpa</div>
                     </div>
                     <div class='keyVal'>
@@ -50,51 +52,167 @@
                         <div class='key'>Pression is getting very </div>
                         <div class='val'>33kpa</div>
                     </div>
-                </li>
-            </ul>
-        </span>
+                </div>
+            </div>
+        </div>
     </div>
-
-
 </body>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Armata&family=Roboto&display=swap');
 
+    /* Style the caret/arrow */
+    .caret {
+        cursor: pointer;
+        user-select: none;
+        /* Prevent text selection */
+        margin-top: .1em;
+        margin-left: .3em;
+        font-size: .75em;
+    }
+
+    /* Create the caret/arrow with a unicode, and style it */
+    .caret::before {
+        content: "\25B6";
+        color: black;
+        display: inline-block;
+        margin-right: 6px;
+    }
+
+    /* Hide the nested list */
+    .nested {
+        display: none;
+        padding-bottom: .25em;
+    }
+
+    /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+    .active {
+        display: block;
+    }
+
+    /* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+    .caret-down::before {
+        transform: rotate(90deg);
+    }
+
     .tag {
         font-family: 'Armata', sans-serif;
-        background: whitesmoke;
+        background: rgb(0, 255, 0, .3);
+        /* opacity: 50%; */
         position: absolute;
-        opacity: 0%;
+        display: flex;
+        color: blue;
         top: 100px;
         left: 100px;
-        border: 1px solid;
+        height: 16px;
+        width: 100px;
+        padding: 2px;
+        /* border: 1px solid;
         border-radius: 5px;
-        box-shadow: -5px 5px rgb(6, 27, 218);
+        box-shadow: -61px 1px rgb(6, 27, 218); */
+        /* transform: rotate(270deg) */
     }
+
+    /* .tag::before {
+        font-family: 'Armata', sans-serif;
+        content: '123456';
+        color: cornsilk;
+        position: absolute;
+        display: block;
+        justify-content: flex-end;
+        top: 0px;
+        left: -61px;
+        height: 16px;
+        padding: 2px;
+        /* width: 60px; */
+
+
+
+    /* } */
 
     .tag:hover {
-        visibility: visible;
-        opacity: 100%;
+        cursor: pointer;
+        border: 1px solid;
+        border-radius: 5px;
+        box-shadow: -61px 0px rgb(6, 27, 218);
+        /* transform: rotate(270deg) */
     }
 
-    .tag li:hover {
-        color: red;
+    .menu {
+        position: absolute;
+        display: none;
+        top: 20px;
+        left: 5px;
+        margin-top: .1em;
+        /* padding-top: .2em; */
+        padding-left: .2em;
+        background: whitesmoke;
+        border: 1px sodivd;
+        border-radius: 5px;
+        box-shadow: -3px -1px rgb(6, 27, 218);
+        /* transform-origin: left top;
+        transform: rotate(90deg) */
     }
 
-    .tag li {
-        margin-right: 1em;
+    .name {
+        color: lightseagreen;
 
     }
 
-    .tag li>div {
-        opacity: 100%;
+    .desc {
+        color: peru;
+        font-size: .75em;
+        padding-right: 1em;
+
     }
+
+    .value {
+
+        font-family: 'Armata', sans-serif;
+        color: whitesmoke;
+        position: absolute;
+        display: block;
+        justify-content: flex-end;
+        top: 0px;
+        left: -61px;
+        height: 16px;
+        padding: 2px;
+        /* width: 60px; */
+    }
+
+    a {
+        color: royalblue;
+        margin-left: .25em;
+        font-size: .7em;
+
+    }
+
+    a:hover {
+
+        color: tomato;
+    }
+
+    .more {
+        display: flex;
+        flex-direction: column;
+        margin-top: .1em;
+        margin-left: .3em;
+        font-size: .75em;
+    }
+
+    .moreItems {
+        /* display: flex; */
+        opacity: 0%;
+
+    }
+
 
     .keyVal {
 
-        display: none;
-        padding: .25em;
+        display: flex;
+        margin-left: .2em;
+
+
     }
 
     .keyVal:hover {
@@ -104,15 +222,17 @@
     }
 
     .key {
-        font-size: .75em;
-        width: 10em;
+        font-size: .5em;
+        white-space: nowrap;
+        /* width: 10em; */
+        /* max-width: 25px; */
         color: royalblue;
-        /* padding-left: 1em; */
-        display: flex;
+        padding-left: 1em;
+        /* display: flex; */
     }
 
     .val {
-        font-size: .75em;
+        font-size: .6em;
         color: peru;
         padding-left: 1em;
         display: flex;
@@ -122,16 +242,46 @@
 
 <script>
 
-    keyVal = document.getElementsByClassName('keyVal');
-    keyValArr = Array.from(keyVal)
-    more = document.getElementById("more");
+    var toggler = document.getElementsByClassName("caret");
+    var i;
 
+    for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function () {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+        });
+    }
 
-    more.addEventListener("mouseenter", () => keyValArr.map((keyval) => keyval.style.display = 'flex'));
+    // info = document.getElementById("info");
+    tag = document.getElementById("tag");
+    menu = document.getElementById("menu");
+    // more = document.getElementById("more");
+    // moreItems = document.getElementById("moreItems");
 
-    more.addEventListener("mouseleave", () => keyValArr.map((keyval) => keyval.style.display = 'none'));
+    // tag.addEventListener("click", () => {
+    //     tag.dataset.show = tag.dataset.show == 'none' ? 'block' : 'none'
+    //     tag.style.display = tag.dataset.show
+    //     // menu.style.opacity = '0'
+    //     // more.style.opacity = '0'
+    // });
 
+    tag.addEventListener("mouseenter", () => {
+        // tag.style.display = 'flex'
+        menu.style.display = 'block'
+        // menu.style.opacity = '1'
+        // more.style.opacity = '1'
+    });
 
+    tag.addEventListener("mouseleave", () => {
+        // tag.style.display = 'none'
+        menu.style.display = 'none'
+        // menu.style.opacity = '0'
+        // more.style.opacity = '0'
+    });
+
+    // more.addEventListener("mouseover", () => {
+    //     moreItems.style.opacity = '1'
+    // });
 
 
 
