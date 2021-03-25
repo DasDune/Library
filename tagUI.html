@@ -300,7 +300,7 @@
     tag = document.getElementById("tag");
     menu = document.getElementById("menu");
     value = document.getElementById("value");
-    status = document.getElementById("stat");
+    stat = document.getElementById("stat");
     // moreItems = document.getElementById("moreItems");
 
     tag.addEventListener("click", (e) => {
@@ -335,9 +335,29 @@
 
     });
 
-    // more.addEventListener("mouseover", () => {
-    //     moreItems.style.opacity = '1'
-    // });
+    stat.addEventListener("change", (e) => {
+
+
+        switch (e.target.value) {
+            case 'Installed':
+                tag.style.backgroundColor = 'palegreen';
+                break;
+            case 'Terminated':
+                tag.style.backgroundColor = 'peru';
+                break;
+            case 'Connected':
+                tag.style.backgroundColor = 'peach';
+                break;
+            case 'Tested':
+                tag.style.backgroundColor = 'orange';
+                break;
+            default:
+                tag.style.backgroundColor = 'transparent';
+        }
+
+
+
+    });
 
 
 
