@@ -10,29 +10,71 @@
 <body>
 
 
-    <div class='box'>DUNE</div>
-    <hr class='line'>
+
+    <datalist id="status">
+        <option value="Installed">
+        <option value="Terminated">
+        <option value="Connected">
+        <option value="Tested">
+    </datalist>
+
+    <div id='info'>INFO</div>
 
 
+    <div id='box' class='box'>
+        <input id='stat' class='stat' list='status' class='status'></input>
+    </div>
 
     <style>
         .box {
-            position: absolute;
-            top: 100px;
-            left: 100px;
-            background: wheat;
-            transform-origin: left;
-            transform: rotate(90deg)
+
+            background: plum;
+            height: 500px;
+            width: 500px;
+
         }
 
-        .line {
+        .stat {
             position: absolute;
-            top: 100px;
             left: 100px;
-            background: wheat;
-            /* transform: rotate(90deg) */
+            top: 100px;
+
+
         }
     </style>
+    <script>
+
+        box = document.getElementById('box');
+        info = document.getElementById('info');
+        stat = document.getElementById('stat');
+
+        info.textContent = 'toto'
+
+        box.addEventListener("mouseleave", (e) => {
+
+            box.style.display = 'none';
+
+        })
+
+        setInterval("myFunction()", 1000);
+
+        function myFunction(e) {
+
+
+            if (stat.hasFocus()) {
+                info.innerHTML = "stat has focus.";
+            } else {
+                info.innerHTML = "stat DOES NOT have focus.";
+            }
+
+        }
+
+
+
+
+
+    </script>
+
 </body>
 
 </html>

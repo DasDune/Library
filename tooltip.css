@@ -17,13 +17,8 @@
     }
 
 span {
-
-    
     transform: scale(0);
     transition: transform ease-in-out 300ms;
-
-  
-
 }    
 
 span[data-tooltip] {
