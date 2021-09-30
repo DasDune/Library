@@ -10,6 +10,7 @@
     "express-fileupload": "^1.2.0",
     "firebase": "^7.15.5",
     "firebase-admin": "^8.13.0",
+    "googleapis": "^87.0.0",
     "jsdom": "^16.4.0",
     "swiper": "^5.4.2"
   },

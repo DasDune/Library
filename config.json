@@ -1,0 +1,11 @@
+{
+    "keysFB": "./keysFB.json",
+    "keysVision": "./keysVision.json",
+    "keysSheets": "./keysSheets.json",
+    "bucket": "gs://taglinker-admin.appspot.com",
+    "fileURLPrefix": "https://firebasestorage.googleapis.com/v0/b/taglinker-admin.appspot.com/o/",
+    "url": "https://taglinker-admin.web.app/",
+    "testUrl": "http://127.0.0.1:8080",
+    "sep": "-",
+    "sheetsId": "1DGdCvVASVgrJAfHqnLXsvpPcmHAIY1bkJhxqWlj3Mrs"
+}

@@ -3,7 +3,7 @@
 const config = require('./config.json');
 const { google } = require("googleapis");
 
-//cells objects
+//cells objects used by batch update
 
 //update values
 let valUpt =
@@ -85,61 +85,72 @@ let noteUpt =
 }
 
 
-const getDateTime = () => {
-
-    let d = new Date();
-    let y = d.getUTCFullYear();
-    let m = d.getUTCMonth() + 1;
-    let dy = d.getUTCDate();
-    let h = d.getUTCHours();
-    let mn = d.getUTCMinutes();
-
-    return (`${m}-${dy}-${y} ${h}:${mn}`)
-}
-
-const color = {
-    reset: '\x1b[0m',
-    bright: '\x1b[1m',
-    dim: '\x1b[2m',
-    underscore: '\x1b[4m',
-    blink: '\x1b[5m',
-    reverse: '\x1b[7m',
-    hidden: '\x1b[8m',
-
-    fgBlack: '\x1b[30m',
-    fgRed: '\x1b[31m',
-    fgGreen: '\x1b[32m',
-    fgYellow: '\x1b[33m',
-    fgBlue: '\x1b[34m',
-    fgMagenta: '\x1b[35m',
-    fgCyan: '\x1b[36m',
-    fgWhite: '\x1b[37m',
-
-    bgBlack: '\x1b[40m',
-    bgRed: '\x1b[41m',
-    bgGreen: '\x1b[42m',
-    bgYellow: '\x1b[43m',
-    bgBlue: '\x1b[44m',
-    bgMagenta: '\x1b[45m',
-    bgCyan: '\x1b[46m',
-    bgWhite: '\x1b[47m',
-};
+//future code
 
 
-//global sheets variables
-let googleSheets = {}
-let spreadsheetId = {}
-let sheetsData = {};
-let auth = {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //init sheets with auth
-sheetsInit = async (sheetsId) => {
+sheetsInit = async () => {
 
-    // const keyFile = "keysSheets.json";
     const keyFile = config['keysSheets'];
-    // const spreadsheetId = "1ynIOtCU10aGmT4dI-Y4wlmW2IQ6ZbMJwID3-qLdwxmA";
-    spreadsheetId = sheetsId;
 
     //authorization
     auth = new google.auth.GoogleAuth({
@@ -151,16 +162,33 @@ sheetsInit = async (sheetsId) => {
     const clientSheets = await auth.getClient();
 
     const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
-    // gs = googleSheets;
-    // sheetsAuth = auth;
-
-    //Get sheets info
-    // sheetsData = await googleSheets.spreadsheets.get({
-    //     spreadsheetId,
-    // });
 
     return ({ googleSheets: googleSheets, auth: auth })
 }
+
+//init sheets with auth
+sheetsInit2 = async (sheetsId) => {
+
+    const keyFile = config['keysSheets'];
+    spreadsheetId = sheetsId;
+
+    //authorization
+    auth = new google.auth.GoogleAuth({
+        keyFile: keyFile,
+        scopes: "https://www.googleapis.com/auth/spreadsheets",
+    });
+
+    // Create client instance for auth
+    const clientSheets = await auth.getClient();
+
+
+    const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
+
+    return ({ googleSheets: googleSheets, auth: auth })
+}
+
+
+
 
 // sheets info
 sheetsInfo = async (sheetsId) => {
@@ -1148,17 +1176,19 @@ dbSet = (tags) => {
 let sheetsTester = (async () => {
 
 
-const sheetsAPIInfo = await sheetsInit('1DGdCvVASVgrJAfHqnLXsvpPcmHAIY1bkJhxqWlj3Mrs')
+const sheetsAPIInfo = await sheetsInit()
 
 console.log(sheetsAPIInfo);
 
 googleSheets = sheetsAPIInfo.googleSheets;
 auth = sheetsAPIInfo.auth;
 
+console.log(sheetsAPIInfo)
 
-    const sheets = await sheetsInfo('1DGdCvVASVgrJAfHqnLXsvpPcmHAIY1bkJhxqWlj3Mrs')
 
-    console.log(sheets)
+    // const sheets = await sheetsInfo('1DGdCvVASVgrJAfHqnLXsvpPcmHAIY1bkJhxqWlj3Mrs')
+
+    // console.log(sheets)
     // const sheet = await sheetInfo('Instruments', sheets)
 
     // await updateCell(sheets, 'taglinker@gmail.com', '2400-LIT-2101', 'IOType', 'OOP')
