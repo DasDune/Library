@@ -125,8 +125,65 @@ const color = {
     bgWhite: '\x1b[47m',
 };
 
+
+//global sheets variables
+let googleSheets = {}
+let spreadsheetId = {}
+let sheetsData = {};
+let auth = {}
+
+
 //init sheets with auth
+sheetsInit = async (sheetsId) => {
+
+    // const keyFile = "keysSheets.json";
+    const keyFile = config['keysSheets'];
+    // const spreadsheetId = "1ynIOtCU10aGmT4dI-Y4wlmW2IQ6ZbMJwID3-qLdwxmA";
+    spreadsheetId = sheetsId;
+
+    //authorization
+    auth = new google.auth.GoogleAuth({
+        keyFile: keyFile,
+        scopes: "https://www.googleapis.com/auth/spreadsheets",
+    });
+
+    // Create client instance for auth
+    const clientSheets = await auth.getClient();
+
+    const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
+    // gs = googleSheets;
+    // sheetsAuth = auth;
+
+    //Get sheets info
+    // sheetsData = await googleSheets.spreadsheets.get({
+    //     spreadsheetId,
+    // });
+
+    return ({ googleSheets: googleSheets, auth: auth })
+}
+
+// sheets info
 sheetsInfo = async (sheetsId) => {
+
+    let spreadsheetId = sheetsId
+
+    //Get sheets info
+    sheetsData = await googleSheets.spreadsheets.get({
+        spreadsheetId,
+    });
+
+    console.log(`${color.fgBlue}total sheets : ${color.reset}${sheetsData.data.sheets.length}`)
+
+    namedRanges = sheetsData.data.namedRanges
+    console.log(`${color.fgBlue}namedRanges : ${color.reset}${namedRanges.length}`)
+
+    console.log(`${color.fgGreen}function :: sheetsInfo completed.${color.reset}`)
+
+    return ({ sheetsData: sheetsData.data })
+}
+
+// sheets info
+sheetsInfo2 = async (sheetsId) => {
 
     console.log(`${color.fgYellow}function :: sheetsInfo started...${color.reset}`)
     console.log(`${color.fgBlue}sheetsId :${color.reset} ${sheetsId}`)
@@ -1090,14 +1147,25 @@ dbSet = (tags) => {
 
 let sheetsTester = (async () => {
 
+
+const sheetsAPIInfo = await sheetsInit('1DGdCvVASVgrJAfHqnLXsvpPcmHAIY1bkJhxqWlj3Mrs')
+
+console.log(sheetsAPIInfo);
+
+googleSheets = sheetsAPIInfo.googleSheets;
+auth = sheetsAPIInfo.auth;
+
+
     const sheets = await sheetsInfo('1DGdCvVASVgrJAfHqnLXsvpPcmHAIY1bkJhxqWlj3Mrs')
+
+    console.log(sheets)
     // const sheet = await sheetInfo('Instruments', sheets)
 
     // await updateCell(sheets, 'taglinker@gmail.com', '2400-LIT-2101', 'IOType', 'OOP')
 
-    const info = await getSheetInfoFromTag(sheets, '2400-LIT-2101')
+    // const info = await getSheetInfoFromTag(sheets, '2400-LIT-2101')
 
-    console.log(info)
+    // console.log(info)
 
     // await updateRows(sheets, ['0-TEST'], 'PDF', 'https://www.google.com/', 'PDF', '0-TEST')
 
