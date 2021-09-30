@@ -10,7 +10,7 @@
 <body>
 
     <div id='info'>info</div>
-    <div id='tag' class='tag' data-show='none'><span id='span' data-tooltip='tooltip'></span>
+    <div id='tag' class='tag' data-show='none' data-statCol='transparent'><span id='span' data-tooltip='tooltip'></span>
         <div id='value' class='value'>123456</div>
         <div id='menu' class='menu'>
             <div class='name'>Name</div>
@@ -242,6 +242,8 @@
 
         display: flex;
         margin-left: .2em;
+        align-items: center;
+        margin-right: .5em;
 
 
     }
@@ -273,11 +275,14 @@
 
 <script>
 
+    // event.stopPropagation();
+
     var toggler = document.getElementsByClassName("caret");
     var i;
 
     for (i = 0; i < toggler.length; i++) {
-        toggler[i].addEventListener("click", function () {
+        toggler[i].addEventListener("click", function (e) {
+            e.stopPropagation();
             this.parentElement.querySelector(".nested").classList.toggle("active");
             this.classList.toggle("caret-down");
         });
@@ -294,9 +299,9 @@
         tag.style.backgroundColor = "transparent";
     }
 
-    setTimeout(() => { styleCtrl() }, 5000);
+    setTimeout(() => { styleCtrl() }, 2000);
 
-    // info = document.getElementById("info");
+    info = document.getElementById("info");
     tag = document.getElementById("tag");
     menu = document.getElementById("menu");
     value = document.getElementById("value");
@@ -305,57 +310,69 @@
 
     tag.addEventListener("click", (e) => {
 
-        // alert(document.activeElement.id);
-        tag.dataset.show = tag.dataset.show == 'none' ? 'block' : 'none'
-        tag.classList.toggle('show');
-        // }
+        info.textContent = e.target.id;
+
+        let res = document.activeElement.id == 'stat';
+        if (!res) {
+            info = tag.dataset.show;
+            // alert(document.activeElement.id);
+            if (tag.dataset.show == 'none') {
+                tag.dataset.show = 'block';
+                tag.style.backgroundColor = tag.dataset.statcol;
+            }
+            else {
+                tag.dataset.show = 'none';
+                tag.style.backgroundColor = 'transparent';
+            }
+
+            tag.classList.toggle('show');
+        }
+        // // }
 
     });
 
     tag.addEventListener("mouseenter", () => {
-        // tag.style.display = 'flex'
         value.style.display = 'block'
         menu.style.display = 'block'
-        // more.style.opacity = '1'
+        tag.style.backgroundColor = tag.dataset.statcol;
     });
 
 
     tag.addEventListener("mouseleave", (e) => {
-
         let res = document.activeElement.id == 'stat';
-
         if (!res) {
             // alert('no focus')
             value.style.display = tag.dataset.show
             menu.style.display = 'none'
+            if (tag.dataset.show == 'none') tag.style.backgroundColor = 'transparent';
         }
-        // document.activeElement = none;
-        // menu.style.opacity = '0'
-        // more.style.opacity = '0'
-
     });
 
     stat.addEventListener("change", (e) => {
 
-
         switch (e.target.value) {
             case 'Installed':
+                tag.dataset.statcol = 'palegreen';
                 tag.style.backgroundColor = 'palegreen';
                 break;
             case 'Terminated':
+                tag.dataset.statcol = 'peru';
                 tag.style.backgroundColor = 'peru';
                 break;
             case 'Connected':
-                tag.style.backgroundColor = 'peach';
+                tag.dataset.statcol = 'yellow';
+                tag.style.backgroundColor = 'yellow';
                 break;
             case 'Tested':
+                tag.dataset.statcol = 'orange';
                 tag.style.backgroundColor = 'orange';
                 break;
             default:
+                tag.dataset.statcol = 'transparent';
                 tag.style.backgroundColor = 'transparent';
         }
 
-
+        e.target.blur();
 
     });
 
