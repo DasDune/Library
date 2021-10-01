@@ -84,6 +84,9 @@ let noteUpt =
     },
 }
 
+
+
+
 //named range add object template
 nrAdd = {
     "addNamedRange": {
@@ -99,6 +102,10 @@ nrAdd = {
         }
     }
 }
+
+
+
+
 
 //named range update object template
 nrUpt = {
@@ -118,13 +125,6 @@ nrUpt = {
     }
 }
 //future code
-
-
-
-
-
-
-
 
 
 
