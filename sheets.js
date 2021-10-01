@@ -84,40 +84,40 @@ let noteUpt =
     },
 }
 
+//named range add object template
+nrAdd = {
+    "addNamedRange": {
+        "namedRange": {
+            "name": "Dune",
+            "range": {
+                "sheetId": 2054546716,
+                "startRowIndex": 10,
+                "endRowIndex": 11,
+                "startColumnIndex": 0,
+                "endColumnIndex": 5,
+            },
+        }
+    }
+}
 
+//named range update object template
+nrUpt = {
+    "updateNamedRange": {
+        "namedRange": {
+            "name": "Dune",
+            "namedRangeId": "33858809",
+            "range": {
+                "sheetId": 391190716,
+                "startRowIndex": 10,
+                "endRowIndex": 11,
+                "startColumnIndex": 0,
+                "endColumnIndex": 12,
+            },
+        },
+        "fields": "*"
+    }
+}
 //future code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -222,60 +222,21 @@ sheetInfo = async (sheetName) => {
     return ({ sheetId: sheetId, rowsData: rowsData })
 }
 
-//populate named ranges
-popNamedRange = async (sheets, sheet) => {
+//populate named ranges for updated tags for the current sheet
+popNamedRanges = async (sheet) => {
 
-    const { gs, spreadsheetId, auth, namedRanges } = sheets
+    const { data } = sheetsData
+    const spreadsheetId = data.spreadsheetId
+    const namedRanges = data.namedRanges
     const { sheetId, rowsData } = sheet
 
-    console.log(`${color.fgYellow}function :: popNamedRange started...${color.reset}`)
-
     let nr = [];
-    let nrs = [];
     let nr2s = [];
 
     let patt = new RegExp(/^U$|^D$/);
 
-
-    // let rowsData = rowsData
     // let header = rowsData.shift();
-    let tagsFlt = rowsData.filter(((tag, i) => patt.test(tag[0])))
-
-    console.log(`${color.fgBlue}rows to set/update named range : ${color.reset}${tagsFlt.length}`)
-
-    //named range add object template
-    nrAdd = {
-        "addNamedRange": {
-            "namedRange": {
-                "name": "Dune",
-                "range": {
-                    "sheetId": 2054546716,
-                    "startRowIndex": 10,
-                    "endRowIndex": 11,
-                    "startColumnIndex": 0,
-                    "endColumnIndex": 5,
-                },
-            }
-        }
-    }
-
-    //named range update object template
-    nrUpt = {
-        "updateNamedRange": {
-            "namedRange": {
-                "name": "Dune",
-                "namedRangeId": "33858809",
-                "range": {
-                    "sheetId": 391190716,
-                    "startRowIndex": 10,
-                    "endRowIndex": 11,
-                    "startColumnIndex": 0,
-                    "endColumnIndex": 12,
-                },
-            },
-            "fields": "*"
-        }
-    }
+    let tagsFlt = rowsData.filter(((tag) => patt.test(tag[0])))
 
     tagsFlt.map((tag) => {
 
@@ -287,30 +248,33 @@ popNamedRange = async (sheets, sheet) => {
         if (nr.length == 0) {
             //need to do a deep object copy of th object to make sure the variables
             //do not refer to the same object 
-            nr2 = JSON.parse(JSON.stringify(nrAdd));
-            nr2.addNamedRange.namedRange.name = nrName;
-            nr2.addNamedRange.namedRange.range.sheetId = sheetId;
+            anr2 = JSON.parse(JSON.stringify(nrAdd));
+            // nrn = nr2.addNamedRange.namedRange.name
+            anr = anr2.addNamedRange.namedRange
+            anr.name = nrName;
+            anr.range.sheetId = sheetId;
             row = rowsData.indexOf(rowsData.filter((tg) => tg[1] == tag[1])[0])
-            nr2.addNamedRange.namedRange.range.startRowIndex = row;
-            nr2.addNamedRange.namedRange.range.endRowIndex = row + 1;
-            nr2.addNamedRange.namedRange.range.startColumnIndex = 0;
-            nr2.addNamedRange.namedRange.range.endColumnIndex = rowsData[0].length;
-            nr2s.push(nr2)
+            anr.range.startRowIndex = row;
+            anr.range.endRowIndex = row + 1;
+            anr.range.startColumnIndex = 0;
+            anr.range.endColumnIndex = rowsData[0].length;
+            nr2s.push(anr2)
         }
 
         else {
             //need to do a deep object copy of th object to make sure the variables
             //do not refer to the same object 
-            nr2 = JSON.parse(JSON.stringify(nrUpt));
-            nr2.updateNamedRange.namedRange.name = nrName;
-            nr2.updateNamedRange.namedRange.namedRangeId = nr[0].namedRangeId;
-            nr2.updateNamedRange.namedRange.range.sheetId = sheetId;
+            unr2 = JSON.parse(JSON.stringify(nrUpt));
+            unr = unr2.updateNamedRange.namedRange
+            unr.name = nrName;
+            unr.namedRangeId = nr[0].namedRangeId;
+            unr.range.sheetId = sheetId;
             row = rowsData.indexOf(rowsData.filter((tg) => tg[1] == tag[1])[0])
-            nr2.updateNamedRange.namedRange.range.startRowIndex = row;
-            nr2.updateNamedRange.namedRange.range.endRowIndex = row + 1;
-            nr2.updateNamedRange.namedRange.range.startColumnIndex = 0;
-            nr2.updateNamedRange.namedRange.range.endColumnIndex = rowsData[0].length;
-            nr2s.push(nr2)
+            unr.range.startRowIndex = row;
+            unr.range.endRowIndex = row + 1;
+            unr.range.startColumnIndex = 0;
+            unr.range.endColumnIndex = rowsData[0].length;
+            nr2s.push(unr2)
         }
 
     })
@@ -318,7 +282,7 @@ popNamedRange = async (sheets, sheet) => {
     //Wait until all the named ranges has been sent prior to send the tags to DB
     //Because DB use the named range to access the sheet tags
     try {
-        await gs.spreadsheets.batchUpdate({
+        await sheets.spreadsheets.batchUpdate({
             auth,
             spreadsheetId,
             requestBody: {
@@ -326,13 +290,10 @@ popNamedRange = async (sheets, sheet) => {
             },
         }
         );
-        console.log(`${color.fgGreen}namedRanges populated : ${color.reset}${nr2s.length}`)
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`popNamedRanges :: ${err.message}`)
     }
-
-    console.log(`${color.fgGreen}function :: popNamedRanges completed.${color.reset}`)
 
 };
 
@@ -993,7 +954,6 @@ getSheetInfoFromTag = async (sheets, tag) => {
     }
 }
 
-
 formatCell = async (sheets, tag, key) => {
 
     // get fresh sheets
@@ -1130,14 +1090,9 @@ let sheetsTester = (async () => {
 
     const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4')
 
-    // console.log(sheetsData)
-    // console.log(`${sheetsData.sheets.length}`)
-    // namedRanges = sheetsData.namedRanges
-    // console.log(`${namedRanges.length}`)
-
     // console.log(sheets)
     const sheet = await sheetInfo('Library')
-    console.log(sheet)
+  
 
     // await updateCell(sheets, 'taglinker@gmail.com', '2400-LIT-2101', 'IOType', 'OOP')
 
@@ -1150,7 +1105,7 @@ let sheetsTester = (async () => {
     // await formatCell(sheets, '2400-LIT-2101', 'Status')
 
     // console.log(sheet)
-    // await popNamedRange(sheets, sheet);
+    await popNamedRanges(sheet);
 
     // let tags = await popStatus(sheets, sheet, 'toto@toto.com');
 
