@@ -163,29 +163,11 @@ sheetsInit = async () => {
 
     const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
 
-    return ({ googleSheets: googleSheets, auth: auth })
+    return ({ sheets: googleSheets, auth: auth })
 }
 
-//init sheets with auth
-sheetsInit2 = async (sheetsId) => {
-
-    const keyFile = config['keysSheets'];
-    spreadsheetId = sheetsId;
-
-    //authorization
-    auth = new google.auth.GoogleAuth({
-        keyFile: keyFile,
-        scopes: "https://www.googleapis.com/auth/spreadsheets",
-    });
-
-    // Create client instance for auth
-    const clientSheets = await auth.getClient();
 
 
-    const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
-
-    return ({ googleSheets: googleSheets, auth: auth })
-}
 
 
 
@@ -196,77 +178,38 @@ sheetsInfo = async (sheetsId) => {
     let spreadsheetId = sheetsId
 
     //Get sheets info
-    sheetsData = await googleSheets.spreadsheets.get({
+    sheetsData = await sheets.spreadsheets.get({
         spreadsheetId,
     });
 
-    console.log(`${color.fgBlue}total sheets : ${color.reset}${sheetsData.data.sheets.length}`)
-
-    namedRanges = sheetsData.data.namedRanges
-    console.log(`${color.fgBlue}namedRanges : ${color.reset}${namedRanges.length}`)
-
-    console.log(`${color.fgGreen}function :: sheetsInfo completed.${color.reset}`)
-
-    return ({ sheetsData: sheetsData.data })
+    return (sheetsData.data)
 }
 
-// sheets info
-sheetsInfo2 = async (sheetsId) => {
 
-    console.log(`${color.fgYellow}function :: sheetsInfo started...${color.reset}`)
-    console.log(`${color.fgBlue}sheetsId :${color.reset} ${sheetsId}`)
 
-    // const keyFile = "keysSheets.json";
-    const keyFile = config['keysSheets'];
-    // const spreadsheetId = "1ynIOtCU10aGmT4dI-Y4wlmW2IQ6ZbMJwID3-qLdwxmA";
-    const spreadsheetId = sheetsId;
 
-    //authorization
-    const auth = new google.auth.GoogleAuth({
-        keyFile: keyFile,
-        scopes: "https://www.googleapis.com/auth/spreadsheets",
-    });
 
-    // Create client instance for auth
-    const clientSheets = await auth.getClient();
 
-    const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
-    // gs = googleSheets;
-    // sheetsAuth = auth;
 
-    //Get sheets info
-    sheetsData = await googleSheets.spreadsheets.get({
-        spreadsheetId,
-    });
 
-    console.log(`${color.fgBlue}total sheets : ${color.reset}${sheetsData.data.sheets.length}`)
 
-    namedRanges = sheetsData.data.namedRanges
-    console.log(`${color.fgBlue}namedRanges : ${color.reset}${namedRanges.length}`)
 
-    console.log(`${color.fgGreen}function :: sheetsInfo completed.${color.reset}`)
 
-    return ({ gs: googleSheets, spreadsheetId: spreadsheetId, data: sheetsData, auth: auth, namedRanges: namedRanges })
-}
+
 
 //get sheet info
-sheetInfo = async (sheetName, sheets) => {
+sheetInfo = async (sheetName) => {
 
-    const { gs, spreadsheetId, data, auth } = sheets
+    const { data } = sheetsData
+    const spreadsheetId = data.spreadsheetId
 
-    console.log(`${color.fgYellow}function :: sheetInfo started...${color.reset}`)
-    console.log(`${color.fgBlue}sheet name :${color.reset} ${sheetName}`)
-
-    let ssData = data.data.sheets
+    let ssData = data.sheets
     let sheet = ssData.filter((ssData) => ssData.properties.title == sheetName)
     let sheetId = sheet[0].properties.sheetId;
     let row = sheet[0].properties.gridProperties.rowCount;
     let col = sheet[0].properties.gridProperties.columnCount;
 
-    console.log(`${color.fgBlue}sheet ID:${color.reset} ${sheetId} `)
-    console.log(`${color.fgBlue}rows:${color.reset} ${row} ${color.fgBlue}cols:${color.reset} ${col}`)
-
-    const getRows = await gs.spreadsheets.values.get({
+    const getRows = await sheets.spreadsheets.values.get({
         auth,
         spreadsheetId,
         range: `${sheetName}!R1C1:R${row}C${col}`,
@@ -276,7 +219,6 @@ sheetInfo = async (sheetName, sheets) => {
     //Get all the tags from the sheet
     let rowsData = getRows.data.values
 
-    console.log(`${color.fgGreen}function :: sheetInfo completed.${color.reset}`)
     return ({ sheetId: sheetId, rowsData: rowsData })
 }
 
@@ -1173,23 +1115,29 @@ dbSet = (tags) => {
     })
 }
 
+let sheets = {}
+let auth = {}
+
+
 let sheetsTester = (async () => {
 
+    const sheetsAPIInfo = await sheetsInit()
 
-const sheetsAPIInfo = await sheetsInit()
+    // console.log(sheetsAPIInfo);
 
-console.log(sheetsAPIInfo);
+    sheets = sheetsAPIInfo.sheets;
+    auth = sheetsAPIInfo.auth;
 
-googleSheets = sheetsAPIInfo.googleSheets;
-auth = sheetsAPIInfo.auth;
+    const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4')
 
-console.log(sheetsAPIInfo)
-
-
-    // const sheets = await sheetsInfo('1DGdCvVASVgrJAfHqnLXsvpPcmHAIY1bkJhxqWlj3Mrs')
+    // console.log(sheetsData)
+    // console.log(`${sheetsData.sheets.length}`)
+    // namedRanges = sheetsData.namedRanges
+    // console.log(`${namedRanges.length}`)
 
     // console.log(sheets)
-    // const sheet = await sheetInfo('Instruments', sheets)
+    const sheet = await sheetInfo('Library')
+    console.log(sheet)
 
     // await updateCell(sheets, 'taglinker@gmail.com', '2400-LIT-2101', 'IOType', 'OOP')
 
