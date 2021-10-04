@@ -298,207 +298,43 @@ popNamedRanges = async (sheet) => {
 };
 
 //populate tags from sheet 
-popTagsFromSheet = async (sheet, userEmail) => {
-
-    console.log(`${color.fgYellow}function :: popTagsFromSheet started...${color.reset}`)
+popTagsFromSheet = async (sheet) => {
 
     const { rowsData } = sheet
 
     let header = rowsData[0];
     let patt = new RegExp(/^U$|^D$/);
-    let tagsFlt = rowsData.filter(((tag, i) => patt.test(tag[0])))
+    let tagsFlt = rowsData.filter(((tag) => patt.test(tag[0])))
+
     let tags = [];
 
     // Convert to an array of tags object to be sent to DB
     try {
-        // let tags = [];
-        // let nrs = [];
+
         tagsFlt.map((tag) => {
-            // nrObj = {};
-            // nrName = `NR_${tag[1].replace(/[-]/g, '_')}`;
-            // nrObj['name'] = nrName;
-            // nrObj['row'] = sheetTags.indexOf(tag) + 1;
-            // nrObj['col'] = col;
-            // nrs.push(nrObj);
             tagObj = {};
             tag.map((val, i) => {
                 if (header[i] == 'Update') {
                     // user = 'toto@toto.com';
-                    tagObj[header[i]] = userEmail + '\n' + getDateTime();
+                    // tagObj[header[i]] = userEmail + '\n' + getDateTime();
                 }
                 else if (val != '') tagObj[header[i]] = val
+
             })
             tags.push(tagObj)
         })
-        console.log(`${color.fgBlue}tags populated : ${color.reset}${Object.keys(tagObj).length}`)
 
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`err.message}`)
+        return (tags)
     }
 
-    console.log(`${color.fgGreen}function :: popTagsFromSheet completed.${color.reset}`)
-
-    try {
-        return tags;
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
+    return tags;
 
 }
 
-//populate tags from sheet 
-popTagsFromSheet2 = async (sheets, sheet, userEmail) => {
-
-    console.log(`${color.fgYellow}function :: popTagsFromSheet started...${color.reset}`)
-
-    const { rowsData, sheetId } = sheet
-    const { spreadsheetId } = sheets
-
-    let sheetsName = sheets.data.data.properties.title
-    let sheetsId = sheets.spreadsheetId
-
-    sheet = sheets.data.data.sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
-    let sheetName = sheet[0].properties.title;
-
-
-
-    let header = rowsData[0];
-    let patt = new RegExp(/^U$|^D$/);
-    let tagsFlt = rowsData.filter(((tag, i) => patt.test(tag[0])))
-    let tags = [];
-    let tagRow = 0;
-
-    // let tagRow = rowsData.filter(((tag, i) => tag.test(tag[1])))
-
-    // Convert to an array of tags object to be sent to DB
-    try {
-        // let tags = [];
-        // let nrs = [];
-
-        // tagRow2 = rowsData.findIndex(tagRow)
-        // nrObj = {};
-        // nrName = `NR_${tag[1].replace(/[-]/g, '_')}`;
-        // nrObj['name'] = nrName;
-        // nrObj['row'] = sheetTags.indexOf(tag) + 1;
-        // nrObj['col'] = col;
-        // nrs.push(nrObj);
-        tagObj = {};
-
-        tagObj.sheetsName = sheetsName
-        tagObj.sheetsId = sheetsId
-        tagObj.sheetName = sheetName
-        tagObj.sheetId = sheetId
-
-
-        tagsFlt.map((tag) => {
-            index = rowsData.map(((tag2, i) => {
-                if (tag2[1] == tag[1]) tagObj.sheetRow = i
-            }))
-
-
-            tag.map((val, i) => {
-                if (header[i] == 'Update') {
-                    // user = 'toto@toto.com';
-                    tagObj[header[i]] = userEmail + '\n' + getDateTime();
-                }
-                else if (val != '') tagObj[header[i]] = val
-            })
-
-
-            tags.push(tagObj)
-        })
-        console.log(`${color.fgBlue}tags populated : ${color.reset}${Object.keys(tagObj).length}`)
-
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
-
-    console.log(`${color.fgGreen}function :: popTagsFromSheet completed.${color.reset}`)
-
-    try {
-        return tags;
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
-
-}
-
-//populate status from sheet 
-popStatus = async (sheets, sheet, userEmail) => {
-
-    console.log(`${color.fgYellow}function :: popStatus started...${color.reset}`)
-
-    const { rowsData, sheetId } = sheet
-    const { spreadsheetId } = sheets
-
-    let sheetsName = sheets.data.data.properties.title
-    let sheetsId = sheets.spreadsheetId
-
-    sheet = sheets.data.data.sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
-    let sheetName = sheet[0].properties.title;
-
-
-
-    let header = rowsData[0];
-    let patt = new RegExp(/^U$|^D$/);
-    let tagsFlt = rowsData.filter(((tag, i) => patt.test(tag[0])))
-    let tags = [];
-    let tagRow = 0;
-
-    // let tagRow = rowsData.filter(((tag, i) => tag.test(tag[1])))
-
-    // Convert to an array of tags object to be sent to DB
-    try {
-        // let tags = [];
-        // let nrs = [];
-
-        // tagRow2 = rowsData.findIndex(tagRow)
-        // nrObj = {};
-        // nrName = `NR_${tag[1].replace(/[-]/g, '_')}`;
-        // nrObj['name'] = nrName;
-        // nrObj['row'] = sheetTags.indexOf(tag) + 1;
-        // nrObj['col'] = col;
-        // nrs.push(nrObj);
-        tagObj = {};
-
-
-
-
-        tagsFlt.map((tag) => {
-
-            tag.map((val, i) => {
-                if (header[i] == 'Update') {
-                    // user = 'toto@toto.com';
-                    tagObj[header[i]] = userEmail + '\n' + getDateTime();
-                }
-                else if (val != '') tagObj[header[i]] = val
-            })
-
-            tags.push(tagObj)
-        })
-        console.log(`${color.fgBlue}tags populated : ${color.reset}${Object.keys(tagObj).length}`)
-
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
-
-    console.log(`${color.fgGreen}function :: popTagsFromSheet completed.${color.reset}`)
-
-    try {
-        return tags;
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
-
-}
-
-//Update <Update> first column with userEmail/Date/Time and populate header based on doc type
+//Update <Update> first column with userEmail/Date/Time
 updateUpdate = async (sheets, sheet, tags) => {
 
     console.log(`${color.fgYellow}function :: updateUpdate started...${color.reset}`)
@@ -507,26 +343,26 @@ updateUpdate = async (sheets, sheet, tags) => {
     const { sheetId } = sheet
 
     //batch update values object template
-    let valUpt =
-    {
-        updateCells: {
-            range: {
-                sheetId: 2054546716,
-                startRowIndex: 1,
-                endRowIndex: 2,
-                startColumnIndex: 0,
-                endColumnIndex: 1,
-            },
-            fields: 'userEnteredValue',
-            rows: [{
-                values: [{
-                    userEnteredValue: {
-                        // key/val set dynamically vs value type to pass
-                    },
-                }],
-            }],
-        },
-    }
+    // let valUpt =
+    // {
+    //     updateCells: {
+    //         range: {
+    //             sheetId: 2054546716,
+    //             startRowIndex: 1,
+    //             endRowIndex: 2,
+    //             startColumnIndex: 0,
+    //             endColumnIndex: 1,
+    //         },
+    //         fields: 'userEnteredValue',
+    //         rows: [{
+    //             values: [{
+    //                 userEnteredValue: {
+    //                     // key/val set dynamically vs value type to pass
+    //                 },
+    //             }],
+    //         }],
+    //     },
+    // }
 
     let valUpt2 = {};
     let valUpt2s = [];
@@ -578,6 +414,91 @@ updateUpdate = async (sheets, sheet, tags) => {
     }
 
     console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
+}
+
+//Update sheet cell from TagLinker client 
+updateCell = async (sheets, userEmail, tag, key, val) => {
+
+    // get fresh sheets
+    const { gs, spreadsheetId, auth, namedRanges, data } = sheets
+
+    let valUpt2 = {};
+    let noteUpt2 = {};
+    let UptArr = [];
+
+    try {
+
+        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
+        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
+        let sheetId = nr[0].range.sheetId;
+        let sheets = data.data.sheets
+        let sheet = sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
+        let sheetName = sheet[0].properties.title;
+        let row = sheet[0].properties.gridProperties.rowCount;
+        let col = sheet[0].properties.gridProperties.columnCount;
+
+        //strong copy of object template
+        valUpt2 = JSON.parse(JSON.stringify(valUpt));
+        valUpt2.updateCells.range.sheetId = sheetId;
+        valUpt2.updateCells.range.startRowIndex = nr[0].range.startRowIndex;
+        valUpt2.updateCells.range.endRowIndex = nr[0].range.startRowIndex + 1;
+
+        noteUpt2 = JSON.parse(JSON.stringify(noteUpt));
+        noteUpt2.updateCells.range.sheetId = sheetId;
+        noteUpt2.updateCells.range.startRowIndex = nr[0].range.startRowIndex;
+        noteUpt2.updateCells.range.endRowIndex = nr[0].range.startRowIndex + 1;
+
+        const getRowsInfo = await gs.spreadsheets.values.get({
+            auth,
+            spreadsheetId,
+            range: `${sheetName}!R1C1:R${1}C${col}`,
+            // range: `${sheetName}!A1:${colLetter}${row}`,
+        });
+
+        header = getRowsInfo.data.values[0]
+        // rowData = getRowsInfo.data.values
+
+        keyIndex = header.indexOf(key)
+
+        valUpt2.updateCells.range.startColumnIndex = keyIndex;
+        valUpt2.updateCells.range.endColumnIndex = keyIndex + 1;
+        valUpt2.updateCells.rows[0].values[0].userEnteredValue.stringValue = val;
+        UptArr.push(valUpt2);
+
+        noteUpt2.updateCells.range.startColumnIndex = keyIndex;
+        noteUpt2.updateCells.range.endColumnIndex = keyIndex + 1;
+
+        let note = `[ ${getDateTime()} ]\n${userEmail}\nChange: ${val}`;
+
+
+        noteUpt2.updateCells.rows[0].values[0].note = note;
+
+
+
+        UptArr.push(noteUpt2);
+
+    }
+    catch (err) {
+        console.log(`${color.fgRed}${err.message}${color.reset}`)
+    }
+
+
+    try {
+        await gs.spreadsheets.batchUpdate({
+            auth,
+            spreadsheetId,
+            requestBody: {
+                requests: UptArr
+            },
+        }
+        );
+        // console.log(`${color.fgGreen}"Update" updated : ${color.reset} ${valUpt2s.length}`)
+    }
+    catch (err) {
+        console.log(`${color.fgRed}${err.message}${color.reset}`)
+    }
+
+    // console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
 }
 
 //Update rows from tags
@@ -694,7 +615,7 @@ updateRows = async (sheets, tagNames, urlKey, urlVal, linkName, fileName2) => {
                             },
                         }
                         );
-                        console.log(`New header key ${urlKey2} on sheet ${sheetName}`)
+                        console.log(`New header key ${urlKey} on sheet ${sheetName}`)
                     }
                     catch (err) {
                         console.log(`${color.fgRed}${err.message}${color.reset}`)
@@ -718,7 +639,7 @@ updateRows = async (sheets, tagNames, urlKey, urlVal, linkName, fileName2) => {
         }
 
         catch (err) {
-            console.log(`${color.fgRed}${err.message}${color.reset}`)
+            console.log(`updateRows :: ${err.message}`)
         }
     }
 
@@ -731,14 +652,176 @@ updateRows = async (sheets, tagNames, urlKey, urlVal, linkName, fileName2) => {
             },
         }
         );
-        console.log(`${color.fgGreen}tags updated : ${color.reset} ${valUpt2s.length}`)
+        // console.log(`${color.fgGreen}tags updated : ${color.reset} ${UptArr.length}`)
+    }
+    catch (err) {
+        console.log(`updateRows :: ${err.message}`)
+    }
+
+
+    // console.log(`${color.fgGreen}function :: updateRows completed.${color.reset}`)
+}
+
+//populate status from sheet 
+popStatus = async (sheets, sheet, userEmail) => {
+
+    console.log(`${color.fgYellow}function :: popStatus started...${color.reset}`)
+
+    const { rowsData, sheetId } = sheet
+    const { spreadsheetId } = sheets
+
+    let sheetsName = sheets.data.data.properties.title
+    let sheetsId = sheets.spreadsheetId
+
+    sheet = sheets.data.data.sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
+    let sheetName = sheet[0].properties.title;
+
+
+
+    let header = rowsData[0];
+    let patt = new RegExp(/^U$|^D$/);
+    let tagsFlt = rowsData.filter(((tag, i) => patt.test(tag[0])))
+    let tags = [];
+    let tagRow = 0;
+
+    // let tagRow = rowsData.filter(((tag, i) => tag.test(tag[1])))
+
+    // Convert to an array of tags object to be sent to DB
+    try {
+        // let tags = [];
+        // let nrs = [];
+
+        // tagRow2 = rowsData.findIndex(tagRow)
+        // nrObj = {};
+        // nrName = `NR_${tag[1].replace(/[-]/g, '_')}`;
+        // nrObj['name'] = nrName;
+        // nrObj['row'] = sheetTags.indexOf(tag) + 1;
+        // nrObj['col'] = col;
+        // nrs.push(nrObj);
+        tagObj = {};
+
+
+
+
+        tagsFlt.map((tag) => {
+
+            tag.map((val, i) => {
+                if (header[i] == 'Update') {
+
+                    tagObj[header[i]] = userEmail + '\n' + getDateTime();
+                }
+                else if (val != '') tagObj[header[i]] = val
+            })
+
+            tags.push(tagObj)
+        })
+        console.log(`${color.fgBlue}tags populated : ${color.reset}${Object.keys(tagObj).length}`)
+
     }
     catch (err) {
         console.log(`${color.fgRed}${err.message}${color.reset}`)
     }
 
+    console.log(`${color.fgGreen}function :: popTagsFromSheet completed.${color.reset}`)
 
-    console.log(`${color.fgGreen}function :: updateRows completed.${color.reset}`)
+    try {
+        return tags;
+    }
+    catch (err) {
+        console.log(`${color.fgRed}${err.message}${color.reset}`)
+    }
+
+}
+
+//Clear sheet cells
+clearCells = async (sheets, tag, link) => {
+
+    // console.log(`${color.fgYellow}function :: updateRows started...${color.reset}`)
+
+    const { gs, spreadsheetId, auth, namedRanges, data } = sheets
+
+    let valUpt2 = {};
+    let valUpt2s = [];
+
+    try {
+        //Get sheets info for the tag
+        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
+        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
+
+        let sheetId = nr[0].range.sheetId;
+        let sheetsList = data.data.sheets
+        let sheet = sheetsList.filter((sheetsList) => sheetsList.properties.sheetId == sheetId)
+        let sheetName = sheet[0].properties.title;
+
+        let row = nr[0].range.startRowIndex;
+        let col = nr[0].range.endColumnIndex;
+
+        const header = await gs.spreadsheets.values.get({
+            auth,
+            spreadsheetId,
+            range: `${sheetName}!R${1}C${1}:R${1}C${col}`,
+            valueRenderOption: 'FORMULA',
+            // range: `${sheetName}!A1:${colLetter}${row}`,
+        });
+
+        console.log(header)
+
+        //strong copy of object template
+        valUpt2 = JSON.parse(JSON.stringify(valUpt));
+        valUpt2.updateCells.range.sheetId = sheetId;
+
+        valUpt2.updateCells.range.startRowIndex = nr[0].range.startRowIndex;
+        valUpt2.updateCells.range.endRowIndex = nr[0].range.startRowIndex + 1;
+
+        colIndex = header.data.values[0].indexOf(link)
+
+        valUpt2.updateCells.range.startColumnIndex = colIndex
+        valUpt2.updateCells.range.endColumnIndex = colIndex + 1
+
+        valUpt2.updateCells.rows[0].values[0].userEnteredValue.stringValue = '';
+        valUpt2s.push(valUpt2);
+
+        await gs.spreadsheets.batchUpdate({
+            auth,
+            spreadsheetId,
+            requestBody: {
+                requests: valUpt2s
+            },
+        }
+        );
+        console.log(`clearCells :: Cleared doc link on column ${link} for tag ${tag} on sheet ${sheetName}`)
+
+    }
+
+    catch (err) {
+        console.log(`${color.fgRed}${err.message}${color.reset}`)
+    }
+}
+
+//Get Sheet info for a given tag
+let getSheetInfoFromTag = async (sheets, tag) => {
+
+    // get fresh sheets
+    const { namedRanges, data } = sheets
+
+    let nr = []
+
+    try {
+
+        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
+        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
+        let sheetId = nr[0].range.sheetId;
+        let sheets = data.data.sheets
+        let sheet = sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
+        let row = nr[0].range.endRowIndex;
+        let col = sheet[0].properties.gridProperties.columnCount;
+        let info = { sheetId: sheetId, range: `B${row}` }
+        return info
+    }
+    catch (err) {
+        console.log(`getSheetInfoFromTag :: ${err.message}`)
+        return { sheetId: `not found`, range: `not found` }
+    }
 }
 
 //Update header based on document type
@@ -798,160 +881,6 @@ updateHeader = async (sheets, sheet) => {
 
 
 
-}
-
-//Update sheet cell from TagLinker client 
-updateCell = async (sheets, userEmail, tag, key, val) => {
-
-    // get fresh sheets
-    const { gs, spreadsheetId, auth, namedRanges, data } = sheets
-
-    //batch update values object template
-    let valUpt =
-    {
-        updateCells: {
-            range: {
-                sheetId: 2054546716,
-                startRowIndex: 1,
-                endRowIndex: 2,
-                startColumnIndex: 0,
-                endColumnIndex: 1,
-            },
-            fields: 'userEnteredValue',
-            rows: [{
-                values: [{
-                    userEnteredValue: {
-                        // key/val set dynamically vs value type to pass
-                    },
-                }],
-            }],
-        },
-    }
-
-    let valUpt2 = {};
-    let valUpt2s = [];
-
-    //batch update note object template
-    let noteUpt =
-    {
-        updateCells: {
-            range: {
-                sheetId: 2054546716,
-                startRowIndex: 1,
-                endRowIndex: 2,
-                startColumnIndex: 0,
-                endColumnIndex: 1,
-            },
-            fields: 'note',
-            rows: [{
-                values: [{
-                    note: {
-                        // key/val set dynamically vs value type to pass
-                    },
-                }],
-            }],
-        },
-    }
-
-    let noteUpt2 = {};
-
-    try {
-
-        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
-        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
-        let sheetId = nr[0].range.sheetId;
-        let sheets = data.data.sheets
-        let sheet = sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
-        let sheetName = sheet[0].properties.title;
-        let row = sheet[0].properties.gridProperties.rowCount;
-        let col = sheet[0].properties.gridProperties.columnCount;
-
-        //strong copy of object template
-        valUpt2 = JSON.parse(JSON.stringify(valUpt));
-        valUpt2.updateCells.range.sheetId = sheetId;
-        valUpt2.updateCells.range.startRowIndex = nr[0].range.startRowIndex;
-        valUpt2.updateCells.range.endRowIndex = nr[0].range.startRowIndex + 1;
-
-        noteUpt2 = JSON.parse(JSON.stringify(noteUpt));
-        noteUpt2.updateCells.range.sheetId = sheetId;
-        noteUpt2.updateCells.range.startRowIndex = nr[0].range.startRowIndex;
-        noteUpt2.updateCells.range.endRowIndex = nr[0].range.startRowIndex + 1;
-
-        const getRowsInfo = await gs.spreadsheets.values.get({
-            auth,
-            spreadsheetId,
-            range: `${sheetName}!R1C1:R${1}C${col}`,
-            // range: `${sheetName}!A1:${colLetter}${row}`,
-        });
-
-        header = getRowsInfo.data.values[0]
-        // rowData = getRowsInfo.data.values
-
-        keyIndex = header.indexOf(key)
-
-        valUpt2.updateCells.range.startColumnIndex = keyIndex;
-        valUpt2.updateCells.range.endColumnIndex = keyIndex + 1;
-        valUpt2.updateCells.rows[0].values[0].userEnteredValue.stringValue = val;
-        valUpt2s.push(valUpt2);
-
-        noteUpt2.updateCells.range.startColumnIndex = keyIndex;
-        noteUpt2.updateCells.range.endColumnIndex = keyIndex + 1;
-
-        let note = `[ ${getDateTime()} ]\n${userEmail}\nChange: ${val}`;
-
-
-        noteUpt2.updateCells.rows[0].values[0].note = note;
-
-
-
-        valUpt2s.push(noteUpt2);
-
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
-
-
-    try {
-        await gs.spreadsheets.batchUpdate({
-            auth,
-            spreadsheetId,
-            requestBody: {
-                requests: valUpt2s
-            },
-        }
-        );
-        console.log(`${color.fgGreen}"Update" updated : ${color.reset} ${valUpt2s.length}`)
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
-
-    console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
-}
-
-//Get Sheet info for a given tag
-getSheetInfoFromTag = async (sheets, tag) => {
-
-    // get fresh sheets
-    const { namedRanges, data } = sheets
-
-    try {
-
-        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
-        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
-        let sheetId = nr[0].range.sheetId;
-        let sheets = data.data.sheets
-        let sheet = sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
-        let row = nr[0].range.endRowIndex;
-        let col = sheet[0].properties.gridProperties.columnCount;
-        let info = { sheetId: sheetId, range: `B${row}` }
-        return info
-    }
-    catch (err) {
-        console.log(`getSheetInfoFromTag :: ${err.message}`)
-        return { sheetId: `not found`, range: `not found` }
-    }
 }
 
 formatCell = async (sheets, tag, key) => {
@@ -1060,23 +989,10 @@ formatCell = async (sheets, tag, key) => {
     console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
 }
 
-//typical db set value
-dbSet = (tags) => {
 
-    tags.map((tag) => {
 
-        admin.firestore().collection('tags').doc('status').set(tag, { merge: true })
-            .then(snapshot => {
-                console.log(`Status ${tag.Status} pushed.`);
-            })
-            .catch(err => {
-                console.log(`Error: ${err.Message}`)
-            });
-    })
-}
-
-let sheets = {}
-let auth = {}
+// let sheets = {}
+// let auth = {}
 
 
 let sheetsTester = (async () => {
@@ -1092,6 +1008,10 @@ let sheetsTester = (async () => {
 
     // console.log(sheets)
     const sheet = await sheetInfo('Library')
+
+    const tags = await popTagsFromSheet(sheet)
+
+    console.log(tags)
   
 
     // await updateCell(sheets, 'taglinker@gmail.com', '2400-LIT-2101', 'IOType', 'OOP')
