@@ -5,7 +5,7 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb' }));
 app.use('/pub', express.static('pub'));
 
-const port = 8080;
+const port = process.env.PORT || 3000;
 
 const cors = require('cors');
 app.use(cors({
