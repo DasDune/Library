@@ -14,13 +14,48 @@ app.use(cors({
 }));
 
 app.listen(port, () => {
-    console.log(`TagLinker listening at port ${port}`);
+    console.log(`Library listening at port ${port}`);
 });
+
+// *** Sheets functions  ***
+
+//init sheets with auth
+sheetsInit = async () => {
+
+    const keyFile = config['keysSheets'];
+
+    //authorization
+    auth = new google.auth.GoogleAuth({
+        keyFile: keyFile,
+        scopes: "https://www.googleapis.com/auth/spreadsheets",
+    });
+
+    // Create client instance for auth
+    const clientSheets = await auth.getClient();
+
+    const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
+
+    return ({ sheets: googleSheets, auth: auth })
+}
+
+// *** Sheets functions  ***
+
+
 
 
 // Home page
 app.get('/', (req, res) => {
     res.send('Library ready');
+    // res.sendFile(`${__dirname}/pub/signIn.html`);
+});
+
+
+// Sheets initialization
+app.get('/sheetsInit', (req, res) => {
+
+    const sheetsObj = sheetsInit();
+
+    res.send(`sheets object ${sheetsObj}`);
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });
 
