@@ -41,7 +41,37 @@ sheetsInit = async () => {
     return ({ sheets: googleSheets, auth: auth })
 }
 
+const init = (async() => {
+
+    const sheetsAPIInfo = await sheetsInit()
+    sheets = sheetsAPIInfo.sheets;
+    auth = sheetsAPIInfo.auth;
+    
+    })()
+
+
+
+// sheets info
+sheetsInfo = async (sheetsId) => {
+
+    let spreadsheetId = sheetsId
+
+    //Get sheets info
+    sheetsData = await sheets.spreadsheets.get({
+        spreadsheetId,
+    });
+
+    return (sheetsData.data)
+}
+
+
+
+
+
+
 // *** Sheets functions  ***
+
+
 
 
 
@@ -62,3 +92,20 @@ app.get('/sheetsInit', async (req, res) => {
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });
 
+// Sheets info
+app.get('/sheetsInfo', async (req, res) => {
+
+    const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4');
+
+    let answer = `<h1 style='color:blue'>sheetsInfo<h1>
+    <h2 style='color:green'>sheetsData</h2>
+    <h2>namedRange :: <span style='color:peru'> ${sheetsData.namedRanges.length}</span></h2>
+    <h2>properties.title :: <span style='color:peru'>${sheetsData.properties.title}</span></h2>
+    <h2>sheets :: <span style='color:peru'>${sheetsData.sheets.length}</span> sheets</h2>
+    <h2>spreadsheetId :: <span style='color:peru'>${sheetsData.spreadsheetId}</span></h2>
+    <h2>spreadsheetUrl :: <span style='color:peru'>${sheetsData.spreadsheetUrl}</span></h2>
+    `
+
+    res.send(answer);
+    // res.sendFile(`${__dirname}/pub/signIn.html`);
+});

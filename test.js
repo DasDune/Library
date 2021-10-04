@@ -1,16 +1,4 @@
-let absolutePath = `${window.location.href.replace('index.html', '')}`;
-let relativePath = `${window.location.pathname.replace('index.html', '')}`;
-console.log(absolutePath);
-console.log(relativePath);
-let arrPath = relativePath.split('/');
-arrPath.shift();
-arrPath.pop();
-console.log(arrPath);
-console.log(arrPath.length);
-let l = arrPath.length;
-let col = '';
-if (l == 1) col = arrPath;
-if (l == 2) col = `${arrPath[l - 2]}-${arrPath[l - 1]}`;
-if (l >= 3) col = `${arrPath[l - 3]}-${arrPath[l - 2]}-${arrPath[l - 1]}`;
-console.log(col);
-// arrPath.map((item) => console.log(item));
+let you = 'you'
+
+console.log(`He ${you}
+He`)
