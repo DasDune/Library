@@ -13,6 +13,9 @@ app.use(cors({
     credentials: true,
 }));
 
+const config = require('./config.json');
+const { google } = require("googleapis");
+
 app.listen(port, () => {
     console.log(`Library listening at port ${port}`);
 });
@@ -51,11 +54,11 @@ app.get('/', (req, res) => {
 
 
 // Sheets initialization
-app.get('/sheetsInit', (req, res) => {
+app.get('/sheetsInit', async (req, res) => {
 
-    const sheetsObj = sheetsInit();
+    const sheetsObj = await sheetsInit();
 
-    res.send(`sheets object ${sheetsObj}`);
+    res.send(`sheets objects ${sheetsObj}`);
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });
 
