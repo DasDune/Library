@@ -334,39 +334,29 @@ popTagsFromSheet = async (sheet) => {
 
 }
 
-//Update <Update> first column with userEmail/Date/Time
-updateUpdate = async (sheets, sheet, tags) => {
 
-    console.log(`${color.fgYellow}function :: updateUpdate started...${color.reset}`)
 
-    const { gs, spreadsheetId, auth, namedRanges } = sheets
+
+
+
+
+
+
+
+
+
+
+
+//Update <Update> first column
+updateUpdate = async (sheet, tags) => {
+
+    const { data } = sheetsData
+    const spreadsheetId = data.spreadsheetId
+    const namedRanges = data.namedRanges
     const { sheetId } = sheet
-
-    //batch update values object template
-    // let valUpt =
-    // {
-    //     updateCells: {
-    //         range: {
-    //             sheetId: 2054546716,
-    //             startRowIndex: 1,
-    //             endRowIndex: 2,
-    //             startColumnIndex: 0,
-    //             endColumnIndex: 1,
-    //         },
-    //         fields: 'userEnteredValue',
-    //         rows: [{
-    //             values: [{
-    //                 userEnteredValue: {
-    //                     // key/val set dynamically vs value type to pass
-    //                 },
-    //             }],
-    //         }],
-    //     },
-    // }
 
     let valUpt2 = {};
     let valUpt2s = [];
-
 
     try {
         tags.map(async (tag) => {
@@ -375,7 +365,6 @@ updateUpdate = async (sheets, sheet, tags) => {
 
                 nrName = `NR_${tag.Name.replace(/[-\/]/g, '_')}`;
                 if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
-
                 //strong copy of object template
                 valUpt2 = JSON.parse(JSON.stringify(valUpt));
                 valUpt2.updateCells.range.sheetId = sheetId;
@@ -387,19 +376,16 @@ updateUpdate = async (sheets, sheet, tags) => {
                 valUpt2s.push(valUpt2);
             }
             catch (err) {
-                console.log(`${color.fgRed}${err.message}${color.reset}`)
+                console.log(`${err.message}`)
             }
         })
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${err.message}`)
     }
 
-
-
-
     try {
-        await gs.spreadsheets.batchUpdate({
+        await sheets.spreadsheets.batchUpdate({
             auth,
             spreadsheetId,
             requestBody: {
@@ -407,20 +393,17 @@ updateUpdate = async (sheets, sheet, tags) => {
             },
         }
         );
-        console.log(`${color.fgGreen}"Update" updated : ${color.reset} ${valUpt2s.length}`)
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${err.message}`)
     }
-
-    console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
 }
 
 //Update sheet cell from TagLinker client 
 updateCell = async (sheets, userEmail, tag, key, val) => {
 
     // get fresh sheets
-    const { gs, spreadsheetId, auth, namedRanges, data } = sheets
+    const { spreadsheetId, auth, namedRanges, data } = sheets
 
     let valUpt2 = {};
     let noteUpt2 = {};
@@ -1009,10 +992,15 @@ let sheetsTester = (async () => {
     // console.log(sheets)
     const sheet = await sheetInfo('Library')
 
-    const tags = await popTagsFromSheet(sheet)
+    // await popNamedRanges(sheet);
 
-    console.log(tags)
+    // const tags = await popTagsFromSheet(sheet)
+
+    // console.log(tags)
   
+    tags = [{Name:'Tag4', Update:'update4'}, {Name:'Tag8', Update:'update8'},]
+
+    await updateUpdate(sheet, tags);
 
     // await updateCell(sheets, 'taglinker@gmail.com', '2400-LIT-2101', 'IOType', 'OOP')
 
@@ -1025,7 +1013,7 @@ let sheetsTester = (async () => {
     // await formatCell(sheets, '2400-LIT-2101', 'Status')
 
     // console.log(sheet)
-    await popNamedRanges(sheet);
+    // await popNamedRanges(sheet);
 
     // let tags = await popStatus(sheets, sheet, 'toto@toto.com');
 
