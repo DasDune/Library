@@ -90,6 +90,7 @@ app.get('/sheetInfo', async (req, res) => {
 // Sheets info
 app.get('/popNamedRanges', async (req, res) => {
 
+    const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4');
     const sheet = await sheetInfo('Library')
     popNamedRanges(sheet)
     res.send('named ranges populated');

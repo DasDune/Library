@@ -242,7 +242,7 @@ popNamedRanges = async (sheet) => {
 
         //Check if named range already exist if yes we need to update instead of adding a namedrange
         //If you don't the namedrange add method will produce the error : 'already exist'
-        nrName = `NR_${tag[1].replace(/[-\/]/g, '_')}`;
+        nrName = `NR_${tag[0].replace(/[-\/]/g, '_')}`;
         if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
 
         if (nr.length == 0) {
@@ -253,7 +253,7 @@ popNamedRanges = async (sheet) => {
             anr = anr2.addNamedRange.namedRange
             anr.name = nrName;
             anr.range.sheetId = sheetId;
-            row = rowsData.indexOf(rowsData.filter((tg) => tg[1] == tag[1])[0])
+            row = rowsData.indexOf(rowsData.filter((tg) => tg[0] == tag[0])[0])
             anr.range.startRowIndex = row;
             anr.range.endRowIndex = row + 1;
             anr.range.startColumnIndex = 0;
@@ -269,7 +269,7 @@ popNamedRanges = async (sheet) => {
             unr.name = nrName;
             unr.namedRangeId = nr[0].namedRangeId;
             unr.range.sheetId = sheetId;
-            row = rowsData.indexOf(rowsData.filter((tg) => tg[1] == tag[1])[0])
+            row = rowsData.indexOf(rowsData.filter((tg) => tg[0] == tag[0])[0])
             unr.range.startRowIndex = row;
             unr.range.endRowIndex = row + 1;
             unr.range.startColumnIndex = 0;
