@@ -10,11 +10,11 @@ let valUpt =
 {
     updateCells: {
         range: {
-            sheetId: 2054546716,
-            startRowIndex: 1,
-            endRowIndex: 2,
+            sheetId: 0,
+            startRowIndex: 0,
+            endRowIndex: 0,
             startColumnIndex: 0,
-            endColumnIndex: 1,
+            endColumnIndex: 0,
         },
         fields: 'userEnteredValue',
         rows: [{
@@ -32,11 +32,11 @@ let fCellObj =
 {
     repeatCell: {
         range: {
-            sheetId: 2054546716,
-            startRowIndex: 1,
-            endRowIndex: 2,
+            sheetId: 0,
+            startRowIndex: 0,
+            endRowIndex: 0,
             startColumnIndex: 0,
-            endColumnIndex: 1,
+            endColumnIndex: 0,
         },
         fields: 'userEnteredFormat(backgroundColor,textFormat,horizontalAlignment,verticalAlignment )',
         cell: {
@@ -67,11 +67,11 @@ let noteUpt =
 {
     updateCells: {
         range: {
-            sheetId: 2054546716,
-            startRowIndex: 1,
-            endRowIndex: 2,
+            sheetId: 0,
+            startRowIndex: 0,
+            endRowIndex: 0,
             startColumnIndex: 0,
-            endColumnIndex: 1,
+            endColumnIndex: 0,
         },
         fields: 'note',
         rows: [{
@@ -91,13 +91,13 @@ let noteUpt =
 nrAdd = {
     "addNamedRange": {
         "namedRange": {
-            "name": "Dune",
+            "name": "",
             "range": {
-                "sheetId": 2054546716,
-                "startRowIndex": 10,
-                "endRowIndex": 11,
+                "sheetId": 0,
+                "startRowIndex": 0,
+                "endRowIndex": 0,
                 "startColumnIndex": 0,
-                "endColumnIndex": 5,
+                "endColumnIndex": 0,
             },
         }
     }
@@ -111,14 +111,14 @@ nrAdd = {
 nrUpt = {
     "updateNamedRange": {
         "namedRange": {
-            "name": "Dune",
-            "namedRangeId": "33858809",
+            "name": "",
+            "namedRangeId": "",
             "range": {
-                "sheetId": 391190716,
-                "startRowIndex": 10,
-                "endRowIndex": 11,
+                "sheetId": 0,
+                "startRowIndex": 0,
+                "endRowIndex": 0,
                 "startColumnIndex": 0,
-                "endColumnIndex": 12,
+                "endColumnIndex": 0,
             },
         },
         "fields": "*"
