@@ -977,6 +977,8 @@ formatCell = async (sheets, tag, key) => {
 // let sheets = {}
 // let auth = {}
 
+module.exports = { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges }
+
 
 let sheetsTester = (async () => {
 

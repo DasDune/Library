@@ -13,33 +13,13 @@ app.use(cors({
     credentials: true,
 }));
 
-const config = require('./config.json');
-const { google } = require("googleapis");
+const sheetsLib = require("./sheets")
+
+const { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges } = sheetsLib;
 
 app.listen(port, () => {
     console.log(`Library listening at port ${port}`);
 });
-
-// *** Sheets functions  ***
-
-//init sheets with auth
-sheetsInit = async () => {
-
-    const keyFile = config['keysSheets'];
-
-    //authorization
-    auth = new google.auth.GoogleAuth({
-        keyFile: keyFile,
-        scopes: "https://www.googleapis.com/auth/spreadsheets",
-    });
-
-    // Create client instance for auth
-    const clientSheets = await auth.getClient();
-
-    const googleSheets = google.sheets({ version: "v4", auth: clientSheets });
-
-    return ({ sheets: googleSheets, auth: auth })
-}
 
 const init = (async() => {
 
@@ -48,32 +28,6 @@ const init = (async() => {
     auth = sheetsAPIInfo.auth;
     
     })()
-
-
-
-// sheets info
-sheetsInfo = async (sheetsId) => {
-
-    let spreadsheetId = sheetsId
-
-    //Get sheets info
-    sheetsData = await sheets.spreadsheets.get({
-        spreadsheetId,
-    });
-
-    return (sheetsData.data)
-}
-
-
-
-
-
-
-// *** Sheets functions  ***
-
-
-
-
 
 
 // Home page
@@ -104,6 +58,21 @@ app.get('/sheetsInfo', async (req, res) => {
     <h2>sheets :: <span style='color:peru'>${sheetsData.sheets.length}</span> sheets</h2>
     <h2>spreadsheetId :: <span style='color:peru'>${sheetsData.spreadsheetId}</span></h2>
     <h2>spreadsheetUrl :: <span style='color:peru'>${sheetsData.spreadsheetUrl}</span></h2>
+    `
+
+    res.send(answer);
+    // res.sendFile(`${__dirname}/pub/signIn.html`);
+});
+
+// Sheets info
+app.get('/sheetInfo', async (req, res) => {
+
+    const sheet = await sheetInfo('Library');
+
+    let answer = `<h1 style='color:blue'>sheetInfo<h1>
+    <h2 style='color:green'>sheet</h2>
+    <h2>sheetId :: <span style='color:peru'>${sheet.sheetId}</span></h2>
+    <h2>rowsData (index 4) :: <span style='color:peru'>${sheet.rowsData[4]}</span></h2>
     `
 
     res.send(answer);
