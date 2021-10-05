@@ -14,7 +14,6 @@ app.use(cors({
 }));
 
 const sheetsLib = require("./sheets")
-
 const { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges } = sheetsLib;
 
 app.listen(port, () => {
@@ -51,6 +50,8 @@ app.get('/sheetsInfo', async (req, res) => {
 
     const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4');
 
+try {
+
     let answer = `<h1 style='color:blue'>sheetsInfo<h1>
     <h2 style='color:green'>sheetsData</h2>
     <h2>namedRange :: <span style='color:peru'> ${sheetsData.namedRanges.length}</span></h2>
@@ -59,8 +60,15 @@ app.get('/sheetsInfo', async (req, res) => {
     <h2>spreadsheetId :: <span style='color:peru'>${sheetsData.spreadsheetId}</span></h2>
     <h2>spreadsheetUrl :: <span style='color:peru'>${sheetsData.spreadsheetUrl}</span></h2>
     `
-
     res.send(answer);
+} 
+
+catch(err) {
+
+//    answser = err.message
+   res.send(err.stack);
+}
+    // res.send(answer);
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });
 
@@ -76,5 +84,14 @@ app.get('/sheetInfo', async (req, res) => {
     `
 
     res.send(answer);
+    // res.sendFile(`${__dirname}/pub/signIn.html`);
+});
+
+// Sheets info
+app.get('/popNamedRanges', async (req, res) => {
+
+    const sheet = await sheetInfo('Library')
+    popNamedRanges(sheet)
+    res.send('named ranges populated');
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });

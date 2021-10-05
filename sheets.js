@@ -233,12 +233,12 @@ popNamedRanges = async (sheet) => {
     let nr = [];
     let nr2s = [];
 
-    let patt = new RegExp(/^U$|^D$/);
+    // let patt = new RegExp(/^U$/);
 
     // let header = rowsData.shift();
-    let tagsFlt = rowsData.filter(((tag) => patt.test(tag[0])))
+    // let tagsFlt = rowsData.filter(((tag) => patt.test(tag[0])))
 
-    tagsFlt.map((tag) => {
+    rowsData.map((tag) => {
 
         //Check if named range already exist if yes we need to update instead of adding a namedrange
         //If you don't the namedrange add method will produce the error : 'already exist'
@@ -982,17 +982,17 @@ module.exports = { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges }
 
 let sheetsTester = (async () => {
 
-    const sheetsAPIInfo = await sheetsInit()
+    // const sheetsAPIInfo = await sheetsInit()
 
     // console.log(sheetsAPIInfo);
 
-    sheets = sheetsAPIInfo.sheets;
-    auth = sheetsAPIInfo.auth;
+    // sheets = sheetsAPIInfo.sheets;
+    // auth = sheetsAPIInfo.auth;
 
-    const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4')
+    // const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4')
 
     // console.log(sheets)
-    const sheet = await sheetInfo('Library')
+    // const sheet = await sheetInfo('Library')
 
     // await popNamedRanges(sheet);
 
@@ -1000,9 +1000,9 @@ let sheetsTester = (async () => {
 
     // console.log(tags)
   
-    tags = [{Name:'Tag4', Update:'update4'}, {Name:'Tag8', Update:'update8'},]
+    // tags = [{Name:'Tag4', Update:'update4'}, {Name:'Tag8', Update:'update8'},]
 
-    await updateUpdate(sheet, tags);
+    // await updateUpdate(sheet, tags);
 
     // await updateCell(sheets, 'taglinker@gmail.com', '2400-LIT-2101', 'IOType', 'OOP')
 
