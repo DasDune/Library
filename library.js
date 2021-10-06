@@ -14,7 +14,7 @@ app.use(cors({
 }));
 
 const sheetsLib = require("./sheets")
-const { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges } = sheetsLib;
+const { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges, delNamedRanges} = sheetsLib;
 
 app.listen(port, () => {
     console.log(`Library listening at port ${port}`);
@@ -87,7 +87,7 @@ app.get('/sheetInfo', async (req, res) => {
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });
 
-// Sheets info
+// populate named ranges
 app.get('/popNamedRanges', async (req, res) => {
 
     const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4');
@@ -96,3 +96,14 @@ app.get('/popNamedRanges', async (req, res) => {
     res.send('named ranges populated');
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });
+
+// delete named ranges
+app.get('/delNamedRanges', async (req, res) => {
+
+    const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4');
+    const sheet = await sheetInfo('Library')
+    delNamedRanges(sheet)
+    res.send('named ranges deleted');
+    // res.sendFile(`${__dirname}/pub/signIn.html`);
+});
+

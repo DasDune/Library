@@ -292,10 +292,134 @@ popNamedRanges = async (sheet) => {
         );
     }
     catch (err) {
-        console.log(`popNamedRanges :: ${err.message}`)
+        console.log(`popNamedRanges :: ${err.stack}`)
     }
 
 };
+
+//delete named ranges
+delNamedRanges = async (sheet) => {
+
+    const { data } = sheetsData
+    const spreadsheetId = data.spreadsheetId
+    const namedRanges = data.namedRanges
+    const { sheetId, rowsData } = sheet
+
+    let nrDel = {
+            "deleteNamedRange": {
+            "namedRangeId": '',
+            }
+        }  
+
+    // let nr = [];
+    let nrDels = [];    
+
+    namedRanges.map((nr)=> {
+
+        nrDel2 = JSON.parse(JSON.stringify(nrDel));
+        // nrn = nr2.addNamedRange.namedRange.name
+        nrDel2.deleteNamedRange.namedRangeId = nr.namedRangeId
+        nrDels.push(nrDel2)
+
+    })
+
+    try {
+        await sheets.spreadsheets.batchUpdate({
+            auth,
+            spreadsheetId,
+            requestBody: {
+                requests: nrDels
+            },
+        }
+        );
+    }
+    catch (err) {
+        console.log(`popNamedRanges :: ${err.stack}`)
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//set a cells from a given name
+setCell = async (sheets, tag, link) => {
+
+    const { data } = sheetsData
+    const spreadsheetId = data.spreadsheetId
+    const namedRanges = data.namedRanges
+    const { sheetId, rowsData } = sheet
+
+    let valUpt2 = {};
+    let valUpt2s = [];
+
+    try {
+        //Get sheets info for the tag
+        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
+        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
+
+        let sheetId = nr[0].range.sheetId;
+        let sheetsList = data.data.sheets
+        let sheet = sheetsList.filter((sheetsList) => sheetsList.properties.sheetId == sheetId)
+        let sheetName = sheet[0].properties.title;
+
+        let row = nr[0].range.startRowIndex;
+        let col = nr[0].range.endColumnIndex;
+
+        const header = await gs.spreadsheets.values.get({
+            auth,
+            spreadsheetId,
+            range: `${sheetName}!R${1}C${1}:R${1}C${col}`,
+            valueRenderOption: 'FORMULA',
+            // range: `${sheetName}!A1:${colLetter}${row}`,
+        });
+
+        console.log(header)
+
+        //strong copy of object template
+        valUpt2 = JSON.parse(JSON.stringify(valUpt));
+        valUpt2.updateCells.range.sheetId = sheetId;
+
+        valUpt2.updateCells.range.startRowIndex = nr[0].range.startRowIndex;
+        valUpt2.updateCells.range.endRowIndex = nr[0].range.startRowIndex + 1;
+
+        colIndex = header.data.values[0].indexOf(link)
+
+        valUpt2.updateCells.range.startColumnIndex = colIndex
+        valUpt2.updateCells.range.endColumnIndex = colIndex + 1
+
+        valUpt2.updateCells.rows[0].values[0].userEnteredValue.stringValue = '';
+        valUpt2s.push(valUpt2);
+
+        await gs.spreadsheets.batchUpdate({
+            auth,
+            spreadsheetId,
+            requestBody: {
+                requests: valUpt2s
+            },
+        }
+        );
+        console.log(`clearCells :: Cleared doc link on column ${link} for tag ${tag} on sheet ${sheetName}`)
+
+    }
+
+    catch (err) {
+        console.log(`${color.fgRed}${err.stack}${color.reset}`)
+    }
+}
+
+
+
+
+
 
 //populate tags from sheet 
 popTagsFromSheet = async (sheet) => {
@@ -326,7 +450,7 @@ popTagsFromSheet = async (sheet) => {
 
     }
     catch (err) {
-        console.log(`err.message}`)
+        console.log(`err.stack}`)
         return (tags)
     }
 
@@ -376,12 +500,12 @@ updateUpdate = async (sheet, tags) => {
                 valUpt2s.push(valUpt2);
             }
             catch (err) {
-                console.log(`${err.message}`)
+                console.log(`${err.stack}`)
             }
         })
     }
     catch (err) {
-        console.log(`${err.message}`)
+        console.log(`${err.stack}`)
     }
 
     try {
@@ -395,7 +519,7 @@ updateUpdate = async (sheet, tags) => {
         );
     }
     catch (err) {
-        console.log(`${err.message}`)
+        console.log(`${err.stack}`)
     }
 }
 
@@ -462,7 +586,7 @@ updateCell = async (sheets, userEmail, tag, key, val) => {
 
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${color.fgRed}${err.stack}${color.reset}`)
     }
 
 
@@ -478,7 +602,7 @@ updateCell = async (sheets, userEmail, tag, key, val) => {
         // console.log(`${color.fgGreen}"Update" updated : ${color.reset} ${valUpt2s.length}`)
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${color.fgRed}${err.stack}${color.reset}`)
     }
 
     // console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
@@ -585,7 +709,7 @@ updateRows = async (sheets, tagNames, urlKey, urlVal, linkName, fileName2) => {
                         console.log(`Append column #${keyIndex} on sheet ${sheetName}`)
                     }
                     catch (err) {
-                        console.log(`${color.fgRed}${err.message}${color.reset}`)
+                        console.log(`${color.fgRed}${err.stack}${color.reset}`)
                     }
 
                     //update the key name (presently null)
@@ -601,7 +725,7 @@ updateRows = async (sheets, tagNames, urlKey, urlVal, linkName, fileName2) => {
                         console.log(`New header key ${urlKey} on sheet ${sheetName}`)
                     }
                     catch (err) {
-                        console.log(`${color.fgRed}${err.message}${color.reset}`)
+                        console.log(`${color.fgRed}${err.stack}${color.reset}`)
                     }
                 }
                 else keyIndex = header.indexOf(urlKey);
@@ -622,7 +746,7 @@ updateRows = async (sheets, tagNames, urlKey, urlVal, linkName, fileName2) => {
         }
 
         catch (err) {
-            console.log(`updateRows :: ${err.message}`)
+            console.log(`updateRows :: ${err.stack}`)
         }
     }
 
@@ -638,7 +762,7 @@ updateRows = async (sheets, tagNames, urlKey, urlVal, linkName, fileName2) => {
         // console.log(`${color.fgGreen}tags updated : ${color.reset} ${UptArr.length}`)
     }
     catch (err) {
-        console.log(`updateRows :: ${err.message}`)
+        console.log(`updateRows :: ${err.stack}`)
     }
 
 
@@ -702,7 +826,7 @@ popStatus = async (sheets, sheet, userEmail) => {
 
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${color.fgRed}${err.stack}${color.reset}`)
     }
 
     console.log(`${color.fgGreen}function :: popTagsFromSheet completed.${color.reset}`)
@@ -711,75 +835,12 @@ popStatus = async (sheets, sheet, userEmail) => {
         return tags;
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${color.fgRed}${err.stack}${color.reset}`)
     }
 
 }
 
-//Clear sheet cells
-clearCells = async (sheets, tag, link) => {
 
-    // console.log(`${color.fgYellow}function :: updateRows started...${color.reset}`)
-
-    const { gs, spreadsheetId, auth, namedRanges, data } = sheets
-
-    let valUpt2 = {};
-    let valUpt2s = [];
-
-    try {
-        //Get sheets info for the tag
-        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
-        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
-
-        let sheetId = nr[0].range.sheetId;
-        let sheetsList = data.data.sheets
-        let sheet = sheetsList.filter((sheetsList) => sheetsList.properties.sheetId == sheetId)
-        let sheetName = sheet[0].properties.title;
-
-        let row = nr[0].range.startRowIndex;
-        let col = nr[0].range.endColumnIndex;
-
-        const header = await gs.spreadsheets.values.get({
-            auth,
-            spreadsheetId,
-            range: `${sheetName}!R${1}C${1}:R${1}C${col}`,
-            valueRenderOption: 'FORMULA',
-            // range: `${sheetName}!A1:${colLetter}${row}`,
-        });
-
-        console.log(header)
-
-        //strong copy of object template
-        valUpt2 = JSON.parse(JSON.stringify(valUpt));
-        valUpt2.updateCells.range.sheetId = sheetId;
-
-        valUpt2.updateCells.range.startRowIndex = nr[0].range.startRowIndex;
-        valUpt2.updateCells.range.endRowIndex = nr[0].range.startRowIndex + 1;
-
-        colIndex = header.data.values[0].indexOf(link)
-
-        valUpt2.updateCells.range.startColumnIndex = colIndex
-        valUpt2.updateCells.range.endColumnIndex = colIndex + 1
-
-        valUpt2.updateCells.rows[0].values[0].userEnteredValue.stringValue = '';
-        valUpt2s.push(valUpt2);
-
-        await gs.spreadsheets.batchUpdate({
-            auth,
-            spreadsheetId,
-            requestBody: {
-                requests: valUpt2s
-            },
-        }
-        );
-        console.log(`clearCells :: Cleared doc link on column ${link} for tag ${tag} on sheet ${sheetName}`)
-
-    }
-
-    catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
-    }
-}
 
 //Get Sheet info for a given tag
 let getSheetInfoFromTag = async (sheets, tag) => {
@@ -802,7 +863,7 @@ let getSheetInfoFromTag = async (sheets, tag) => {
         return info
     }
     catch (err) {
-        console.log(`getSheetInfoFromTag :: ${err.message}`)
+        console.log(`getSheetInfoFromTag :: ${err.stack}`)
         return { sheetId: `not found`, range: `not found` }
     }
 }
@@ -950,7 +1011,7 @@ formatCell = async (sheets, tag, key) => {
 
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${color.fgRed}${err.stack}${color.reset}`)
     }
 
 
@@ -966,7 +1027,7 @@ formatCell = async (sheets, tag, key) => {
         console.log(`${color.fgGreen}"Update" updated : ${color.reset} ${valUpt2s.length}`)
     }
     catch (err) {
-        console.log(`${color.fgRed}${err.message}${color.reset}`)
+        console.log(`${color.fgRed}${err.stack}${color.reset}`)
     }
 
     console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
@@ -977,7 +1038,7 @@ formatCell = async (sheets, tag, key) => {
 // let sheets = {}
 // let auth = {}
 
-module.exports = { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges }
+module.exports = { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges, delNamedRanges }
 
 
 let sheetsTester = (async () => {
