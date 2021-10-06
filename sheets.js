@@ -28,7 +28,7 @@ let valUpt =
 }
 
 //format cells
-let fCellObj =
+let fCell =
 {
     repeatCell: {
         range: {
@@ -42,20 +42,20 @@ let fCellObj =
         cell: {
             "userEnteredFormat": {
                 "backgroundColor": {
-                    "red": 236,
-                    "green": 149,
-                    "blue": 124
+                    "red": 0,
+                    "green": 1,
+                    "blue": 1
                 },
-                "horizontalAlignment": "CENTER",
+                "horizontalAlignment": "LEFT",
                 "verticalAlignment": "MIDDLE",
                 "textFormat": {
                     "foregroundColor": {
-                        "red": 45,
-                        "green": 59,
-                        "blue": 124
+                        "red": 0,
+                        "green": 0,
+                        "blue": 0
                     },
-                    "fontSize": 12,
-                    "bold": true
+                    "fontSize": 10,
+                    "bold": false
                 }
             }
         },
@@ -347,10 +347,90 @@ delNamedRanges = async (sheet) => {
 
 
 
+//format cell on tag/header position
+formatCell = async (tag, key) => {
+
+    const { data } = sheetsData
+    const spreadsheetId = data.spreadsheetId
+    const namedRanges = data.namedRanges
+    let sheetId = 0;
+    // const { sheetId, rowsData } = sheet
+
+    let nr = [];
+    let fCell2 = {};
+    let fCell2s = [];
+
+    try {
+
+        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
+        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
+        if (nr[0].range.sheetId !== undefined) sheetId = nr[0].range.sheetId;
+        let sheets2 = data.sheets
+        let sheet = sheets2.filter((sheets) => sheets.properties.sheetId == sheetId)
+        let sheetName = sheet[0].properties.title;
+        let row = sheet[0].properties.gridProperties.rowCount;
+        let col = sheet[0].properties.gridProperties.columnCount;
+
+        //strong copy of object template
+        fCell2 = JSON.parse(JSON.stringify(fCell));
+        fRng = fCell2.repeatCell.range
+        fRng.sheetId = sheetId;
+        fRng.startRowIndex = nr[0].range.startRowIndex;
+        fRng.endRowIndex = nr[0].range.startRowIndex + 1;
+
+
+        const getRowsInfo = await sheets.spreadsheets.values.get({
+            auth,
+            spreadsheetId,
+            range: `${sheetName}!R1C1:R${1}C${col}`,
+            // range: `${sheetName}!A1:${colLetter}${row}`,
+        });
+
+        header = getRowsInfo.data.values[0]
+        // rowData = getRowsInfo.data.values
+
+        keyIndex = header.indexOf(key)
+
+        fRng.startColumnIndex = keyIndex;
+        fRng.endColumnIndex = keyIndex + 1;
+        // fCell2.updateCells.rows[0].values[0].userEnteredValue.stringValue = val;
+        fCell2s.push(fCell2);
+
+        // valUpt2s.push(noteUpt2);
+
+    }
+    catch (err) {
+        console.log(`${err.stack}`)
+    }
+
+
+    try {
+        await sheets.spreadsheets.batchUpdate({
+            auth,
+            spreadsheetId,
+            requestBody: {
+                requests: fCell2s
+            },
+        }
+        );
+        // console.log(`${color.fgGreen}"Update" updated : ${color.reset} ${valUpt2s.length}`)
+    }
+    catch (err) {
+        console.log(`${err.stack}`)
+    }
+  
+}
 
 
 
-//set a cells from a given name
+
+
+
+
+
+
+
+//set a cells for a given tag and a given column 
 setCell = async (sheets, tag, link) => {
 
     const { data } = sheetsData
@@ -927,118 +1007,13 @@ updateHeader = async (sheets, sheet) => {
 
 }
 
-formatCell = async (sheets, tag, key) => {
-
-    // get fresh sheets
-    const { gs, spreadsheetId, auth, namedRanges, data } = sheets
-
-    //batch update values object template
-    let valUpt =
-    {
-        repeatCell: {
-            range: {
-                sheetId: 2054546716,
-                startRowIndex: 1,
-                endRowIndex: 2,
-                startColumnIndex: 0,
-                endColumnIndex: 1,
-            },
-            fields: 'userEnteredFormat(backgroundColor,textFormat,horizontalAlignment,verticalAlignment )',
-            cell: {
-                "userEnteredFormat": {
-                    "backgroundColor": {
-                        "red": 236,
-                        "green": 149,
-                        "blue": 124
-                    },
-                    "horizontalAlignment": "CENTER",
-                    "verticalAlignment": "MIDDLE",
-                    "textFormat": {
-                        "foregroundColor": {
-                            "red": 45,
-                            "green": 59,
-                            "blue": 124
-                        },
-                        "fontSize": 12,
-                        "bold": true
-                    }
-                }
-            },
-        },
-    }
-
-    let valUpt2 = {};
-    let valUpt2s = [];
-
-
-
-    try {
-
-        nrName = `NR_${tag.replace(/[-\/]/g, '_')}`;
-        if (namedRanges !== undefined) nr = (namedRanges.filter((nr) => nr.name == nrName))
-        let sheetId = nr[0].range.sheetId;
-        let sheets = data.data.sheets
-        let sheet = sheets.filter((sheets) => sheets.properties.sheetId == sheetId)
-        let sheetName = sheet[0].properties.title;
-        let row = sheet[0].properties.gridProperties.rowCount;
-        let col = sheet[0].properties.gridProperties.columnCount;
-
-        //strong copy of object template
-        valUpt2 = JSON.parse(JSON.stringify(valUpt));
-        valUpt2.repeatCell.range.sheetId = sheetId;
-        valUpt2.repeatCell.range.startRowIndex = nr[0].range.startRowIndex;
-        valUpt2.repeatCell.range.endRowIndex = nr[0].range.startRowIndex + 1;
-
-
-        const getRowsInfo = await gs.spreadsheets.values.get({
-            auth,
-            spreadsheetId,
-            range: `${sheetName}!R1C1:R${1}C${col}`,
-            // range: `${sheetName}!A1:${colLetter}${row}`,
-        });
-
-        header = getRowsInfo.data.values[0]
-        // rowData = getRowsInfo.data.values
-
-        keyIndex = header.indexOf(key)
-
-        valUpt2.repeatCell.range.startColumnIndex = keyIndex;
-        valUpt2.repeatCell.range.endColumnIndex = keyIndex + 1;
-        // valUpt2.updateCells.rows[0].values[0].userEnteredValue.stringValue = val;
-        valUpt2s.push(valUpt2);
-
-        // valUpt2s.push(noteUpt2);
-
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.stack}${color.reset}`)
-    }
-
-
-    try {
-        await gs.spreadsheets.batchUpdate({
-            auth,
-            spreadsheetId,
-            requestBody: {
-                requests: valUpt2s
-            },
-        }
-        );
-        console.log(`${color.fgGreen}"Update" updated : ${color.reset} ${valUpt2s.length}`)
-    }
-    catch (err) {
-        console.log(`${color.fgRed}${err.stack}${color.reset}`)
-    }
-
-    console.log(`${color.fgGreen}function :: updateUpdate completed.${color.reset}`)
-}
 
 
 
 // let sheets = {}
 // let auth = {}
 
-module.exports = { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges, delNamedRanges }
+module.exports = { sheetsInit, sheetsInfo, sheetInfo, popNamedRanges, delNamedRanges, formatCell }
 
 
 let sheetsTester = (async () => {
