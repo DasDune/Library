@@ -42,8 +42,8 @@ let fCell =
         cell: {
             "userEnteredFormat": {
                 "backgroundColor": {
-                    "red": 0,
-                    "green": 1,
+                    "red": 1,
+                    "green":1,
                     "blue": 1
                 },
                 "horizontalAlignment": "LEFT",
@@ -348,13 +348,18 @@ delNamedRanges = async (sheet) => {
 
 
 //format cell on tag/header position
-formatCell = async (tag, key) => {
+formatCell = async (tag, key, format) => {
+
+    const {bBlue, bGreen, bRed, fBlue, fGreen, fRed, bold, fontSize, hAlign, vAlign } = format
 
     const { data } = sheetsData
     const spreadsheetId = data.spreadsheetId
     const namedRanges = data.namedRanges
     let sheetId = 0;
     // const { sheetId, rowsData } = sheet
+
+
+
 
     let nr = [];
     let fCell2 = {};
@@ -373,17 +378,34 @@ formatCell = async (tag, key) => {
 
         //strong copy of object template
         fCell2 = JSON.parse(JSON.stringify(fCell));
+        bg = fCell2.repeatCell.cell.userEnteredFormat.backgroundColor
+        text = fCell2.repeatCell.cell.userEnteredFormat.textFormat
+        align = fCell2.repeatCell.cell.userEnteredFormat
+        bg.blue = bBlue !== undefined ? bBlue/255 : bg.blue
+        bg.green = bGreen !== undefined ? bGreen/255 : bg.green
+        bg.red = bRed !== undefined ? bRed/255 : bg.red
+        text.foregroundColor.blue = fBlue !== undefined ? fBlue/255 : text.foregroundColor.blue
+        text.foregroundColor.green = fGreen !== undefined ? fGreen/255 : text.foregroundColor.green
+        text.foregroundColor.red = fRed !== undefined ? fRed/255 : text.foregroundColor.red
+        text.bold = bold !== undefined ? bold : text.bold 
+        text.fontSize = fontSize !== undefined ? fontSize : text.fontSize
+        align.horizontalAlignment = hAlign !== undefined ? hAlign : align.horizontalAlignment
+        align.verticalAlignment = vAlign !== undefined ? vAlign : align.verticalAlignment
+
+
+
+
+
         fRng = fCell2.repeatCell.range
         fRng.sheetId = sheetId;
         fRng.startRowIndex = nr[0].range.startRowIndex;
         fRng.endRowIndex = nr[0].range.startRowIndex + 1;
 
-
+        //Get header array
         const getRowsInfo = await sheets.spreadsheets.values.get({
             auth,
             spreadsheetId,
             range: `${sheetName}!R1C1:R${1}C${col}`,
-            // range: `${sheetName}!A1:${colLetter}${row}`,
         });
 
         header = getRowsInfo.data.values[0]
@@ -393,7 +415,7 @@ formatCell = async (tag, key) => {
 
         fRng.startColumnIndex = keyIndex;
         fRng.endColumnIndex = keyIndex + 1;
-        // fCell2.updateCells.rows[0].values[0].userEnteredValue.stringValue = val;
+
         fCell2s.push(fCell2);
 
         // valUpt2s.push(noteUpt2);

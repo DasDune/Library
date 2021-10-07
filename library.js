@@ -111,11 +111,28 @@ app.get('/delNamedRanges', async (req, res) => {
 app.get('/formatCell', async (req, res) => {
 
     let info = req.query
+    let tag = info.tag
+    let col = info.col
+
+    let bBlue = info.bBlue !== undefined ?parseInt(info.bBlue) : undefined
+    let bGreen = info.bGreen !== undefined ?parseInt(info.bGreen) : undefined
+    let bRed = info.bRed !== undefined ?parseInt(info.bRed) : undefined
+    let fBlue = info.fBlue !== undefined ?parseInt(info.fBlue) : undefined
+    let fGreen = info.fGreen !== undefined ?parseInt(info.fGreen) : undefined
+    let fRed = info.fRed !== undefined ?parseInt(info.fRed) : undefined
+    let bold = info.bold !== undefined ? info.bold : undefined
+    let fontSize = info.fontSize !== undefined ?parseInt(info.fontSize) : undefined
+    let hAlign= info.hAlign !== undefined ? info.hAlign : undefined
+    let vAlign= info.vAlign !== undefined ? info.vAlign : undefined
+
+    let format = { bBlue: bBlue, bGreen:bGreen , bRed:bRed, fBlue:fBlue, fGreen:fGreen, fRed:fRed, bold:bold, fontSize:fontSize, hAlign:hAlign, vAlign:vAlign }
+
+
     
     const sheetsData = await sheetsInfo('1TIQfrcPM15l_4NIjDOz7MMe3EtHfIR8_aST4YD-PEY4');
     const sheet = await sheetInfo('Library')
-    formatCell(info.tag, info.col)
-    res.send('cell fomrmatted');
+    formatCell(info.tag, info.col, format)
+    res.send('cell formatted');
     // res.sendFile(`${__dirname}/pub/signIn.html`);
 });
 
