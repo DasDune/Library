@@ -356,10 +356,6 @@ formatCell = async (tag, key, format) => {
     const spreadsheetId = data.spreadsheetId
     const namedRanges = data.namedRanges
     let sheetId = 0;
-    // const { sheetId, rowsData } = sheet
-
-
-
 
     let nr = [];
     let fCell2 = {};
@@ -392,10 +388,6 @@ formatCell = async (tag, key, format) => {
         align.horizontalAlignment = hAlign !== undefined ? hAlign : align.horizontalAlignment
         align.verticalAlignment = vAlign !== undefined ? vAlign : align.verticalAlignment
 
-
-
-
-
         fRng = fCell2.repeatCell.range
         fRng.sheetId = sheetId;
         fRng.startRowIndex = nr[0].range.startRowIndex;
@@ -425,7 +417,6 @@ formatCell = async (tag, key, format) => {
         console.log(`${err.stack}`)
     }
 
-
     try {
         await sheets.spreadsheets.batchUpdate({
             auth,
@@ -442,6 +433,10 @@ formatCell = async (tag, key, format) => {
     }
   
 }
+
+
+
+
 
 
 
